@@ -1,5 +1,6 @@
 Automation:
   view: yes
+  hide: yes
   entities:
     - group.all_automations
 

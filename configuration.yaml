@@ -61,3 +61,6 @@ zone 3:
   longitude: !secret z3lo
   radius: 80
   icon: mdi:account-multiple
+
+shell_command: 
+  gitpush:  sudo ./home/pi/hassbian-scripts/gitpush.sh
