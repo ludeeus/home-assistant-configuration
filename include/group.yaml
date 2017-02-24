@@ -1,0 +1,43 @@
+#Automation:
+#  control: hidden
+#  view: yes
+#  entities:
+#    - group.all_automations
+
+Scripts:
+  control: hidden
+  view: yes
+  entities:
+    - group.all_scripts
+    
+Master:
+  control: hidden
+  entities:
+    - script.master_on
+    - script.master_off
+    - script.restart_ha
+    
+Radio:
+  control: hidden
+  entities:
+    - script.radio_on
+    - script.radio_on_stue
+    - script.radio_off
+    
+Stue:
+  control: hidden
+  view: yes
+  entities:
+    - script.radio_on_stue
+    - script.radio_off
+    - switch.varmeovn_stua
+    - media_player.stua_atv
+    - media_player.soveromet_atv
+    
+Personer:
+  control: hidden
+  entities:
+    - device_tracker.tel_android
+    
+    
+    

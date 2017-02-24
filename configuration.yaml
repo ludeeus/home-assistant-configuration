@@ -1,0 +1,46 @@
+homeassistant:
+  name: Home
+  elevation: 221
+  unit_system: metric
+  time_zone: Europe/Oslo
+  customize: !include include/customize.yaml
+group: !include include/group.yaml
+mqtt: !include include/mqtt.yaml
+script: !include include/script.yaml
+#scene: !include include/scene.yaml
+automation: !include include/automation.yaml
+media_player: !include include/media_player.yaml
+notify: !include include/notify.yaml
+ifttt: !include include/ifttt.yaml
+device_tracker: !include include/device_tracker.yaml
+wemo:
+frontend:
+http:
+  api_password: !secret apipassword
+  base_url: !secret baseurl
+updater:
+discovery:
+conversation:
+history:
+logbook:
+
+zone:
+  name: Hjemme
+  latitude: !secret z1la
+  longitude: !secret z1lo
+  radius: 30
+  icon: mdi:home
+
+zone 2:
+  name: Skole
+  latitude: !secret z2la
+  longitude: !secret z2lo
+  radius: 250
+  icon: mdi:school
+
+zone 3:
+  name: Jobb
+  latitude: !secret z3la
+  longitude: !secret z3lo
+  radius: 80
+  icon: mdi:account-multiple

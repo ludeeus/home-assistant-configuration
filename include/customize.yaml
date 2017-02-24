@@ -1,0 +1,12 @@
+#group.all_automations:
+#  hidden: false
+#  friendly_name: Automations
+  
+group.all_scripts:
+  control: hidden
+  hidden: false
+  friendly_name: Script
+  
+device_tracker.tel_android:
+  mdi: crown
+  friendly_name:  !secret tracker1

@@ -1,0 +1,97 @@
+ifttt_test:
+  alias: Test av integrasjon mot IFTTT
+  sequence:
+    - service: ifttt.trigger
+      data:
+        event: test
+restart_ha:
+  alias: Restart HASS
+  sequence:
+      - service: notify.pushbullet
+        data:
+          message: HASS Restarter...
+      - service: homeassistant.restart
+      
+master_on:
+  alias: Master On
+  sequence:
+      - service: switch.turn_on
+        entity_id: switch.varmeovn_stua
+      - service: notify.pushbullet
+        data:
+          message: Master on er aktivert
+
+master_off:
+  alias: Master Off
+  sequence:
+      - service: media_player.turn_off
+        entity_id: media_player.cast_audio
+      - service: media_player.turn_off
+        entity_id: media_player.chrome_cast
+      - service: media_player.turn_off
+        entity_id: media_player.soveromet_atv
+      - service: media_player.turn_off
+        entity_id: media_player.stua_atv
+      - service: switch.turn_off
+        entity_id: switch.varmeovn_stua
+      - service: media_player.turn_off
+        entity_id: media_player.yamaha_receiver
+      - service: notify.pushbullet
+        data:
+          message: Master off er aktivert
+          
+radio_on:
+  alias: Radio on
+  sequence:
+      - service: media_player.turn_on
+        entity_id: media_player.chrome_cast
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.chrome_cast
+          media_content_id: http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3
+          media_content_type: audio/mp4
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.cast_audio
+          media_content_id: http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3
+          media_content_type: audio/mp4  
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.soveromet_atv
+          media_content_id: http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3
+          media_content_type: audio/mp4
+      - service: media_player.play_media
+        data:
+          entity_id: media_player.stua_atv
+          media_content_id: http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3
+          media_content_type: audio/mp4          
+radio_off:
+  alias: Radio off
+  sequence:
+      - service: media_player.turn_off
+        entity_id: media_player.cast_audio
+      - service: media_player.turn_off
+        entity_id: media_player.chrome_cast
+      - service: media_player.turn_off
+        entity_id: media_player.soveromet_atv
+      - service: media_player.turn_off
+        entity_id: media_player.stua_atv
+      - service: media_player.turn_off
+        entity_id: media_player.yamaha_receiver
+        
+radio_on_stue:
+  alias: Radio Stua
+  sequence:
+      - service: media_player.turn_on
+        entity_id: media_player.yamaha_receiver
+      - service: media_player.volume_set
+        data:
+          entity_id: media_player.yamaha_receiver
+          volume_level: 0.40
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.yamaha_receiver
+          source: Spotify
+      - service: media_player.media_play
+        data:
+          entity_id: media_player.yamaha_receiver
