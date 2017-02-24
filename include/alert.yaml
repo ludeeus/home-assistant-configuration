@@ -1,0 +1,9 @@
+garage_door:
+  name: Garage is open
+  entity_id: media_player.yamaha_receiver
+  state: 'idle'
+  repeat: 30
+  can_acknowledge: True
+  skip_first: True
+  notifiers:
+    - pushbullet
