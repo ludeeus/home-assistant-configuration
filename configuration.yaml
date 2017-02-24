@@ -1,3 +1,6 @@
+###############################
+##  Default config
+###############################
 homeassistant:
   name: Home
   latitude: !secret z1la
@@ -6,6 +9,10 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Oslo
   customize: !include include/customize.yaml
+  
+###############################
+##  Include files
+###############################
 group: !include include/group.yaml
 mqtt: !include include/mqtt.yaml
 script: !include include/script.yaml
@@ -16,6 +23,11 @@ notify: !include include/notify.yaml
 ifttt: !include include/ifttt.yaml
 #shell_command: !include include/shell.yaml
 device_tracker: !include include/device_tracker.yaml
+
+###############################
+##  Include functions
+###############################
+netatmo:
 wemo:
 frontend:
 http:
@@ -49,4 +61,5 @@ zone 3:
   icon: mdi:account-multiple
   
 shell_command:
-  gitpush: ./home/homeassistant/.homeassistant/gitpush.sh
+  gitpush: bash /home/homeassistant/.homeassistant/gitpush.sh
+##
