@@ -1,9 +1,9 @@
-ifttt_test:
-  alias: Test av integrasjon mot IFTTT
-  sequence:
-    - service: ifttt.trigger
-      data:
-        event: test
+#ifttt_test:
+#  alias: Test av integrasjon mot IFTTT
+#  sequence:
+#    - service: ifttt.trigger
+#      data:
+#        event: test
 restart_ha:
   alias: Restart HASS
   sequence:
@@ -92,8 +92,3 @@ radio_on_stue:
       - service: media_player.media_play
         data:
           entity_id: media_player.yamaha_receiver
-          
-git_push:
-  alias: Oppdater GIT
-  sequence:
-      - service: shell_command.gitpush
