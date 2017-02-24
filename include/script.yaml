@@ -7,9 +7,6 @@ ifttt_test:
 restart_ha:
   alias: Restart HASS
   sequence:
-      - service: notify.pushbullet
-        data:
-          message: HASS Restarter...
       - service: homeassistant.restart
       
 master_on:
@@ -95,3 +92,8 @@ radio_on_stue:
       - service: media_player.media_play
         data:
           entity_id: media_player.yamaha_receiver
+          
+git_push:
+  alias: Oppdater GIT
+  sequence:
+      - service: shell_command.gitpush
