@@ -1,0 +1,6 @@
+name: Velg høytaler
+options:
+  - "Stopp"
+  - "Bad"
+  - "Stua"
+icon: mdi:radio

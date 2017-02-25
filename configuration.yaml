@@ -37,6 +37,7 @@ camera: !include include/camera.yaml
 ##  Include folders
 ###############################
 group: !include_dir_named group/
+input_select: !include_dir_named input_select/
 
 ###############################
 ##  Include functions

@@ -1,4 +1,5 @@
 control: hidden
 view: yes
+icon: mdi:wrench
 entities:
   - group.admin
