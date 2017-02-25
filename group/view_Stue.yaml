@@ -1,5 +1,6 @@
 control: hidden
 view: yes
+icon: mdi:sofa
 entities:
   - script.spotify_stue_start
   - script.spotify_stue_stop

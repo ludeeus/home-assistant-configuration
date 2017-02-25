@@ -49,6 +49,7 @@ discovery:
 conversation:
 history:
 logbook:
+#config:
 
 ###############################
 ##  Zones

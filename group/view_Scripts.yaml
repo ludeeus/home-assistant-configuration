@@ -1,4 +1,5 @@
 control: hidden
 view: yes
+icon: mdi:script
 entities:
   - group.all_scripts
