@@ -2,7 +2,7 @@
 ##  Default config
 ###############################
 homeassistant:
-  name: Home
+  name: Hjemme
   latitude: !secret z1la
   longitude: !secret z1lo
   elevation: 221
@@ -32,6 +32,7 @@ netatmo: !include include/netatmo.yaml
 panel_iframe: !include include/panel_iframe.yaml
 tts: !include include/tts.yaml
 input_boolean: !include include/input_boolean.yaml
+camera: !include include/camera.yaml
 
 ###############################
 ##  Include functions

@@ -27,11 +27,10 @@ Stue:
   control: hidden
   view: yes
   entities:
-    - script.radio_on_stue
-    - script.radio_off
+    - script.spotify_stue_start
+    - script.spotify_stue_stop
     - switch.varmeovn_stua
     - media_player.stua_atv
-    - media_player.soveromet_atv
     
 Personer:
   control: hidden
