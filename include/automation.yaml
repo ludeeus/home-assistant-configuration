@@ -1,15 +1,43 @@
-- alias: 'Morgen radio'
+- alias: 'Morgen radio, ukedager 07:00, hjemme'
   trigger:
     platform: time
     after: '07:00:00'
   condition:
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: state
+      entity_id: device_tracker.tel_android 
+      state: 'Hjemme'
   action:
     service: script.turn_on
     entity_id: script.radio_on_stue
+
+- alias: 'Varsling lav temp, ukedager 07:03, hjemme '
+  initial_state: True
+  hide_entity: false
+  trigger:
+    - platform: time
+      after: '07:03:00'
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.netatmo_ute_temperature
+      below: '3'
+    - condition: state
+      entity_id: device_tracker.tel_android 
+      state: 'Hjemme'
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: notify.pushbullet
+      data:
+        message: 'Det er kaldt! {{ states.sensor.netatmo_ute_temperature.state }} grader, lurt å holde seg inne i dag :)'

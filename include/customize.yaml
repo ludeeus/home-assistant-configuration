@@ -9,3 +9,7 @@ group.all_scripts:
   
 device_tracker.tel_android:
   friendly_name:  !secret tracker1
+sensor.breaches_joasoeoutlookcom:
+  friendly_name: joasoe@outlook.com
+sensor.breaches_joasoegmailcom:
+  friendly_name: joasoe@gmail.com

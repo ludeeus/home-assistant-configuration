@@ -1,0 +1,4 @@
+router:
+  title: 'Router'
+  url: !secret url-router
+  icon: mdi:router-wireless
