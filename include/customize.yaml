@@ -1,27 +1,46 @@
+###############################
+##  Inputs
+###############################
 input_boolean.test_automation:
   hidden: true
   icon: mdi:wrench
 
+###############################
+##  Scripts
+###############################
 script.test:
   hidden: true
   icon: mdi:wrench
+script.tts:
+  hidden: true
+script.restart_ha:
+  icon: mdi:restart
+script.spotify_stue_stop:
+  icon: mdi:spotify
+script.spotify_stue_start:
+  icon: mdi:spotify
   
-  
-  
-  
-  
+###############################
+##  Groups
+###############################  
 group.all_automations:
   hidden: false
   friendly_name: Automations
-  
+
 group.all_scripts:
   control: hidden
   hidden: false
   friendly_name: Script
-  
+
+###############################
+##  Devices
+###############################
 device_tracker.tel_android:
   friendly_name:  !secret tracker1
   
+###############################
+##  Sensors
+###############################
 sensor.speedtest_ping:
   friendly_name: Ping
   icon: mdi:signal-variant
@@ -31,21 +50,12 @@ sensor.speedtest_download:
 sensor.speedtest_upload:
   friendly_name: Upload
   icon: mdi:upload
-  
-script.tts:
-  hidden: true
-  
 sensor.phone_to_home:
   friendly_name: Tid til hjemme
-  
-script.restart_ha:
-  icon: mdi:restart
-script.spotify_stue_stop:
-  icon: mdi:spotify
-script.spotify_stue_start:
-  icon: mdi:spotify
 
-  
+###############################
+##  Automations
+###############################
 automation.morgen_radio_ukedager_0700_hjemme:
   icon: mdi:radio
 automation.varsling_lav_temp_ukedager_0703_hjemme:
