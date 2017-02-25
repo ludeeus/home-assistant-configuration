@@ -19,7 +19,7 @@ http:
 #alert: !include include/alert.yaml
 #scene: !include include/scene.yaml
 #shell_command: !include include/shell.yaml
-#sensor: !include include/sensor.yaml
+sensor: !include include/sensor.yaml
 group: !include include/group.yaml
 mqtt: !include include/mqtt.yaml
 script: !include include/script.yaml
@@ -30,6 +30,8 @@ ifttt: !include include/ifttt.yaml
 device_tracker: !include include/device_tracker.yaml
 netatmo: !include include/netatmo.yaml
 panel_iframe: !include include/panel_iframe.yaml
+tts: !include include/tts.yaml
+input_boolean: !include include/input_boolean.yaml
 
 ###############################
 ##  Include functions
@@ -41,9 +43,6 @@ discovery:
 conversation:
 history:
 logbook:
-tts:
-  - platform: google
-    language: 'no'
 
 ###############################
 ##  Zones

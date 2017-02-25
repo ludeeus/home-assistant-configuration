@@ -13,11 +13,16 @@
     - condition: state
       entity_id: device_tracker.tel_android 
       state: 'Hjemme'
-  action:
-    service: script.turn_on
-    entity_id: script.radio_on_stue
+  action:      
+    - service: media_player.turn_on
+      entity_id: media_player.yamaha_receiver
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.yamaha_receiver
+        volume_level: 0.40
+    - service: script.spotify_stue_start
 
-- alias: 'Varsling lav temp, ukedager 07:03, hjemme '
+- alias: 'Varsling lav temp, ukedager 07:03, hjemme'
   initial_state: True
   hide_entity: false
   trigger:

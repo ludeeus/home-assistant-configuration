@@ -9,7 +9,7 @@ Scripts:
   entities:
     - group.all_scripts
     
-Master:
+Admin:
   control: hidden
   entities:
     - script.master_on
@@ -37,6 +37,7 @@ Personer:
   control: hidden
   entities:
     - device_tracker.tel_android
+    - sensor.phone_to_home
 
 Netatmo:
   control: hidden
@@ -52,3 +53,10 @@ Netatmo:
     - sensor.netatmo_ute_humidity
     - sensor.netatmo_ute_temperature
     - camera.kablingsrommet
+    
+Speedtest:
+  control: hidden
+  entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload

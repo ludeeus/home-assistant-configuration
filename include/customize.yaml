@@ -1,3 +1,15 @@
+input_boolean.test_automation:
+  hidden: true
+  icon: mdi:wrench
+
+script.test:
+  hidden: true
+  icon: mdi:wrench
+  
+  
+  
+  
+  
 group.all_automations:
   hidden: false
   friendly_name: Automations
@@ -9,7 +21,32 @@ group.all_scripts:
   
 device_tracker.tel_android:
   friendly_name:  !secret tracker1
-sensor.breaches_joasoeoutlookcom:
-  friendly_name: joasoe@outlook.com
-sensor.breaches_joasoegmailcom:
-  friendly_name: joasoe@gmail.com
+  
+sensor.speedtest_ping:
+  friendly_name: Ping
+  icon: mdi:signal-variant
+sensor.speedtest_download:
+  friendly_name: Download
+  icon: mdi:download
+sensor.speedtest_upload:
+  friendly_name: Upload
+  icon: mdi:upload
+  
+script.tts:
+  hidden: true
+  
+sensor.phone_to_home:
+  friendly_name: Tid til hjemme
+  
+script.restart_ha:
+  icon: mdi:restart
+script.spotify_stue_stop:
+  icon: mdi:spotify
+script.spotify_stue_start:
+  icon: mdi:spotify
+
+  
+automation.morgen_radio_ukedager_0700_hjemme:
+  icon: mdi:radio
+automation.varsling_lav_temp_ukedager_0703_hjemme:
+  icon: mdi:snowflake
