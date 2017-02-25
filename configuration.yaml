@@ -2,7 +2,7 @@
 ##  Default config
 ###############################
 homeassistant:
-  name: Hjemme
+  name: HASS
   latitude: !secret z1la
   longitude: !secret z1lo
   elevation: 221
