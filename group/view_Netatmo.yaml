@@ -1,0 +1,5 @@
+control: hidden
+view: yes
+icon: mdi:weather-sunny
+entities:
+  - group.netatmo

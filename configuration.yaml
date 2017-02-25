@@ -20,7 +20,6 @@ http:
 #scene: !include include/scene.yaml
 #shell_command: !include include/shell.yaml
 sensor: !include include/sensor.yaml
-group: !include include/group.yaml
 mqtt: !include include/mqtt.yaml
 script: !include include/script.yaml
 automation: !include include/automation.yaml
@@ -33,6 +32,11 @@ panel_iframe: !include include/panel_iframe.yaml
 tts: !include include/tts.yaml
 input_boolean: !include include/input_boolean.yaml
 camera: !include include/camera.yaml
+
+###############################
+##  Include folders
+###############################
+group: !include_dir_named group/
 
 ###############################
 ##  Include functions

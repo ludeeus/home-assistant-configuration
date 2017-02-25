@@ -1,0 +1,5 @@
+control: hidden
+entities:
+  - script.radio_on
+  - script.radio_on_stue
+  - script.radio_off

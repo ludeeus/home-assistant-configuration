@@ -1,0 +1,4 @@
+control: hidden
+view: yes
+entities:
+  - group.all_scripts
