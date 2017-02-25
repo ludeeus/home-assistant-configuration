@@ -24,6 +24,7 @@ script.spotify_stue_start:
 ##  Groups
 ###############################  
 group.all_automations:
+  control: hidden
   hidden: false
   friendly_name: Automations
 

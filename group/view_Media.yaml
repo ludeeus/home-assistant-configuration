@@ -1,0 +1,7 @@
+view: yes
+icon: mdi:play
+entities:
+  - media_player.cast_audio
+  - media_player.chrome_cast
+  - media_player.yamaha_receiver
+  - media_player.soveromet_atv
