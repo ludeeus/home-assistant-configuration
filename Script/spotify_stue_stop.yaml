@@ -1,0 +1,9 @@
+alias: Stopper Spotify i stua
+sequence:
+  - service: script.tts
+    data:
+      message: Skrur av spotify i stua
+  - delay:
+      seconds: 5
+  - service: media_player.media_stop
+    entity_id: media_player.yamaha_receiver

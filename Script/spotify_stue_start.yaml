@@ -1,0 +1,15 @@
+alias: Starter Spotify i Stua
+sequence:
+  - service: script.tts
+    data:
+      message: Spiller spotify i stua
+  - delay:
+      seconds: 3
+  - service: media_player.turn_on
+    entity_id: media_player.yamaha_receiver
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.yamaha_receiver
+      source: Spotify
+  - service: media_player.media_play
+    entity_id: media_player.yamaha_receiver

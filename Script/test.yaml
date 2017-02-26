@@ -1,0 +1,5 @@
+alias: TEST
+sequence:
+  - service: script.tts
+    data_template:
+      message: Det er kaldt! {{ states.sensor.netatmo_ute_temperature.state }} grader, lurt å holde seg inne i dag :)

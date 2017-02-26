@@ -10,6 +10,6 @@ echo 'Enter the commit message:'
 read commitMessage
 
 git commit -m "$commitMessage"
-git push -f origin master
+git push origin master
 
 exit
