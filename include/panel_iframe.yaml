@@ -3,7 +3,7 @@ router:
   url: !secret url-router
   icon: mdi:router-wireless
   
-pi_hole:
-  title: 'Pi-hole'
-  url: http://192.168.1.108/admin
-  icon: mdi:dns
+# pi_hole:
+  # title: 'Pi-hole'
+  # url: http://192.168.1.108/admin
+  # icon: mdi:dns
