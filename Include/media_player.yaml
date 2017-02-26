@@ -7,3 +7,11 @@
   # host: 192.168.1.108
 # - platform: snapcast
   # host: 192.168.1.108
+- platform: apple_tv
+  host: 192.168.1.147
+  login_id: 00000000-3d15-ff02-7dfe-85f64ead4cd2
+  name: ATV Soverommet
+- platform: apple_tv
+  host: 192.168.1.146
+  login_id: 00000000-3d15-ff02-7dfe-85f64ead4cd2
+  name: ATV Stua
