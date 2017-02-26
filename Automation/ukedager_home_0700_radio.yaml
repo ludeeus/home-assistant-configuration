@@ -1,0 +1,23 @@
+alias: 'Morgen radio, ukedager 07:00, hjemme'
+trigger:
+  platform: time
+  after: '07:00:00'
+condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: state
+    entity_id: device_tracker.tel_android 
+    state: 'Home'
+action:      
+  - service: media_player.turn_on
+    entity_id: media_player.yamaha_receiver
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.yamaha_receiver
+      volume_level: 0.40
+  - service: script.spotify_stue_start

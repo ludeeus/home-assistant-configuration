@@ -1,0 +1,24 @@
+alias: 'Varsling lav temp, ukedager 07:03, hjemme'
+initial_state: True
+hide_entity: false
+trigger:
+  - platform: time
+    after: '07:03:00'
+condition:
+  - condition: numeric_state
+    entity_id: sensor.netatmo_ute_temperature
+    below: '3'
+  - condition: state
+    entity_id: device_tracker.tel_android 
+    state: 'Home'
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+action:
+  - service: notify.pushbullet
+    data:
+      message: 'Det er kaldt! {{ states.sensor.netatmo_ute_temperature.state }} grader, lurt å holde seg inne i dag :)'

@@ -1,4 +1,4 @@
 view: yes
-icon: mdi:settings
+icon: mdi:reload
 entities:
   - group.all_automations

@@ -1,0 +1,7 @@
+admin:
+  entities:
+  - script.restart_ha
+  - script.master_on
+  - script.master_off
+  name: Admin
+  view: false

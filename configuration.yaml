@@ -19,7 +19,6 @@ http:
 #alert: !include Include/alert.yaml
 #scene: !include Include/scene.yaml
 #shell_command: !include Include/shell.yaml
-automation: !include Include/automation.yaml
 camera: !include Include/camera.yaml
 device_tracker: !include Include/device_tracker.yaml
 ifttt: !include Include/ifttt.yaml
@@ -36,6 +35,7 @@ tts: !include Include/tts.yaml
 ###############################
 ##  Include folders
 ###############################
+automation: !include_dir_list Automation/
 group: !include_dir_named Groups/
 input_select: !include_dir_named Input_select/
 

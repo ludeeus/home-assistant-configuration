@@ -1,9 +1,60 @@
 ###############################
+##  Automations
+###############################
+automation.morgen_radio_ukedager_0700_hjemme:
+  icon: mdi:radio
+automation.varsling_lav_temp_ukedager_0703_hjemme:
+  icon: mdi:snowflake
+automation.start_radio_pa_stua:
+  icon: mdi:radio
+  hidden: true
+automation.start_radio_pa_badet:
+  icon: mdi:radio
+  hidden: true
+automation.start_radio_pa_badet_2:
+  icon: mdi:radio
+  hidden: true
+automation.stopp_radio_pa_stua_eller_bad:
+  icon: mdi:radio
+  hidden: true
+
+###############################
+##  Devices
+###############################
+device_tracker.tel_android:
+  friendly_name:  !secret tracker1
+
+###############################
+##  Groups
+###############################  
+group.all_automations:
+  control: hidden
+  hidden: false
+  friendly_name: Automations
+
+group.all_scripts:
+  control: hidden
+  hidden: false
+  friendly_name: Script
+
+###############################
 ##  Inputs
 ###############################
 input_boolean.test_automation:
   hidden: true
   icon: mdi:wrench
+
+###############################
+##  Netatmo
+###############################
+binary_sensor.kablingsrommet_motion:
+  hidden: true
+binary_sensor.kablingsrommet_someone_known:
+  hidden: true
+binary_sensor.kablingsrommet_someone_unknown:
+  hidden: true
+camera.kablingsrommet:
+  hidden: true
 
 ###############################
 ##  Scripts
@@ -19,26 +70,7 @@ script.spotify_stue_stop:
   icon: mdi:spotify
 script.spotify_stue_start:
   icon: mdi:spotify
-  
-###############################
-##  Groups
-###############################  
-group.all_automations:
-  control: hidden
-  hidden: false
-  friendly_name: Automations
 
-group.all_scripts:
-  control: hidden
-  hidden: false
-  friendly_name: Script
-
-###############################
-##  Devices
-###############################
-device_tracker.tel_android:
-  friendly_name:  !secret tracker1
-  
 ###############################
 ##  Sensors
 ###############################
@@ -53,32 +85,3 @@ sensor.speedtest_upload:
   icon: mdi:upload
 sensor.phone_to_home:
   friendly_name: Tid til hjemme
-
-###############################
-##  Automations
-###############################
-automation.morgen_radio_ukedager_0700_hjemme:
-  icon: mdi:radio
-automation.varsling_lav_temp_ukedager_0703_hjemme:
-  icon: mdi:snowflake
-automation.start_radio_pa_badet:
-  icon: mdi:radio
-  hidden: true
-automation.start_radio_pa_stua:
-  icon: mdi:radio
-  hidden: true
-automation.stopp_radio_pa_stua_eller_bad:
-  icon: mdi:radio
-  hidden: true
-  
-###############################
-##  Netatmo
-###############################
-binary_sensor.kablingsrommet_motion:
-  hidden: true
-binary_sensor.kablingsrommet_someone_known:
-  hidden: true
-binary_sensor.kablingsrommet_someone_unknown:
-  hidden: true
-camera.kablingsrommet:
-  hidden: true
