@@ -9,7 +9,7 @@ condition:
     entity_id: sensor.netatmo_ute_temperature
     below: '5'
   - condition: state
-    entity_id: device_tracker.tel_android 
+    entity_id: group.all_devices
     state: 'Home'
   - condition: time
     weekday:

@@ -11,7 +11,7 @@ condition:
       - thu
       - fri
   - condition: state
-    entity_id: device_tracker.tel_android 
+    entity_id: group.all_devices 
     state: 'Home'
 action:      
   - service: media_player.turn_on
