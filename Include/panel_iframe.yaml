@@ -9,10 +9,10 @@ router:
   # icon: mdi:dns
   
 
-spotify:
-  title: 'Spotify'
-  url: http://192.168.1.108:6680/iris
-  icon: mdi:spotify
+# spotify:
+  # title: 'Spotify'
+  # url: http://192.168.1.108:6680/iris
+  # icon: mdi:spotify
   
 plex:
   title: 'PLEX'
