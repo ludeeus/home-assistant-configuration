@@ -5,17 +5,9 @@ automation.morgen_radio_ukedager_0700_hjemme:
   icon: mdi:radio
 automation.varsling_lav_temp_ukedager_0703_hjemme:
   icon: mdi:snowflake
-automation.start_radio_pa_stua:
-  icon: mdi:radio
-  hidden: true
-automation.start_radio_pa_badet:
-  icon: mdi:radio
-  hidden: true
-automation.start_radio_pa_badet_2:
-  icon: mdi:radio
+automation.start_radio_pa_stua_eller_bad:
   hidden: true
 automation.stopp_radio_pa_stua_eller_bad:
-  icon: mdi:radio
   hidden: true
 
 ###############################
