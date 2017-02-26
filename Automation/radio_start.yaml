@@ -1,0 +1,19 @@
+alias: Start radio på stua eller bad
+trigger:
+  - platform: state
+    entity_id: input_select.radio
+action:
+  - service: media_player.play_media
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.radio", "Bad") %}
+          media_player.cast_audio
+        {%-elif is_state("input_select.radio", "Stua") %}
+          media_player.chrome_cast
+        {%-elif is_state("input_select.radio", "Begge") %}
+          media_player.cast_audio,media_player.chrome_cast
+        {% else %}
+          "None"
+        {% endif %}
+      media_content_id: 'http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3'
+      media_content_type: 'audio/mp4'

@@ -5,6 +5,4 @@ trigger:
   to: "Stopp"
 action:
   - service: media_player.turn_off
-    entity_id: media_player.cast_audio
-  - service: media_player.turn_off
-    entity_id: media_player.chrome_cast
+    entity_id: media_player.cast_audio,media_player.chrome_cast
