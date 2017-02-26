@@ -3,3 +3,7 @@
   # host: 192.168.1.217
 - platform: plex
   host: 192.168.1.10
+- platform: mpd
+  host: 192.168.1.108
+- platform: snapcast
+  host: 192.168.1.108
