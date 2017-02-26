@@ -21,3 +21,4 @@ harmony_media_room.conf
 pyozw.sqlite
 .*
 !/.gitignore
+!/gitpush.sh

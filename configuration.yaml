@@ -8,7 +8,7 @@ homeassistant:
   elevation: 221
   unit_system: metric
   time_zone: Europe/Oslo
-  customize: !include include/customize.yaml
+  customize: !include Include/customize.yaml
 http:
   api_password: !secret apipassword
   base_url: !secret baseurl
@@ -16,28 +16,28 @@ http:
 ###############################
 ##  Include files
 ###############################
-#alert: !include include/alert.yaml
-#scene: !include include/scene.yaml
-#shell_command: !include include/shell.yaml
-automation: !include include/automation.yaml
-camera: !include include/camera.yaml
-device_tracker: !include include/device_tracker.yaml
-ifttt: !include include/ifttt.yaml
-input_boolean: !include include/input_boolean.yaml
-media_player: !include include/media_player.yaml
-mqtt: !include include/mqtt.yaml
-netatmo: !include include/netatmo.yaml
-notify: !include include/notify.yaml
-panel_iframe: !include include/panel_iframe.yaml
-script: !include include/script.yaml
-sensor: !include include/sensor.yaml
-tts: !include include/tts.yaml
+#alert: !include Include/alert.yaml
+#scene: !include Include/scene.yaml
+#shell_command: !include Include/shell.yaml
+automation: !include Include/automation.yaml
+camera: !include Include/camera.yaml
+device_tracker: !include Include/device_tracker.yaml
+ifttt: !include Include/ifttt.yaml
+input_boolean: !include Include/input_boolean.yaml
+media_player: !include Include/media_player.yaml
+mqtt: !include Include/mqtt.yaml
+netatmo: !include Include/netatmo.yaml
+notify: !include Include/notify.yaml
+panel_iframe: !include Include/panel_iframe.yaml
+script: !include Include/script.yaml
+sensor: !include Include/sensor.yaml
+tts: !include Include/tts.yaml
 
 ###############################
 ##  Include folders
 ###############################
-group: !include_dir_named group/
-input_select: !include_dir_named input_select/
+group: !include_dir_named Groups/
+input_select: !include_dir_named Input_select/
 
 ###############################
 ##  Include functions
