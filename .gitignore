@@ -12,6 +12,7 @@ home-assistant_v2.db
 lib
 deps
 tts
+icloud
 secrets.yaml
 known_devices.yaml
 groups.yaml

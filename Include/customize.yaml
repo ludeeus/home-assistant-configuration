@@ -38,6 +38,11 @@ group.all_scripts:
   friendly_name: Script
 
 ###############################
+##  HomeBridge
+###############################
+switch.varmeovn_stua:
+    homebridge_hidden: true
+###############################
 ##  Inputs
 ###############################
 input_boolean.test_automation:

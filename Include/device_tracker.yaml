@@ -1,2 +1,5 @@
 - platform: owntracks
   max_gps_accuracy: 200
+- platform: icloud
+  username: !secret ios-user
+  password: !secret ios-password
