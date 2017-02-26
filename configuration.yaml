@@ -55,7 +55,7 @@ config:
 ##  Zones
 ###############################
 zone:
-  name: Hjemme
+  name: Home
   latitude: !secret z1la
   longitude: !secret z1lo
   radius: 30

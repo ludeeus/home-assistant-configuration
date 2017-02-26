@@ -3,4 +3,3 @@ view: yes
 icon: mdi:camcorder
 entities:
   - camera.rv3_rena
-  - camera.kablingsrommet

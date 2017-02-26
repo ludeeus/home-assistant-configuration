@@ -12,7 +12,7 @@
         - fri
     - condition: state
       entity_id: device_tracker.tel_android 
-      state: 'Hjemme'
+      state: 'Home'
   action:      
     - service: media_player.turn_on
       entity_id: media_player.yamaha_receiver
@@ -34,7 +34,7 @@
       below: '3'
     - condition: state
       entity_id: device_tracker.tel_android 
-      state: 'Hjemme'
+      state: 'Home'
     - condition: time
       weekday:
         - mon

@@ -11,4 +11,4 @@
   name: Phone To Home
   api_key: !secret googleapi
   origin: device_tracker.tel_android
-  destination: zone.Hjemme
+  destination: zone.home
