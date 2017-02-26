@@ -13,3 +13,8 @@ spotify:
   title: 'Spotify'
   url: http://192.168.1.108:6680/iris
   icon: mdi:spotify
+  
+plex:
+  title: 'PLEX'
+  url: http://192.168.1.10:32400/web/index.html
+  icon: mdi:plex
