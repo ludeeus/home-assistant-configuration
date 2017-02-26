@@ -22,7 +22,7 @@ http:
 ###############################
 #alert: !include Include/alert.yaml
 #scene: !include Include/scene.yaml
-#shell_command: !include Include/shell.yaml
+shell_command: !include Include/shell.yaml
 camera: !include Include/camera.yaml
 device_tracker: !include Include/device_tracker.yaml
 ifttt: !include Include/ifttt.yaml
