@@ -21,3 +21,8 @@ action:
       entity_id: media_player.yamaha_receiver
       volume_level: 0.40
   - service: script.spotify_stue_start
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.cast_audio
+      media_content_id: http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3
+      media_content_type: audio/mp4

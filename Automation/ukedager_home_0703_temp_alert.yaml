@@ -7,7 +7,7 @@ trigger:
 condition:
   - condition: numeric_state
     entity_id: sensor.netatmo_ute_temperature
-    below: '3'
+    below: '5'
   - condition: state
     entity_id: device_tracker.tel_android 
     state: 'Home'
