@@ -1,0 +1,12 @@
+alias: 'Velkommen hjem'
+initial_state: True
+hide_entity: false
+trigger:
+  - platform: state
+    entity_id: device_tracker.ipad
+    to: 'home'
+action:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.cast_audio
+      message: "Velkommen hjem"

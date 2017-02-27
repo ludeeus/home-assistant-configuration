@@ -3,5 +3,6 @@ options:
   - "Stopp"
   - "Bad"
   - "Stua"
+  - "Begge"
 initial: "Stopp"
 icon: mdi:radio
