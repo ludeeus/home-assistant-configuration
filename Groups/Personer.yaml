@@ -1,6 +1,7 @@
 control: hidden
 entities:
-  - device_tracker.tel_android
-  - sensor.phone_to_home
-  - device_tracker.ipad
   - device_tracker.iphone
+  - sensor.battery_iphone
+  - sensor.phone_to_home
+  - device_tracker.tel_android
+  - device_tracker.ipad
