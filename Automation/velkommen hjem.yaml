@@ -3,7 +3,7 @@ initial_state: True
 hide_entity: false
 trigger:
   - platform: state
-    entity_id: device_tracker.ipad
+    entity_id: device_tracker.iphone
     to: 'home'
 action:
   - service: tts.google_say

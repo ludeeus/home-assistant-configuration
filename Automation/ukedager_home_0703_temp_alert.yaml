@@ -9,8 +9,8 @@ condition:
     entity_id: sensor.netatmo_ute_temperature
     below: '5'
   - condition: state
-    entity_id: group.all_devices
-    state: 'Home'
+    entity_id: device_tracker.iphone
+    state: 'home'
   - condition: time
     weekday:
       - mon
