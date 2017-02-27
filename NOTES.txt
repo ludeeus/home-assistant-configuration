@@ -5,4 +5,4 @@ Computer: Asus Tinker Board
 
 # Commands
 sudo apt-get update
-sudo apt-get install python3 espeak
+sudo apt-get install python3 espeak -y
