@@ -21,6 +21,7 @@ http:
 ##  Include files
 ###############################
 #alert: !include Include/alert.yaml
+#mqtt: !include Include/mqtt.yaml
 #scene: !include Include/scene.yaml
 shell_command: !include Include/shell.yaml
 camera: !include Include/camera.yaml
@@ -28,7 +29,6 @@ device_tracker: !include Include/device_tracker.yaml
 ifttt: !include Include/ifttt.yaml
 input_boolean: !include Include/input_boolean.yaml
 media_player: !include Include/media_player.yaml
-mqtt: !include Include/mqtt.yaml
 netatmo: !include Include/netatmo.yaml
 notify: !include Include/notify.yaml
 panel_iframe: !include Include/panel_iframe.yaml

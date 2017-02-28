@@ -1,3 +1,0 @@
-alias: TEST
-sequence:
-  - service: shell_command.test

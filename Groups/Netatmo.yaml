@@ -1,8 +1,5 @@
 control: hidden
 entities:
-  - binary_sensor.kablingsrommet_motion
-  - binary_sensor.kablingsrommet_someone_known
-  - binary_sensor.kablingsrommet_someone_unknown
   - sensor.netatmo_inne_co2
   - sensor.netatmo_inne_humidity
   - sensor.netatmo_inne_noise
@@ -10,4 +7,3 @@ entities:
   - sensor.netatmo_inne_temperature
   - sensor.netatmo_ute_humidity
   - sensor.netatmo_ute_temperature
-  - camera.kablingsrommet

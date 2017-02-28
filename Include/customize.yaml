@@ -13,8 +13,6 @@ automation.stopp_radio_pa_stua_eller_bad:
 ###############################
 ##  Devices
 ###############################
-device_tracker.tel_android:
-  friendly_name:  !secret tracker1
 
 ###############################
 ##  Groups
@@ -30,28 +28,11 @@ group.all_scripts:
   friendly_name: Script
 
 ###############################
-##  HomeBridge
-###############################
-switch.varmeovn_stua:
-    homebridge_hidden: true
-###############################
 ##  Inputs
 ###############################
 input_boolean.test_automation:
   hidden: true
   icon: mdi:wrench
-
-###############################
-##  Netatmo
-###############################
-binary_sensor.kablingsrommet_motion:
-  hidden: true
-binary_sensor.kablingsrommet_someone_known:
-  hidden: true
-binary_sensor.kablingsrommet_someone_unknown:
-  hidden: true
-camera.kablingsrommet:
-  hidden: true
 
 ###############################
 ##  Scripts

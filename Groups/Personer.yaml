@@ -3,5 +3,3 @@ entities:
   - device_tracker.iphone
   - sensor.battery_iphone
   - sensor.phone_to_home
-  - device_tracker.tel_android
-  - device_tracker.ipad

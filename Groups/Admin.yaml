@@ -1,5 +1,3 @@
 control: hidden
 entities:
-  - script.master_on
-  - script.master_off
   - script.restart_ha
