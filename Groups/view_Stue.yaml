@@ -5,4 +5,5 @@ entities:
   - script.spotify_stue_start
   - script.spotify_stue_stop
   - switch.varmeovn_stua
-  - media_player.stua_atv
+  - media_player.atv_stua
+  - media_player.yamaha_receiver

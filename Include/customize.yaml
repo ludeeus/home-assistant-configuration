@@ -31,7 +31,7 @@ group.all_scripts:
 ##  Inputs
 ###############################
 input_boolean.test_automation:
-  hidden: true
+  hidden: false
   icon: mdi:wrench
 
 ###############################

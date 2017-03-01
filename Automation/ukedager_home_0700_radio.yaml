@@ -14,13 +14,6 @@ condition:
     entity_id: device_tracker.iphone 
     state: 'home'
 action:      
-  - service: media_player.turn_on
-    entity_id: media_player.yamaha_receiver
-  - service: media_player.volume_set
-    data:
-      entity_id: media_player.yamaha_receiver
-      volume_level: 0.40
-  - service: script.spotify_stue_start
   - service: media_player.play_media
     data:
       entity_id: media_player.cast_audio
