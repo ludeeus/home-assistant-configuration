@@ -1,7 +1,7 @@
-alias: Skru av TV når ATV starter
+alias: Skru av TV når Yamaha stopper
 trigger:
   - platform: state
-    entity_id: media_player.atv_stua
+    entity_id: media_player.
     to: 'off'
 action:
   - service: media_player.turn_off

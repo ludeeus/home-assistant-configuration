@@ -1,4 +1,4 @@
-#- platform: yamaha
+- platform: yamaha
 - platform: lg_netcast
   host: 192.168.1.217
   access_token: 221540
