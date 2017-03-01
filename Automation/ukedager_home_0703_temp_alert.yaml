@@ -3,7 +3,7 @@ initial_state: True
 hide_entity: false
 trigger:
   - platform: time
-    after: '07:03:00
+    after: '07:03:00'
 condition:
   - condition: numeric_state
     entity_id: sensor.netatmo_ute_temperature
