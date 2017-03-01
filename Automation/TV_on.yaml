@@ -1,0 +1,8 @@
+alias: Skru på TV når ATV starter
+trigger:
+  - platform: state
+    entity_id: media_player.atv_stua
+    to: 'idle'
+action:
+  - service: media_player.turn_on
+    entity_id: media_player.lg_tv_remote

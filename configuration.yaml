@@ -16,7 +16,7 @@ http:
     - 192.168.1.0/24
   ip_ban_enabled: True
   login_attempts_threshold: 5
-  
+
 ###############################
 ##  Include files
 ###############################
@@ -55,6 +55,8 @@ conversation:
 history:
 logbook:
 config:
+recorder:
+  purge_days: 3
 
 ###############################
 ##  Zones

@@ -1,6 +1,7 @@
-- platform: yamaha
-# - platform: lg_netcast
-  # host: 192.168.1.217
+#- platform: yamaha
+- platform: lg_netcast
+  host: 192.168.1.217
+  access_token: 221540
 - platform: plex
   host: 192.168.1.10
 - platform: apple_tv
