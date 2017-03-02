@@ -18,6 +18,7 @@ Home Assistant Version: 0.39.1
 #Additional software
 * Espeak
 * Git
+* <a href="https://github.com/nfarina/homebridge">Homebridge</a>
 
 #Usefull notes
 * Stop HA: ```sudo systemctl stop home-assistant@homeassistant.service```
