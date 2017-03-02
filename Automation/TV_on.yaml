@@ -1,0 +1,17 @@
+alias: Skru på forsterker når TV starter
+initial_state: 'off'
+trigger:
+  - platform: state
+    entity_id: media_player.lg_tv_remote
+    from: 'off'
+action:
+  - service: media_player.turn_on
+    entity_id: media_player.yamaha_receiver
+  - delay:
+      seconds: 3
+  - service: media_player.select_source
+    entity_id: media_player.yamaha_receiver
+    data:
+      source: HDMI2
+  - service: media_player.media_play
+    entity_id: media_player.atv_stua

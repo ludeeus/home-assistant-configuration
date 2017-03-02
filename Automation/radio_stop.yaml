@@ -1,4 +1,5 @@
 alias: Stopp radio på stua eller bad
+initial_state: 'off'
 trigger:
   platform: state
   entity_id: input_select.radio

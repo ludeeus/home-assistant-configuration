@@ -6,9 +6,9 @@ automation.morgen_radio_ukedager_0700_hjemme:
 automation.varsling_lav_temp_ukedager_0703_hjemme:
   icon: mdi:snowflake
 automation.start_radio_pa_stua_eller_bad:
-  hidden: true
+  icon: mdi:radio
 automation.stopp_radio_pa_stua_eller_bad:
-  hidden: true
+  icon: mdi:radio
 
 ###############################
 ##  Devices
@@ -16,7 +16,7 @@ automation.stopp_radio_pa_stua_eller_bad:
 
 ###############################
 ##  Groups
-###############################  
+###############################
 group.all_automations:
   control: hidden
   hidden: false
@@ -37,11 +37,8 @@ input_boolean.test_automation:
 ###############################
 ##  Scripts
 ###############################
-script.test:
-  hidden: true
-  icon: mdi:wrench
 script.tts:
-  hidden: true
+  icon: mdi:wrench
 script.restart_ha:
   icon: mdi:restart
 script.spotify_stue_stop:
