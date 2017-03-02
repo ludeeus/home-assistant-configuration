@@ -35,6 +35,7 @@ notify: !include Include/notify.yaml
 panel_iframe: !include Include/panel_iframe.yaml
 sensor: !include Include/sensor.yaml
 tts: !include Include/tts.yaml
+wemo: !include Include/wemo.yaml
 
 ###############################
 ##  Include folders
@@ -48,10 +49,9 @@ script: !include_dir_named Script/
 ###############################
 ##  Include functions
 ###############################
-wemo:
+#discovery:
 frontend:
 updater:
-discovery:
 conversation:
 history:
 logbook:

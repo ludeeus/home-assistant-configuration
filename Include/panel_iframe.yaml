@@ -2,8 +2,13 @@ router:
   title: 'Router'
   url: !secret url-router
   icon: mdi:router-wireless
-  
+
 plex:
   title: 'PLEX'
   url: !secret url-plex
   icon: mdi:plex
+
+pi_hole:
+  title: 'PI-HOLE'
+  url: !secret url-pihole
+  icon: mdi:server-network
