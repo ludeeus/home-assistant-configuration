@@ -25,6 +25,7 @@ Home Assistant Version: 0.39.1
 * Start HA: ```sudo systemctl start home-assistant@homeassistant.service```
 * Restart HA: ```sudo systemctl restart home-assistant@homeassistant.service```
 * Activate Samba: ```sudo /home/pi/hassbian-scripts/install_samba.sh```
+* View live logs: ```sudo journalctl -u home-assistant@homeassistant.service -f```
 
 
 * New hassbian device:

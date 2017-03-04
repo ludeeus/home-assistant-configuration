@@ -51,7 +51,6 @@ script: !include_dir_named Script/
 #discovery:
 frontend:
 updater:
-conversation:
 history:
 logbook:
 config:
