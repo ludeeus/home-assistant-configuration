@@ -1,8 +1,3 @@
-# test_automation:
-  # name: Test av automation regler
-  # initial: off
-  # icon: mdi:wrench
- 
 privacy_mode:
   name: Privacy Mode
   initial: off

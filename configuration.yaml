@@ -42,8 +42,7 @@ wemo: !include Include/wemo.yaml
 ###############################
 automation: !include_dir_list Automation/
 group: !include_dir_named Groups/
-input_select: !include_dir_named Input_select/
-input_slider: !include_dir_named Input_slider/
+input_select: !include_dir_named Input/Select/
 script: !include_dir_named Script/
 
 ###############################

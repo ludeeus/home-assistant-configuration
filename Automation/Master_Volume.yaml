@@ -2,9 +2,8 @@ alias: Master Volume
 trigger:
   platform: state
   entity_id: input_select.test_slider
-  to: CUSTOM
 action:
   - service: media_player.volume_set
+    entity_id: media_player.yamaha_receiver
     data_template:
-      entity_id: media_player.yamaha_receiver
-      volume_level: '{{ states.input_slider.test_slider.state | int }}'
+      volume_level: '{{ trigger.to_state.state }}'
