@@ -1,16 +1,18 @@
-alias: 'People Greeting'
+alias: Welcome home
 trigger:
   - platform: state
     entity_id:
       - device_tracker.iphone
     from: 'not_home'
     to: 'home'
-    for: '00:02:00'
+    #for: '00:02:00'
 action:
-  - service: notify.pushbullet
+  - service: tts.google_say
+    entity_id: media_player.cast_audio
     data_template:
+      language: "en"
       message: >
-        {% set person = trigger.entity_id.split('.')[1]|replace('_', ' ')%}
+        {% set person = trigger.to_state.attributes.friendly_name%}
         {%- macro greeting_sentence(person) -%}
         {{ [
         "Welcome home " ~ person,

@@ -40,10 +40,10 @@ wemo: !include Include/wemo.yaml
 ###############################
 ##  Include folders
 ###############################
-#input_slider: !include_dir_named Input_slider/
 automation: !include_dir_list Automation/
 group: !include_dir_named Groups/
 input_select: !include_dir_named Input_select/
+input_slider: !include_dir_named Input_slider/
 script: !include_dir_named Script/
 
 ###############################
