@@ -4,4 +4,3 @@ source /srv/homeassistant/bin/activate
 pip3 install --upgrade homeassistant
 exit
 sudo systemctl start home-assistant@homeassistant.service
-

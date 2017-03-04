@@ -1,8 +1,6 @@
 #Home Assistant
 My [Home Assistant](https://home-assistant.io) Config
 
-Home Assistant Version: 0.39.1
-
 <img src=https://i.gyazo.com/3fd1b15dd9ea2ad20495a493ccc8a047.png></img>
 
 #Devices:
