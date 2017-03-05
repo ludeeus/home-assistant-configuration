@@ -1,11 +1,12 @@
 alias: Welcome home
+initial_state: 'on'
 trigger:
   - platform: state
     entity_id:
       - device_tracker.iphone
     from: 'not_home'
     to: 'home'
-    #for: '00:02:00'
+    for: '00:02:00'
 action:
   - service: tts.google_say
     entity_id: media_player.cast_audio

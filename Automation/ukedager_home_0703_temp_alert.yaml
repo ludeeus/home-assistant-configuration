@@ -1,5 +1,5 @@
 alias: 'Varsling lav temp, ukedager 07:03, hjemme'
-initial_state: True
+initial_state: 'on'
 hide_entity: false
 trigger:
   - platform: time

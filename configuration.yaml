@@ -9,14 +9,6 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Oslo
   customize: !include Include/customize.yaml
-http:
-  api_password: !secret apipassword
-  base_url: !secret baseurl
-  trusted_networks:
-    - 127.0.0.1
-    - 192.168.1.0/24
-  ip_ban_enabled: True
-  login_attempts_threshold: 5
 
 ###############################
 ##  Include files
@@ -24,9 +16,9 @@ http:
 #alert: !include Include/alert.yaml
 #mqtt: !include Include/mqtt.yaml
 #scene: !include Include/scene.yaml
-shell_command: !include Include/shell.yaml
 camera: !include Include/camera.yaml
 device_tracker: !include Include/device_tracker.yaml
+http: !include Include/http.yaml
 ifttt: !include Include/ifttt.yaml
 input_boolean: !include Include/input_boolean.yaml
 media_player: !include Include/media_player.yaml
@@ -34,6 +26,8 @@ netatmo: !include Include/netatmo.yaml
 notify: !include Include/notify.yaml
 panel_iframe: !include Include/panel_iframe.yaml
 sensor: !include Include/sensor.yaml
+shell_command: !include Include/shell.yaml
+switch: !include Include/switch.yaml
 tts: !include Include/tts.yaml
 wemo: !include Include/wemo.yaml
 

@@ -2,4 +2,3 @@ control: hidden
 entities:
   - script.restart_ha
   - input_boolean.privacy_mode
-#  - input_boolean.test_automation

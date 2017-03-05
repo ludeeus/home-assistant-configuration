@@ -1,0 +1,10 @@
+alias: Update notifications
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: updater.updater
+action:
+  service: notify.pushbullet
+  data:
+    title: 'Home Assistant'
+    message: 'There is a new Home Assistant release available.'

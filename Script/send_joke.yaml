@@ -1,0 +1,6 @@
+alias: Send CN Joke
+sequence:
+  - service: notify.pushbullet
+    data_template:
+      title: "Le litt da :)"
+      message: "{{states.sensor.cn_joke.state}}"

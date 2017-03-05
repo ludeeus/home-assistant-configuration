@@ -6,13 +6,13 @@
     - ping
     - download
     - upload
-    
+
 - platform: google_travel_time
   name: Phone To Home
   api_key: !secret googleapi
   origin: device_tracker.iphone
   destination: zone.home
-  
+
 - platform: template
   sensors:
     battery_iphone:
@@ -23,3 +23,8 @@
           {% else %}
               {{ states.sensor.battery_iphone.state }}
           {%- endif %}
+- platform: pi_hole
+- platform: rest
+  resource: http://api.icndb.com/jokes/random?firstName=Joakim&lastName=Sorensen&limitTo=[nerdy]
+  name: cn_joke
+  value_template: '{{ value_json.value.joke }}'

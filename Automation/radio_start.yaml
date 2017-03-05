@@ -1,5 +1,5 @@
 alias: Start radio på stua eller bad
-initial_state: 'off'
+initial_state: 'on'
 trigger:
   - platform: state
     entity_id: input_select.radio
