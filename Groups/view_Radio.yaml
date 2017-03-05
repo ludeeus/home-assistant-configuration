@@ -1,5 +1,0 @@
-control: hidden
-view: yes
-icon: mdi:radio
-entities:
-  - input_select.radio

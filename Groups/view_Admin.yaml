@@ -1,5 +1,0 @@
-control: hidden
-view: yes
-icon: mdi:settings
-entities:
-  - group.admin
