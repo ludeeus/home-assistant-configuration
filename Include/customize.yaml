@@ -44,6 +44,7 @@ input_boolean.test_automation:
 ##  Scripts
 ###############################
 script.tts:
+  hidden: true
   icon: mdi:wrench
 script.restart_ha:
   icon: mdi:restart

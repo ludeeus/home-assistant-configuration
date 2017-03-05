@@ -1,9 +1,0 @@
-alias: Skru av TV når Yamaha stopper
-initial_state: 'off'
-trigger:
-  - platform: state
-    entity_id: media_player.yamaha_receiver
-    to: 'off'
-action:
-  - service: media_player.turn_off
-    entity_id: media_player.lg_tv_remote

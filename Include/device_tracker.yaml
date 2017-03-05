@@ -1,3 +1,8 @@
 - platform: icloud
   username: !secret ios-user
   password: !secret ios-password
+
+- platform: asuswrt
+  host: 192.168.1.1
+  username: !secret asususer
+  password: !secret asuspassword
