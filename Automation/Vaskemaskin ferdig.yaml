@@ -1,0 +1,11 @@
+alias: Varsle når vaskemaskinen er ferdig
+initial_state: 'on'
+trigger:
+  platform: state
+  entity_id: binary_sensor.vaskemaskin
+  from: "on"
+  to: "off"
+action:
+  - service: notify.pushbullet
+    data:
+      message: "Vaskemaskinen er ferdig."

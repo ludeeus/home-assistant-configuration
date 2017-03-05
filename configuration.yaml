@@ -16,6 +16,7 @@ homeassistant:
 #alert: !include Include/alert.yaml
 #mqtt: !include Include/mqtt.yaml
 #scene: !include Include/scene.yaml
+binary_sensor: !include Include/binary_sensor.yaml
 camera: !include Include/camera.yaml
 device_tracker: !include Include/device_tracker.yaml
 http: !include Include/http.yaml

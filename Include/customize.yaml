@@ -20,6 +20,12 @@ sensor.pihole:
   hidden: true
 sensor.cn_joke:
   hidden: true
+switch.stua:
+  friendly_name: Master Stua
+switch.w01:
+  friendly_name: 'WeMo kontakt #1'
+binary_sensor.vaskemaskin:
+  hidden: true
 ###############################
 ##  Groups
 ###############################
