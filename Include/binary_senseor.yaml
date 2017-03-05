@@ -1,5 +1,0 @@
-platform: template
-sensors:
-  vaskemaskin:
-    value_template: '{{ states.switch.w01.attributes.current_power_mwh > 400}}'
-    friendly_name: 'Vaskemaskin'
