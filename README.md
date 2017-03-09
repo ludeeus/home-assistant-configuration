@@ -12,9 +12,9 @@ My [Home Assistant](https://home-assistant.io) Config
 * Apple TV 4.gen
 * Apple iPad
 * Apple iPhone
+* 433mhz RF Outlets (Unkown brand)
 
 #Additional software
-* Espeak
 * Git
 * <a href="https://github.com/nfarina/homebridge">Homebridge</a>
 
