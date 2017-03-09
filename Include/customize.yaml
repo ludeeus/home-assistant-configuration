@@ -9,6 +9,8 @@ automation.start_radio_pa_stua_eller_bad:
   icon: mdi:radio
 automation.stopp_radio_pa_stua_eller_bad:
   icon: mdi:radio
+automation.privacy_mode:
+  icon: mdi:volume-off
 
 ###############################
 ##  Devices
@@ -23,9 +25,10 @@ sensor.cn_joke:
 switch.stua:
   friendly_name: Master Stua
 switch.w01:
-  friendly_name: 'WeMo kontakt #1'
-binary_sensor.vaskemaskin:
-  hidden: true
+  friendly_name: 'Vaskemaskin'
+switch.rf01:
+  friendly_name: 'Varmeovn - Stua'
+
 ###############################
 ##  Groups
 ###############################
@@ -73,3 +76,7 @@ sensor.speedtest_upload:
   icon: mdi:upload
 sensor.phone_to_home:
   friendly_name: Tid til hjemme
+binary_sensor.vaskemaskin:
+  hidden: true
+binary_sensor.iss:
+  hidden: true

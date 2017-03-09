@@ -12,3 +12,36 @@
           entity_id: switch.w01
         - service: media_player.turn_off
           entity_id: media_player.cast_audio
+- platform: rpi_rf
+  gpio: 17
+  switches:
+    rf01:
+      pulselength: 150
+      protocol: 1
+      code_on: 14501204
+      code_off: 14501201
+    rf02:
+      pulselength: 150
+      protocol: 1
+      code_on: 14504276
+      code_off: 14504273
+    rf03:
+      pulselength: 150
+      protocol: 1
+      code_on: 14505044
+      code_off: 14505041
+    rf04:
+      pulselength: 150
+      protocol: 1
+      code_on: 14505236
+      code_off: 14505233
+    rf05:
+      pulselength: 150
+      protocol: 1
+      code_on: 16598356
+      code_off: 16598353
+    rf06:
+      pulselength: 150
+      protocol: 1
+      code_on: 16601428
+      code_off: 16601425
