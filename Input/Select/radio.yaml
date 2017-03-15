@@ -1,8 +1,8 @@
-name: Velg høytaler
+name: Velg radiokanal
 options:
   - "Stopp"
-  - "Bad"
-  - "Stua"
-  - "Begge"
+  - "P4"
+  - "Radio Norge"
+  - "Solør Radio"
 initial: "Stopp"
 icon: mdi:radio

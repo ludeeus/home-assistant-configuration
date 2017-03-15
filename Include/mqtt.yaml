@@ -1,6 +1,1 @@
-broker: !secret mqttbroker
-port: !secret mqttport
-client_id: !secret mqttid
-keepalive: 60
-username: !secret mqttuser
-password: !secret mqttpsw
+broker: 127.0.0.1

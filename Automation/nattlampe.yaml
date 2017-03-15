@@ -1,0 +1,15 @@
+alias: Automatisk skru av nattbords lampe
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: switch.rf04
+    to: 'on'
+condition:
+  - condition: state
+    entity_id: input_boolean.privacy_mode
+    state: 'off'
+action:
+  - delay:
+      seconds: 180
+  - service: switch.turn_off
+    entity_id: switch.rf04

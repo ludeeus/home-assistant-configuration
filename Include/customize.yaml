@@ -27,7 +27,13 @@ switch.stua:
 switch.w01:
   friendly_name: 'Vaskemaskin'
 switch.rf01:
-  friendly_name: 'Varmeovn - Stua'
+  friendly_name: 'Stua - Varmeovn'
+switch.rf02:
+  friendly_name: 'Stua - Lys i vindu'
+switch.rf03:
+  friendly_name: 'Kaffe'
+switch.rf04:
+  friendly_name: 'Soverom - Nattbord lys'
 
 ###############################
 ##  Groups
@@ -79,4 +85,6 @@ sensor.phone_to_home:
 binary_sensor.vaskemaskin:
   hidden: true
 binary_sensor.iss:
+  hidden: true
+sensor.alert:
   hidden: true

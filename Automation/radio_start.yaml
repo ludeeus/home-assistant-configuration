@@ -6,15 +6,15 @@ trigger:
 action:
   - service: media_player.play_media
     data_template:
-      entity_id: >
-        {% if is_state("input_select.radio", "Bad") %}
-          media_player.cast_audio
-        {%-elif is_state("input_select.radio", "Stua") %}
-          media_player.chrome_cast
-        {%-elif is_state("input_select.radio", "Begge") %}
-          media_player.cast_audio,media_player.chrome_cast
+      entity_id: media_player.chrome_cast
+      media_content_id: >
+        {% if is_state("input_select.radio", "P4") %}
+          http://stream.p4.no/p4_aac_lq
+        {%-elif is_state("input_select.radio", "Radio Norge") %}
+          http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3
+        {%-elif is_state("input_select.radio", "Solør Radio") %}
+          http://109.169.96.11:8000/solor.mp3
         {% else %}
           "None"
         {% endif %}
-      media_content_id: 'http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3'
       media_content_type: 'audio/mp4'

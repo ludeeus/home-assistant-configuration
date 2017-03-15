@@ -27,3 +27,7 @@
   resource: http://api.icndb.com/jokes/random?firstName=Joakim&lastName=Sorensen
   name: cn_joke
   value_template: '{{ value_json.value.joke }}'
+
+- platform: mqtt
+  name: alert
+  state_topic: HA/alert

@@ -1,0 +1,16 @@
+alias: Alert
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: sensor.alert
+action:
+  - service: persistent_notification.create
+    data_template:
+      title: "Alert"
+      message: >
+        {{states.sensor.alert.state}}
+  - service: notify.pushbullet
+    data_template:
+      title: "Alert"
+      message: >
+        {{states.sensor.alert.state}}
