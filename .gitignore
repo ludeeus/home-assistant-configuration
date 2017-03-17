@@ -23,5 +23,6 @@ harmony_media_room.conf
 pyozw.sqlite
 .*
 !/.gitignore
+!/.gitattributes
 !/gitpush.sh
 Groups/nmap_tracker.yaml
