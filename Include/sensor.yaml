@@ -23,6 +23,8 @@
           {% else %}
               {{ states.sensor.battery_iphone.state }}
           {%- endif %}
+      icon_template: 'mdi:battery-{{(states.device_tracker.iphone.attributes.battery|float / 10)|round*10}}'
+
 - platform: rest
   resource: http://api.icndb.com/jokes/random?firstName=Joakim&lastName=Sorensen
   name: cn_joke
