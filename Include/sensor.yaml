@@ -23,7 +23,7 @@
           {% else %}
               {{ states.sensor.battery_iphone.state }}
           {%- endif %}
-      icon_template: 'mdi:battery-{{(states.device_tracker.iphone.attributes.battery|float / 10)|round*10}}'
+      icon_template: '{%- if  states.device_tracker.iphone.attributes.battery < 5 %}mdi:battery-outline{%- elif states.device_tracker.iphone.attributes.battery > 95 %}mdi:battery{% else %}mdi:battery-{{(states.device_tracker.iphone.attributes.battery|float / 10)|round*10}}{%- endif %}'
 
 - platform: rest
   resource: http://api.icndb.com/jokes/random?firstName=Joakim&lastName=Sorensen
