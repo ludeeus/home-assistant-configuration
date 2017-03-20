@@ -8,7 +8,7 @@ homeassistant:
   elevation: 221
   unit_system: metric
   time_zone: Europe/Oslo
-  customize: !include Include/customize.yaml
+  customize: !include customize.yaml
 
 ###############################
 ##  Include files
