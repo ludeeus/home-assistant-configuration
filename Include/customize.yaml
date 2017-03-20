@@ -15,8 +15,6 @@ automation.privacy_mode:
 ###############################
 ##  Devices
 ###############################
-sensor.battery_iphone:
-  friendly_name: iPhone battery
 sensor.pihole:
   hidden: true
 sensor.cn_joke:
