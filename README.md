@@ -1,9 +1,9 @@
-#Home Assistant
+# Home Assistant
 My [Home Assistant](https://home-assistant.io) Config
 
 <img src=https://i.gyazo.com/3fd1b15dd9ea2ad20495a493ccc8a047.png></img>
 
-#Devices:
+### Devices:
 * Raspberry Pi 3B (Hassbian)
 * Wemo
 * Chrome Cast
@@ -14,11 +14,11 @@ My [Home Assistant](https://home-assistant.io) Config
 * Apple iPhone
 * 433mhz RF Outlets (Unkown brand)
 
-#Additional software
+### Additional software
 * Git
 * <a href="https://github.com/nfarina/homebridge">Homebridge</a>
 
-#Usefull notes
+### Usefull notes
 * Stop HA: ```sudo systemctl stop home-assistant@homeassistant.service```
 * Start HA: ```sudo systemctl start home-assistant@homeassistant.service```
 * Restart HA: ```sudo systemctl restart home-assistant@homeassistant.service```
