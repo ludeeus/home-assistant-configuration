@@ -36,9 +36,9 @@
   
 - platform: netatmo
   modules:
-    inne:
+    INNE:
       - temperature
       - co2
-    ute:
+    UTE:
       - temperature
       - battery_vp
