@@ -87,3 +87,5 @@ binary_sensor.iss:
   hidden: true
 sensor.alert:
   hidden: true
+sensor.netatmo_ute_battery
+  hidden: true
