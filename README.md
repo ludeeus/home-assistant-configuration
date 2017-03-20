@@ -19,7 +19,7 @@ My [Home Assistant](https://home-assistant.io) Config
 * <a href="https://github.com/nfarina/homebridge">Homebridge</a>
 
 ### Usefull notes
-[Usefull commands](https://github.com/ludeeus/hass-config/wiki/Usefull-commands)
+[Usefull commands](https://github.com/ludeeus/hass-config/wiki)
 * Stop HA: ```sudo systemctl stop home-assistant@homeassistant.service```
 * Start HA: ```sudo systemctl start home-assistant@homeassistant.service```
 * Restart HA: ```sudo systemctl restart home-assistant@homeassistant.service```
