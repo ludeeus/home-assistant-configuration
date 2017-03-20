@@ -46,9 +46,6 @@ sensor: !include_dir_list Sensor/
 #discovery:
 frontend:
 updater:
-battery:
-  entity_id:
-    - device_trecker.iphone
 history:
 logbook:
 config:
