@@ -46,6 +46,7 @@ sensor: !include_dir_list Sensor/
 #discovery:
 frontend:
 updater:
+hello_state:
 history:
 logbook:
 config:
