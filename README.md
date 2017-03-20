@@ -38,9 +38,6 @@ cd
  
 * Update form git and restart:
 ```
-cd /home/homeassistant/.homeassistant
-sudo git pull https://github.com/ludeeus/hass-config
-sudo systemctl restart home-assistant@homeassistant.service
-cd
+cd /home/homeassistant/.homeassistant && sudo git pull https://github.com/ludeeus/hass-config && sudo systemctl restart home-assistant@homeassistant.service && cd
 
 ```
