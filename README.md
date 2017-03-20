@@ -31,6 +31,8 @@ My [Home Assistant](https://home-assistant.io) Config
 cd /home/homeassistant/.homeassistant
 sudo git init
 sudo git pull https://github.com/ludeeus/hass-config
+sudo systemctl restart home-assistant@homeassistant.service
+cd
 
 ```
  
