@@ -1,2 +1,1 @@
 espeak: espeak "{{ message }}"
-git_uppdate: ssh pi@192.168.1.2 cd /home/homeassistant/.homeassistant && sudo git pull https://github.com/ludeeus/hass-config && sudo systemctl restart home-assistant@homeassistant.service && cd
