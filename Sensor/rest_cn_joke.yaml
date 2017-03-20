@@ -1,4 +1,4 @@
 platform: rest
-  resource: http://api.icndb.com/jokes/random?firstName=Joakim&lastName=Sorensen
-  name: cn_joke
-  value_template: '{{ value_json.value.joke }}'
+resource: http://api.icndb.com/jokes/random?firstName=Joakim&lastName=Sorensen
+name: cn_joke
+value_template: '{{ value_json.value.joke }}'
