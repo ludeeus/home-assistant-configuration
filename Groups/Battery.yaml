@@ -1,3 +1,4 @@
 control: hidden
 entities:
   - sensor.battery_iphone
+  - sensor.netatmo_ute_battery
