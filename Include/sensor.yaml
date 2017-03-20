@@ -33,3 +33,12 @@
 - platform: mqtt
   name: alert
   state_topic: HA/alert
+  
+- platform: netatmo
+  modules:
+    inne:
+      - temperature
+      - co2
+    ute:
+      - temperature
+      - battery_vp
