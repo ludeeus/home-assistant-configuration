@@ -1,0 +1,3 @@
+control: hidden
+entities:
+  - sensor.battery_iphone
