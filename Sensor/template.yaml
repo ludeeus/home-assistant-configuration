@@ -9,3 +9,8 @@ sensors:
             {{ states.sensor.battery_iphone.state }}
         {%- endif %}
     icon_template: '{%- if  states.device_tracker.iphone.attributes.battery < 5 %}mdi:battery-outline{%- elif states.device_tracker.iphone.attributes.battery > 95 %}mdi:battery{% else %}mdi:battery-{{(states.device_tracker.iphone.attributes.battery|float / 10)|round*10}}{%- endif %}'
+  battery_netatmo:
+    unit_of_measurement: '%'
+    value_template: '{{states.sensor.netatmo_ute_battery.state}}'
+    icon_template: '{%- if  states.sensor.netatmo_ute_battery.state == "Full" %}mdi:battery{%- elif states.sensor.netatmo_ute_battery.state == "Low" %}mdi:battery-outline{% else %}mdi:battery-50{%- endif %}'
+ 
