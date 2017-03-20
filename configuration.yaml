@@ -26,7 +26,6 @@ mqtt: !include Include/mqtt.yaml
 netatmo: !include Include/netatmo.yaml
 notify: !include Include/notify.yaml
 panel_iframe: !include Include/panel_iframe.yaml
-sensor: !include Include/sensor.yaml
 shell_command: !include Include/shell.yaml
 switch: !include Include/switch.yaml
 tts: !include Include/tts.yaml
@@ -39,6 +38,7 @@ automation: !include_dir_list Automation/
 group: !include_dir_named Groups/
 input_select: !include_dir_named Input/Select/
 script: !include_dir_named Script/
+sensor: !include_dir_list Sensor/
 
 ###############################
 ##  Include functions
