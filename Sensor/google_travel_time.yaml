@@ -1,0 +1,5 @@
+platform: google_travel_time
+  name: Phone To Home
+  api_key: !secret googleapi
+  origin: device_tracker.iphone
+  destination: zone.home
