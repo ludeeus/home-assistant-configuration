@@ -24,11 +24,21 @@ My [Home Assistant](https://home-assistant.io) Config
 * Restart HA: ```sudo systemctl restart home-assistant@homeassistant.service```
 * Activate Samba: ```sudo /home/pi/hassbian-scripts/install_samba.sh```
 * View live logs: ```sudo journalctl -u home-assistant@homeassistant.service -f```
-
-
+ 
+ 
 * New hassbian device:
 ```
 cd /home/homeassistant/.homeassistant
 sudo git init
 sudo git pull https://github.com/ludeeus/hass-config
+
+```
+ 
+* Update form git and restart:
+```
+cd /home/homeassistant/.homeassistant
+sudo git pull https://github.com/ludeeus/hass-config
+sudo systemctl restart home-assistant@homeassistant.service
+cd
+
 ```
