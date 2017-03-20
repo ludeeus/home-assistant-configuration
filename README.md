@@ -35,7 +35,13 @@ sudo systemctl restart home-assistant@homeassistant.service
 cd
 
 ```
- 
+
+* Push local files to git:
+```
+cd /home/homeassistant/.homeassistant && sudo ./gitpush.sh
+
+```
+
 * Update form git and restart:
 ```
 cd /home/homeassistant/.homeassistant && sudo git pull https://github.com/ludeeus/hass-config && sudo systemctl restart home-assistant@homeassistant.service && cd
