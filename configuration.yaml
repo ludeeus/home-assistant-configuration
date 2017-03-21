@@ -51,7 +51,6 @@ logbook:
 config:
 recorder:
   purge_days: 3
-restore_states:
 
 ###############################
 ##  Zones
