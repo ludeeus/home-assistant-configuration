@@ -1,6 +1,6 @@
 platform: template
 sensors:
-  battery_iphone: !include /battery/iphone.yaml    
+  battery_iphone: !include Sensor/battery/iphone.yaml    
   battery_ipad:
     friendly_name: iPad
     unit_of_measurement: '%'
