@@ -16,7 +16,7 @@ homeassistant:
 #alert: !include Include/alert.yaml
 #scene: !include Include/scene.yaml
 binary_sensor: !include Include/binary_sensor.yaml
-camera: !include 'curl https://raw.githubusercontent.com/ludeeus/hass-config/master/Include/camera.yaml'
+camera: !include curl https://raw.githubusercontent.com/ludeeus/hass-config/master/Include/camera.yaml
 device_tracker: !include Include/device_tracker.yaml
 http: !include Include/http.yaml
 ifttt: !include Include/ifttt.yaml
