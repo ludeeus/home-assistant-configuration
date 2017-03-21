@@ -1,10 +1,16 @@
-alias: Welcome home
+alias: Welcome Home
 initial_state: 'on'
 trigger:
   - platform: state
     entity_id:
       - device_tracker.iphone
     from: 'not_home'
+    to: 'home'
+    for: '00:02:00'
+  - platform: state
+    entity_id:
+      - device_tracker.iphone
+    from: 'unknown'
     to: 'home'
     for: '00:02:00'
 action:
