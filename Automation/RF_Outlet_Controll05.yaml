@@ -1,1 +1,10 @@
-
+alias: RF05
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: input_boolean.rf05
+  - platform: event
+    event_type: homeassistant_start
+action:
+  - service_template: '{%- if is_state("input_boolean.rf05", "on")%}switch.turn_on{% else %}switch.turn_off{%- endif %}'
+    entity_id: switch.rf05
