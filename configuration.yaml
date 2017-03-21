@@ -20,7 +20,6 @@ camera: !include Include/camera.yaml
 device_tracker: !include Include/device_tracker.yaml
 http: !include Include/http.yaml
 ifttt: !include Include/ifttt.yaml
-#input_boolean: !include Include/input_boolean.yaml
 media_player: !include Include/media_player.yaml
 mqtt: !include Include/mqtt.yaml
 netatmo: !include Include/netatmo.yaml
@@ -52,6 +51,7 @@ logbook:
 config:
 recorder:
   purge_days: 3
+restore_states:
 
 ###############################
 ##  Zones
