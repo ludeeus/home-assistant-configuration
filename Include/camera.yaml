@@ -1,4 +1,5 @@
 - platform: netatmo
+  name: Security Cam #01
 - platform: mjpeg
   name: RV3 Rena
   mjpeg_url: http://webkamera.vegvesen.no/kamera?id=185544  
