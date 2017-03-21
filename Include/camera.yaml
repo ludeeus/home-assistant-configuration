@@ -1,3 +1,4 @@
+- platform: netatmo
 - platform: mjpeg
   name: RV3 Rena
-  mjpeg_url: http://webkamera.vegvesen.no/kamera?id=185544
+  mjpeg_url: http://webkamera.vegvesen.no/kamera?id=185544  
