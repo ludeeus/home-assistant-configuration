@@ -9,7 +9,7 @@ sensors:
         {% else %}
             {{ states.sensor.battery_iphone.state }}
         {%- endif %}
-    icon_template: '{%- if is_state_attr("device_tracker.iphone", "battery_status", "Charging") %}mdi:battery-charging{%- elif  states.device_tracker.iphone.attributes.battery <= 5 %}mdi:battery-outline{%- elif states.device_tracker.iphone.attributes.battery >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.device_tracker.iphone.attributes.battery|float / 10)|round*10}}{%- endif %}'
+    icon_template: '{%- if is_state("sensor.battery_iphone", "unknown") %}mdi:battery-unknown{%- elif is_state_attr("device_tracker.iphone", "battery_status", "Charging") %}mdi:battery-charging{%- elif  states.device_tracker.iphone.attributes.battery <= 5 %}mdi:battery-outline{%- elif states.device_tracker.iphone.attributes.battery >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.device_tracker.iphone.attributes.battery|float / 10)|round*10}}{%- endif %}'
   battery_netatmo:
     friendly_name: 'Netatmo ute modul'
     value_template: '{{states.sensor.netatmo_ute_battery.state}}'
