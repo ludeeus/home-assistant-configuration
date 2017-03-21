@@ -87,3 +87,9 @@ sensor.alert:
   hidden: true
 sensor.netatmo_ute_battery:
   hidden: true
+binary_sensor.cam01_motion:
+  hidden: true
+binary_sensor.cam01_someone_known:
+  hidden: true
+binary_sensor.cam01_someone_unknown:
+  hidden: true
