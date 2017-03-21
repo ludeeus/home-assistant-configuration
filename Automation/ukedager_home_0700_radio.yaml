@@ -1,5 +1,5 @@
 alias: 'Morgen radio, ukedager 07:00, hjemme'
-initial_state: 'off'
+initial_state: 'on'
 trigger:
   platform: time
   after: '07:00:00'
