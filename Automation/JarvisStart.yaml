@@ -1,1 +1,10 @@
-
+alias: Automation for when 'Jarvis' starts
+initial_state: 'on'
+trigger:
+  - platform: event
+    event_type: homeassistant_start
+action:
+  - service: notify.pushbullet
+    data:
+      title: 'Jarvis'
+      message: 'Jarvis startet successfully.'
