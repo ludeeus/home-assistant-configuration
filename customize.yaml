@@ -11,16 +11,9 @@ automation.stopp_radio_pa_stua_eller_bad:
   icon: mdi:radio
 automation.privacy_mode:
   icon: mdi:volume-off
-
 ###############################
 ##  Devices
 ###############################
-sensor.pihole:
-  hidden: true
-sensor.cn_joke:
-  hidden: true
-switch.stua:
-  friendly_name: Master Stua
 switch.w01:
   friendly_name: 'Vaskemaskin'
 switch.rf01:
@@ -31,7 +24,10 @@ switch.rf03:
   friendly_name: 'Kaffe'
 switch.rf04:
   friendly_name: 'Soverom - Nattbord lys'
-
+switch.rf05:
+  friendly_name: 'Security Cam #01'
+switch.rf06:
+  friendly_name: 'Ikke i bruk...'
 ###############################
 ##  Groups
 ###############################
@@ -39,19 +35,16 @@ group.all_automations:
   control: hidden
   hidden: false
   friendly_name: Automations
-
 group.all_scripts:
   control: hidden
   hidden: false
   friendly_name: Script
-
 ###############################
 ##  Inputs
 ###############################
 input_boolean.test_automation:
   hidden: false
   icon: mdi:wrench
-
 ###############################
 ##  Scripts
 ###############################
@@ -64,7 +57,6 @@ script.spotify_stue_stop:
   icon: mdi:spotify
 script.spotify_stue_start:
   icon: mdi:spotify
-
 ###############################
 ##  Sensors
 ###############################
@@ -81,8 +73,6 @@ sensor.phone_to_home:
   friendly_name: Tid til hjemme
 binary_sensor.vaskemaskin:
   hidden: true
-binary_sensor.iss:
-  hidden: true
 sensor.alert:
   hidden: true
 sensor.netatmo_ute_battery:
@@ -92,4 +82,6 @@ binary_sensor.cam01_motion:
 binary_sensor.cam01_someone_known:
   hidden: true
 binary_sensor.cam01_someone_unknown:
+  hidden: true
+sensor.cn_joke:
   hidden: true
