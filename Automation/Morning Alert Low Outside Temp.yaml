@@ -1,4 +1,4 @@
-alias: 'Varsling lav temp, ukedager 07:03, hjemme'
+alias: 'Morning Alert Low Outside Temp'
 initial_state: 'on'
 hide_entity: false
 trigger:
@@ -8,9 +8,6 @@ condition:
   - condition: numeric_state
     entity_id: sensor.netatmo_ute_temperature
     below: '5'
-  - condition: state
-    entity_id: device_tracker.iphone
-    state: 'home'
   - condition: time
     weekday:
       - mon
