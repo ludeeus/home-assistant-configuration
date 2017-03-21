@@ -20,7 +20,7 @@ camera: !include Include/camera.yaml
 device_tracker: !include Include/device_tracker.yaml
 http: !include Include/http.yaml
 ifttt: !include Include/ifttt.yaml
-input_boolean: !include Include/input_boolean.yaml
+#input_boolean: !include Include/input_boolean.yaml
 media_player: !include Include/media_player.yaml
 mqtt: !include Include/mqtt.yaml
 netatmo: !include Include/netatmo.yaml
@@ -36,6 +36,7 @@ wemo: !include Include/wemo.yaml
 ###############################
 automation: !include_dir_list Automation/
 group: !include_dir_named Groups/
+input_boolean: !include_dir_named Input/Boolean/
 input_select: !include_dir_named Input/Select/
 script: !include_dir_named Script/
 sensor: !include_dir_list Sensor/
