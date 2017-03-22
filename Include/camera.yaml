@@ -1,2 +1,2 @@
 - platform: netatmo
-  name: Security Cam 01
+  friendly_name: Security Cam 01
