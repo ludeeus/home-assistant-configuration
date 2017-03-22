@@ -43,7 +43,7 @@ switch.rf06:
 device_tracker.user_ios01:
   hidden: true
 camera.cam01:
-  friendly_name: Security Cam 01
+  friendly_name: 'Security Cam 01 #01'
 ###############################
 ##  Groups
 ###############################
