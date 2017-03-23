@@ -51,6 +51,10 @@ logbook:
 config:
 recorder:
   purge_days: 3
+logger:
+  default: info
+  logs:
+    homeassistant.components.camera: critical
 
 ###############################
 ##  Zones
