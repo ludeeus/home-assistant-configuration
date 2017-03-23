@@ -1,4 +1,4 @@
-alias: Restart HASS
+alias: 'Restart Jarvis'
 sequence:
   - service: script.tts
     data:
