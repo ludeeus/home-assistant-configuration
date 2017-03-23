@@ -15,8 +15,7 @@ action:
         {%-elif is_state("input_select.radio", "Solør Radio") %}
           http://109.169.96.11:8000/solor.mp3
         {% else %}
-          "None"
         {% endif %}
-      #media_content_type: 'audio/mp4'
+      media_content_type: '{%if is_state("input_select.radio","Stopp")%}{%else%}audio/mp4{%endif%}'
   - service: media_player.turn_on
     entity_id: media_player.yamaha_receiver
