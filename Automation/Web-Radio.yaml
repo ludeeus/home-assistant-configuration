@@ -4,7 +4,7 @@ trigger:
   - platform: state
     entity_id: input_select.radio
 action:
-  - service_template: '{%if is_state("input_select.radio","Stopp")%}media_player.play_pause{%else%}media_player.play_media{%endif%}'
+  - service_template: '{%if is_state("input_select.radio","Stopp")%}media_player.media_pause{%else%}media_player.play_media{%endif%}'
     data_template:
       entity_id: media_player.chrome_cast
       media_content_id: >
