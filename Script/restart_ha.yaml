@@ -4,4 +4,4 @@ sequence:
     data:
       message: restarter hass
   - service: shell_command.updatefromgit
-  - service: homeassistant.restat
+  - service: homeassistant.restart
