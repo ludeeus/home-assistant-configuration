@@ -6,4 +6,4 @@ trigger:
 action:
   - service_template: script.turn_on
     data_template:
-      entity_id: '{%if is_state("input_select.radio","Stopp")%}script.webradio_stop{%else%}script.webradio_stop{%endif%}'
+      entity_id: '{%if is_state("input_select.radio","Stopp")%}script.webradio_stop{%else%}script.webradio_start{%endif%}'
