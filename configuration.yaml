@@ -52,7 +52,7 @@ config:
 recorder:
   purge_days: 3
 logger:
-  default: info
+  default: warning
   logs:
     homeassistant.components.camera: critical
 
