@@ -1,1 +1,1 @@
-updatefromgit: ./updatefromgit.sh
+updatefromgit: ./homeassistant/updatefromgit.sh
