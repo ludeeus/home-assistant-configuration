@@ -1,4 +1,4 @@
-alias: Start web-radio in the livingroom
+alias: Web-radio in the livingroom
 initial_state: 'on'
 trigger:
   - platform: state
