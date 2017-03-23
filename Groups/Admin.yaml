@@ -1,5 +1,5 @@
 control: hidden
 entities:
-  - script.restart_ha
+  - script.restart
   - input_boolean.privacy_mode
   - input_boolean.rf05
