@@ -1,0 +1,11 @@
+alias: Notify when garageport is activated
+initial_state: 'on'
+trigger:
+  - platform: event
+    event_type: SERVICE_REGISTERED
+    entity_id: script.send_joke
+action:
+  - service: notify.pushbullet
+    data:
+      title: 'Jarvis'
+      message: 'Garageport is activated.'
