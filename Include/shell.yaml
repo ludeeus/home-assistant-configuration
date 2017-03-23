@@ -1,1 +1,1 @@
-updatefromgit: cd /home/homeassistant/.homeassistant && git pull https://github.com/ludeeus/hass-config && ssh pi@localhost sudo systemctl stop home-assistant@homeassistant.service && sudo systemctl start home-assistant@homeassistant.service
+updatefromgit: cd /home/homeassistant/.homeassistant && git pull https://github.com/ludeeus/hass-config && ssh pi@localhost sudo systemctl restart
