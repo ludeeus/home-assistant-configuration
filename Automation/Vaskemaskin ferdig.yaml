@@ -8,4 +8,5 @@ trigger:
 action:
   - service: notify.pushbullet
     data:
+      title: "Jarvis"
       message: "Vaskemaskinen er ferdig."
