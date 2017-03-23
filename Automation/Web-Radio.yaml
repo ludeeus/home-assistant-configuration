@@ -4,18 +4,6 @@ trigger:
   - platform: state
     entity_id: input_select.radio
 action:
-  - service_template: '{%if is_state("input_select.radio","Stopp")%}media_player.media_pause{%else%}media_player.play_media{%endif%}'
+  - service_template: script.turn_on
     data_template:
-      entity_id: media_player.chrome_cast
-      media_content_id: >
-        {% if is_state("input_select.radio", "P4") %}
-          http://stream.p4.no/p4_aac_lq
-        {%-elif is_state("input_select.radio", "Radio Norge") %}
-          http://tx-bauerno.sharp-stream.com/http_live.php?i=radionorge_no_mp3
-        {%-elif is_state("input_select.radio", "Solør Radio") %}
-          http://109.169.96.11:8000/solor.mp3
-        {% else %}
-        {% endif %}
-      media_content_type: '{%if is_state("input_select.radio","Stopp")%}{%else%}audio/mp4{%endif%}'
-  - service: media_player.turn_on
-    entity_id: media_player.yamaha_receiver
+      entity_id: '{%if is_state("input_select.radio","Stopp")%}script.webradio_stop{%else%}script.webradio_start{%endif%}'

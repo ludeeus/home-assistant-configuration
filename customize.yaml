@@ -73,6 +73,10 @@ script.spotify_stue_stop:
   icon: mdi:spotify
 script.spotify_stue_start:
   icon: mdi:spotify
+script.webradio_start:
+  hidden: true
+script.webradio_stop:
+  hidden: true
 ###############################
 ##  Sensors
 ###############################
