@@ -3,9 +3,9 @@ sequence:
   - service: tts.google_say
     data_template:
       entity_id: media_player.cast_audio
-      message: "{{states.sensor.cn_joke.state}}"
+      message: '{{states.sensor.cn_joke.state}}'
       language: 'en'
   - service: notify.pushbullet
     data_template:
-      title: "Le litt da :)"
-      message: "{{states.sensor.cn_joke.state}}"
+      title: 'Le litt da :)'
+      message: '{{states.sensor.cn_joke.state}}'
