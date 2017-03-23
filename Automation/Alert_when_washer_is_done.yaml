@@ -1,4 +1,4 @@
-alias: Varsle når vaskemaskinen er ferdig
+alias: 'Alert when washer is done'
 initial_state: 'on'
 trigger:
   platform: state
@@ -8,4 +8,5 @@ trigger:
 action:
   - service: notify.pushbullet
     data:
-      message: "Vaskemaskinen er ferdig."
+      title: 'Jarvis'
+      message: 'Vaskemaskinen er ferdig.'

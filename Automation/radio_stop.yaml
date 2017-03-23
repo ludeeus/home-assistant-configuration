@@ -1,9 +1,0 @@
-alias: Stopp radio på stua eller bad
-initial_state: 'on'
-trigger:
-  platform: state
-  entity_id: input_select.radio
-  to: "Stopp"
-action:
-  - service: media_player.media_pause
-    entity_id: media_player.chrome_cast

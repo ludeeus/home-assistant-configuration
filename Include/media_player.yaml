@@ -1,22 +1,23 @@
 - platform: yamaha
   host: 192.168.1.27
   source_ignore:
-      - "AUX"
-      - "AUDIO"
-      - "AV1"
-      - "AV2"
-      - "AV3"
-      - "AV4"
-      - "AV5"
-      - "AV6"
-      - "NET RADIO"
-      - "SERVER"
-      - "TUNER"
-      - "USB"
-      - "V-AUX"
-      - "iPod (USB)"
+      - 'AUX'
+      - 'AUDIO'
+      - 'AV1'
+      - 'AV2'
+      - 'AV3'
+      - 'AV4'
+      - 'AV5'
+      - 'AV6'
+      - 'NET RADIO'
+      - 'SERVER'
+      - 'TUNER'
+      - 'USB'
+      - 'V-AUX'
+      - 'iPod (USB)'
   source_names:
-    HDMI2: "ATV"
+    HDMI2: 'ATV'
+    HDMI3: 'ChromeCast'
     Spotify: "SPOTIFY"
 - platform: lg_netcast
   host: 192.168.1.22

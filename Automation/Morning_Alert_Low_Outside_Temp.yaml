@@ -18,4 +18,5 @@ condition:
 action:
   - service: notify.pushbullet
     data:
+      title: 'Jarvis'
       message: 'Det er kaldt! {{ states.sensor.netatmo_ute_temperature.state }} grader, lurt å holde seg inne i dag :)'
