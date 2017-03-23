@@ -77,6 +77,8 @@ script.webradio_start:
   hidden: true
 script.webradio_stop:
   hidden: true
+script.updatefromgit:
+  hidden: true
 ###############################
 ##  Sensors
 ###############################
