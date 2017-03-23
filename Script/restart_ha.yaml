@@ -5,4 +5,4 @@ sequence:
       message: restarter hass
   - delay:
       seconds: 1
-  - service: homeassistant.restart
+  - service: shell_command.updatefromgit
