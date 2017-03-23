@@ -3,6 +3,5 @@ sequence:
   - service: script.tts
     data:
       message: restarter hass
-  - delay:
-      seconds: 1
   - service: shell_command.updatefromgit
+  - service: homeassistant.restat
