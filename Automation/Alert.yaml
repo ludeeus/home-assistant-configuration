@@ -8,4 +8,4 @@ action:
   - service: persistent_notification.create
     data_template:
       title: "Alert"
-      message: '{{("trigger.entity_id".split("."))[1]}}'
+      message: '{{((trigger.entity_id).split("."))[1]}}'
