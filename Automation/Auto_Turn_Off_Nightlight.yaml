@@ -2,7 +2,7 @@ alias: Automatic turn off bed nightlight after 3 minutes
 initial_state: 'on'
 trigger:
   - platform: state
-    entity_id: switch.rf04
+    entity_id: input_boolean.rf04
     to: 'on'
 condition:
   - condition: state
@@ -11,5 +11,5 @@ condition:
 action:
   - delay:
       seconds: 180
-  - service: switch.turn_off
-    entity_id: switch.rf04
+  - service: input_boolean.turn_off
+    entity_id: input_boolean.rf04
