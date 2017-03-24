@@ -8,9 +8,9 @@ trigger:
   - platform: event
     event_type: homeassistant_start
 action:
-  - service_template: '{{"switch.(trigger.to_state)}}'
+  - service_template: '{{"switch."(trigger.to_state)}}'
     data_template:
       entity_id: '{{"switch."((trigger.entity_id).split("."))[1]}}'
-  - service_template: '{{"input_boolean.(trigger.to_state)}}'
+  - service_template: '{{"input_boolean."(trigger.to_state)}}'
     data_template:
       entity_id: '{{"input_boolean."((trigger.entity_id).split("."))[1]}}'
