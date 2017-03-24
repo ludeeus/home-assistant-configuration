@@ -10,4 +10,5 @@ trigger:
 action:
   - service: switch.turn_on
     data_template:
-      entity_id: '{{"switch."((trigger.entity_id).split("."))[1]}}'
+      #entity_id: '{{"switch."((trigger.entity_id).split("."))[1]}}'
+      entity_id: switch.rf01
