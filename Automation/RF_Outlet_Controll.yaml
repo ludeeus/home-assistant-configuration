@@ -10,7 +10,4 @@ trigger:
 action:
   - service_template: 'switch.turn_{{trigger.to_state.state}}'
     data_template:
-      entity_id: '{{"switch."((trigger.entity_id).split("."))[1]}}'
-  - service_template: 'input_boolean.turn_{{trigger.to_state.state}}'
-    data_template:
-      entity_id: '{{"input_boolean."((trigger.entity_id).split("."))[1]}}'
+      entity_id: 'switch.{{trigger.entity_id.split(".")[1]}}'
