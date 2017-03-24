@@ -8,7 +8,7 @@ trigger:
   - platform: event
     event_type: homeassistant_start
 action:
-  - service_template: 'switch.turn_{{trigger.to.state}}'
+  - service_template: 'switch.turn_{{trigger.to_state}}'
     data:
       #entity_id: '{{"switch."((trigger.entity_id).split("."))[1]}}'
       entity_id: switch.rf01
