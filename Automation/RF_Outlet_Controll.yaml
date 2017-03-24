@@ -3,14 +3,9 @@ initial_state: 'on'
 trigger:
   - platform: state
     entity_id: input_boolean.rf01,input_boolean.rf02,input_boolean.rf03,input_boolean.rf04,input_boolean.rf05,input_boolean.rf06
-  - platform: state
-    entity_id: switch.rf01,switch.rf02,switch.rf03,switch.rf04,switch.rf05,switch.rf06
   - platform: event
     event_type: homeassistant_start
 action:
   - service_template: 'switch.turn_{{trigger.to_state.state}}'
     data_template:
       entity_id: 'switch.{{trigger.entity_id.split(".")[1]}}'
-  - service_template: 'input_boolean.turn_{{trigger.to_state.state}}'
-    data_template:
-      entity_id: 'input_boolean.{{trigger.entity_id.split(".")[1]}}'
