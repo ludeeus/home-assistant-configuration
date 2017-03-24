@@ -12,7 +12,6 @@ automation.stopp_radio_pa_stua_eller_bad:
 automation.privacy_mode:
   icon: mdi:volume-off
 automation.rf01:
-  hidden: true
 automation.rf02:
   hidden: true
 automation.rf03:
