@@ -1,6 +1,5 @@
 control: hidden
 entities:
   - sensor.battery_iphone
-  - sensor.battery_iphone_owntracks
   - sensor.battery_ipad
   - sensor.battery_netatmo
