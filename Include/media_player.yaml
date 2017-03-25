@@ -22,7 +22,6 @@
 - platform: lg_netcast
   host: 192.168.1.22
   access_token: 221540
-- platform: plex
 - platform: apple_tv
   host: 192.168.1.21
   login_id: 00000000-3d15-ff02-7dfe-85f64ead4cd2
