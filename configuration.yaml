@@ -57,6 +57,10 @@ logger:
     homeassistant.components.camera: critical
     homeassistant.components.media_player: error
     homeassistant.components.binary_sensor.template: error
+    
+google:
+ client_id: !secret googleid
+ client_secret: !secret googlesecret
 
 #######################################################################################################################################
 ##  Zones
