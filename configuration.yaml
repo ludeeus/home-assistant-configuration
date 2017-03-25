@@ -53,6 +53,7 @@ logger:
   default: warning
   logs:
     homeassistant.components.camera: critical
+    homeassistant.setup: critical
 
 #######################################################
 ##  Zones
