@@ -3,8 +3,8 @@ initial_state: 'on'
 trigger:
   - platform: state
     entity_id: input_boolean.rf01,input_boolean.rf02,input_boolean.rf03,input_boolean.rf04,input_boolean.rf05,input_boolean.rf06
-  - platform: event
-    event_type: homeassistant_start
+  #- platform: event
+  #  event_type: homeassistant_start
 action:
   - service_template: 'switch.turn_{{trigger.to_state.state}}'
     data_template:
