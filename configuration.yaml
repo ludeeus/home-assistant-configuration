@@ -54,6 +54,7 @@ logger:
   logs:
     homeassistant.components.camera: critical
     homeassistant.setup: critical
+    homeassistant.core: error
 
 #######################################################
 ##  Zones
