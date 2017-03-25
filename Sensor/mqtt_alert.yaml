@@ -1,3 +1,0 @@
-platform: mqtt
-name: alert
-state_topic: HA/alert

@@ -1,6 +1,6 @@
-###############################
+#######################################################
 ##  Automations
-###############################
+#######################################################
 automation.morgen_radio_ukedager_0700_hjemme:
   icon: mdi:radio
 automation.varsling_lav_temp_ukedager_0703_hjemme:
@@ -11,21 +11,9 @@ automation.stopp_radio_pa_stua_eller_bad:
   icon: mdi:radio
 automation.privacy_mode:
   icon: mdi:volume-off
-automation.rf01:
-  hidden: false
-automation.rf02:
-  hidden: true
-automation.rf03:
-  hidden: true
-automation.rf04:
-  hidden: true
-automation.rf05:
-  hidden: true
-automation.rf06:
-  hidden: true
-###############################
+#######################################################
 ##  Devices
-###############################
+#######################################################
 switch.w01:
   friendly_name: 'Vaskemaskin'
 switch.rf01:
@@ -40,13 +28,11 @@ switch.rf05:
   friendly_name: 'Security Cam #01'
 switch.rf06:
   friendly_name: 'Ikke i bruk...'
-device_tracker.user_ios01:
-  hidden: true
 camera.cam01:
   friendly_name: 'Security Cam #01'
-###############################
+#######################################################
 ##  Groups
-###############################
+#######################################################
 group.all_automations:
   control: hidden
   hidden: false
@@ -55,15 +41,13 @@ group.all_scripts:
   control: hidden
   hidden: false
   friendly_name: Script
-###############################
+#######################################################
 ##  Inputs
-###############################
-input_boolean.test_automation:
-  hidden: false
-  icon: mdi:wrench
-###############################
+#######################################################
+
+#######################################################
 ##  Scripts
-###############################
+#######################################################
 script.tts:
   hidden: true
   icon: mdi:wrench
@@ -79,9 +63,9 @@ script.webradio_stop:
   hidden: true
 script.updatefromgit:
   hidden: true
-###############################
+#######################################################
 ##  Sensors
-###############################
+#######################################################
 sensor.speedtest_ping:
   friendly_name: Ping
   icon: mdi:signal-variant
@@ -94,8 +78,6 @@ sensor.speedtest_upload:
 sensor.phone_to_home:
   friendly_name: Tid til hjemme
 binary_sensor.vaskemaskin:
-  hidden: true
-sensor.alert:
   hidden: true
 sensor.netatmo_ute_battery:
   hidden: true
