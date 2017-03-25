@@ -1,5 +1,5 @@
 - platform: template
   sensors:
     vaskemaskin:
-      value_template: '{%-if is_state_attr("switch.w01","current_power_mwh","unknown")%}"Ukjent Status"{% else %}{{ states.switch.w01.attributes.current_power_mwh > 400}}{%- endif %}'
+      value_template: '{%-if is_state("binary_sensor.vaskemaskin","unknown")%}"Ukjent Status"{% else %}{{ states.switch.w01.attributes.current_power_mwh > 400}}{%- endif %}'
       friendly_name: 'Vaskemaskin'
