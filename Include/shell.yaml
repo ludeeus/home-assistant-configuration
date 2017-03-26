@@ -1,2 +1,2 @@
 updatefromgit: cd /home/homeassistant/.homeassistant && git pull https://github.com/ludeeus/hass-config
-mqtt: cd /home/homeassistant/.homeassistant && python3 mqtt.py
+mqtt: cd /home/pi && python3 mqtt.py
