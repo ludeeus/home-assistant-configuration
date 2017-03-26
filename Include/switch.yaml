@@ -1,47 +1,47 @@
 - platform: mqtt
   name: "rf01"
-  state_topic: "HA/RF"
-  command_topic: "HA/RF"
+  state_topic: "HA/RF/rf01"
+  command_topic: "HA/RF/rf01"
   payload_on: "14501204"
   payload_off: "14501201"
   retain: true
   
 - platform: mqtt
   name: "rf02"
-  state_topic: "HA/RF"
-  command_topic: "HA/RF"
+  state_topic: "HA/RF/rf02"
+  command_topic: "HA/RF/rf02"
   payload_on: "14504276"
   payload_off: "14504273"
   retain: true
   
 - platform: mqtt
   name: "rf03"
-  state_topic: "HA/RF"
-  command_topic: "HA/RF"
+  state_topic: "HA/RF/rf03"
+  command_topic: "HA/RF/rf03"
   payload_on: "14505044"
   payload_off: "14505041"
   retain: true
   
 - platform: mqtt
   name: "rf04"
-  state_topic: "HA/RF"
-  command_topic: "HA/RF"
+  state_topic: "HA/RF/rf04"
+  command_topic: "HA/RF/rf04"
   payload_on: "14505236"
   payload_off: "14505233"
   retain: true
   
 - platform: mqtt
   name: "rf05"
-  state_topic: "HA/RF"
-  command_topic: "HA/RF"
+  state_topic: "HA/RF/rf05"
+  command_topic: "HA/RF/rf05"
   payload_on: "16598356"
   payload_off: "16598353"
   retain: true
   
 - platform: mqtt
   name: "rf06"
-  state_topic: "HA/RF"
-  command_topic: "HA/RF"
+  state_topic: "HA/RF/rf06"
+  command_topic: "HA/RF/rf06"
   payload_on: "16601428"
   payload_off: "16601425"
   retain: true
