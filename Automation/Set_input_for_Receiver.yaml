@@ -10,9 +10,9 @@ trigger:
     from: "off"
     to: "on"
 action:
-  - service: switch.turn_on
+  - service: input_boolean.turn_on
     data:
-      entity_id: switch.rf06
+      entity_id: input_boolean.rf06
   - service: media_player.select_source
     data:
       entity_id: media_player.yamaha_receiver
