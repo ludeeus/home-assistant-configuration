@@ -31,3 +31,12 @@
       protocol: 1
       code_on: 16601428
       code_off: 16601425
+- platform: mqtt
+    name: "Bedroom Switch"
+    state_topic: "home/bedroom/switch1"
+    command_topic: "home/bedroom/switch1/set"
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+    qos: 0
+    retain: true
