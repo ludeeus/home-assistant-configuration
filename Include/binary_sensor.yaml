@@ -1,6 +1,1 @@
-- platform: template
-  sensors:
-    vaskemaskin:
-      value_template: '{{ states.switch.w01.attributes.current_power_w > 0.4}}'
-      friendly_name: 'Vaskemaskin'
 - platform: netatmo
