@@ -1,4 +1,4 @@
-alias: 'Alert when washer is done'
+alias: 'Set source to ATV if TV goes on.'
 initial_state: 'on'
 trigger:
   platform: state
@@ -9,4 +9,4 @@ action:
   - service: media_player.select_source
     data:
       entity_id: media_player.yamaha_receiver
-      source: 'HDMI 2'
+      source: 'HDMI2'
