@@ -1,41 +1,41 @@
-- platform: rpi_rf
-  gpio: 17
-  switches:
-    rf01:
-      pulselength: 150
-      protocol: 1
-      code_on: 14501204
-      code_off: 14501201
-    rf02:
-      pulselength: 150
-      protocol: 1
-      code_on: 14504276
-      code_off: 14504273
-    rf03:
-      pulselength: 150
-      protocol: 1
-      code_on: 14505044
-      code_off: 14505041
-    rf04:
-      pulselength: 150
-      protocol: 1
-      code_on: 14505236
-      code_off: 14505233
-    rf05:
-      pulselength: 150
-      protocol: 1
-      code_on: 16598356
-      code_off: 16598353
-    rf06:
-      pulselength: 150
-      protocol: 1
-      code_on: 16601428
-      code_off: 16601425
 - platform: mqtt
-  name: "Bedroom Switch"
+  name: "rf01"
+  state_topic: "HA/RF"
+  command_topic: "HA/RF"
+  payload_on: "14501204"
+  payload_off: "14501201"
+  
+- platform: mqtt
+  name: "rf02"
   state_topic: "HA/RF"
   command_topic: "HA/RF"
   payload_on: "14504276"
   payload_off: "14504273"
-  qos: 0
-  retain: true
+  
+- platform: mqtt
+  name: "rf03"
+  state_topic: "HA/RF"
+  command_topic: "HA/RF"
+  payload_on: "14505044"
+  payload_off: "14505041"
+  
+- platform: mqtt
+  name: "rf04"
+  state_topic: "HA/RF"
+  command_topic: "HA/RF"
+  payload_on: "14505236"
+  payload_off: "14505233"
+  
+- platform: mqtt
+  name: "rf05"
+  state_topic: "HA/RF"
+  command_topic: "HA/RF"
+  payload_on: "16598356"
+  payload_off: "16598353"
+  
+- platform: mqtt
+  name: "rf06"
+  state_topic: "HA/RF"
+  command_topic: "HA/RF"
+  payload_on: "16601428"
+  payload_off: "16601425"
