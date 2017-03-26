@@ -2,8 +2,8 @@ control: hidden
 entities:
   - sensor.netatmo_ute_temperature
   - sensor.netatmo_inne_temperature
-  - input_boolean.rf01
-  - input_boolean.rf02
-  - input_boolean.rf03
-  - input_boolean.rf04
-  - input_boolean.rf06
+  - switch.rf01
+  - switch.rf02
+  - switch.rf03
+  - switch.rf04
+  - switch.rf06
