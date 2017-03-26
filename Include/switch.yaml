@@ -33,9 +33,9 @@
       code_off: 16601425
 - platform: mqtt
   name: "Bedroom Switch"
-  state_topic: "home/bedroom/switch1"
-  command_topic: "home/bedroom/switch1"
-  payload_on: "ON"
-  payload_off: "OFF"
+  state_topic: "HA/RF"
+  command_topic: "HA/RF"
+  payload_on: "14504276"
+  payload_off: "14504273"
   qos: 0
   retain: true
