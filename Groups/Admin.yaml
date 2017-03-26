@@ -3,3 +3,4 @@ entities:
   - script.restart
   - input_boolean.privacy_mode
   - switch.rf05
+  - script.goodnight
