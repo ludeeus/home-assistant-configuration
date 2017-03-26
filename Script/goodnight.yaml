@@ -3,6 +3,6 @@ sequence:
   - service: switch.turn_off
     entity_id: switch.rf02, switch.rf06
   - service: media_player.turn_off
-    entity_id: media_player.yahmaha
+    entity_id: media_player.yamaha_receiver
   - service: switch.turn_on
     entity_id: switch.rf04
