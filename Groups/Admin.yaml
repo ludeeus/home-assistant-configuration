@@ -2,4 +2,4 @@ control: hidden
 entities:
   - script.restart
   - input_boolean.privacy_mode
-  - input_boolean.rf05
+  - switch.rf05
