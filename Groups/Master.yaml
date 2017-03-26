@@ -2,6 +2,7 @@ control: hidden
 entities:
   - sensor.netatmo_ute_temperature
   - sensor.netatmo_inne_temperature
+  - script.goodnight
   - switch.rf01
   - switch.rf02
   - switch.rf03
