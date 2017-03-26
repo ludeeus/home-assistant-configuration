@@ -8,3 +8,4 @@ action:
     data:
       title: 'Jarvis'
       message: 'Jarvis started successfully.'
+  - service: shell_command.mqtt
