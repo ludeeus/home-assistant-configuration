@@ -2,9 +2,9 @@ alias: Send alert if RF-Transmitter is offline
 initial_state: 'on'
 trigger:
   - platform: state
-    entity_id: sensor.eso8266_1
-    to: "Offline"
-    for: '00:02:00'
+    entity_id: sensor.esp8266_1
+    from: 'Online'
+    to: 'Offline'
 action:
   service: notify.all
   data:
