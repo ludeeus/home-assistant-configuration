@@ -1,3 +1,3 @@
 updatefromgit: cd /home/homeassistant/.homeassistant && git pull https://github.com/ludeeus/hass-config
-mqtt: cd /home/pi && python3 mqtt.py
+#mqtt: cd /home/pi && python3 mqtt.py
 restartrpi: ssh pi@192.168.1.2 'hassctl stop && sudo reboot'
