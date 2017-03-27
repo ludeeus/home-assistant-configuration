@@ -45,3 +45,11 @@
   payload_on: "16601428"
   payload_off: "16601425"
   retain: true
+
+- platform: mqtt
+  name: "rf06"
+  state_topic: "HA/RF/rf06"
+  command_topic: "HA/RF/rf06"
+  payload_on: "4|101|110111010101000101010100"
+  payload_off: "4|101|110111010101000101010001"
+  retain: true
