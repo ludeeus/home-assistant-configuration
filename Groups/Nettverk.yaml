@@ -3,3 +3,4 @@ entities:
   - sensor.speedtest_ping
   - sensor.speedtest_download
   - sensor.speedtest_upload
+  - device_tracker.esp8266
