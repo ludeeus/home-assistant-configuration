@@ -27,7 +27,7 @@
   state_topic: "HA/RF/rf04"
   command_topic: "HA/RF/rf04"
   payload_on: "4|101|110111010101010100010100"
-  payload_off: "4|101|110111010101010100010100"
+  payload_off: "4|101|110111010101010100010001"
   retain: true
   
 - platform: mqtt
