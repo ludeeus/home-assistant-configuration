@@ -1,3 +1,7 @@
 - name: pushbullet
   platform: pushbullet
   api_key: !secret pushbullet-apikey
+
+- name: facebook
+  platform: facebook
+  page_access_token: !secret facebook
