@@ -37,6 +37,8 @@ switch.rf06:
   icon: mdi:television
 camera.cam01:
   friendly_name: 'Security Cam #01'
+device_tracker.esp8266:
+  hidden: true
 #######################################################
 ##  Groups
 #######################################################
