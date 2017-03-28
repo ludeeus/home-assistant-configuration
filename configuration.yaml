@@ -45,6 +45,9 @@ sensor: !include_dir_list Sensor/
 frontend:
 updater:
 history:
+  exclude:
+    domains:
+      - automation
 logbook:
 config:
 recorder:
