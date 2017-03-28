@@ -49,15 +49,21 @@ logbook:
 config:
 recorder:
   db_url: !secret db
-  purge_days: 3
+  purge_days: 7
+  exclude:
+    domains:
+      - sun
+      - updater
+    entities:
+      - sun.sun
 logger:
   default: warning
   logs:
     homeassistant.core: error
-    homeassistant.setup: critical
-    homeassistant.components.camera: critical
-    homeassistant.components.media_player: error
-    homeassistant.components.binary_sensor.template: error
+    #homeassistant.setup: critical
+    #homeassistant.components.camera: critical
+    #homeassistant.components.media_player: error
+    #homeassistant.components.binary_sensor.template: error
     
 google:
  client_id: !secret googleid
