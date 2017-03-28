@@ -48,6 +48,7 @@ history:
 logbook:
 config:
 recorder:
+  db_url: !secret db
   purge_days: 3
 logger:
   default: warning
