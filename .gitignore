@@ -16,6 +16,7 @@ icloud
 secrets.yaml
 known_devices.yaml
 groups.yaml
+google_calendars.yaml
 *.conf
 plex.conf
 phue.conf
