@@ -1,0 +1,18 @@
+sensor:
+  platform: template
+  sensors:
+    cccommercial:
+      friendly_name: 'Reklame'
+      value_template: '{%if states.media_player.chrome_cast.attributes.media_duration < 70 %}true{%else%}false{%endif%}'
+
+automation:
+  alias: Mute Volume during comersials on ChromeCast
+  initial_state: 'on'
+  trigger:
+    platform: template
+    value_template: '{% if is_state("sensor.cccommercial", "false") %}true{% elif is_state("sensor.cccommercial", "true") %}true{% endif %}'
+  action:
+    - service_template: media_player.volume_set
+      data_template:
+        entity_id: media_player.yamaha_receiver
+        volume_level: '{%- if is_state("sensor.cccommercial", "true")%}0.5{%- else -%}0.7{%- endif %}'

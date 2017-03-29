@@ -51,7 +51,8 @@ history:
 logbook:
 config:
 recorder:
-  purge_days: 5
+  db_url: !secret db
+  purge_days: 7
   exclude:
     domains:
       - sun
