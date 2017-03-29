@@ -98,3 +98,5 @@ binary_sensor.cam01_someone_unknown:
   hidden: true
 sensor.cn_joke:
   hidden: true
+sensor.cccommercial:
+  hidden: true
