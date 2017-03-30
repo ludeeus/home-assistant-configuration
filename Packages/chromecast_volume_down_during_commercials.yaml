@@ -9,8 +9,8 @@ automation:
   alias: Mute Volume during comersials on ChromeCast
   initial_state: 'on'
   trigger:
-    platform: template
-    value_template: '{% if is_state("sensor.cccommercial", "false") %}true{% elif is_state("sensor.cccommercial", "true") %}true{% endif %}'
+    platform: state
+    entity_id: sensor.cccommercial
   action:
     - service_template: media_player.volume_set
       data_template:
