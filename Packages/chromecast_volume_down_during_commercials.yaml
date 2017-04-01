@@ -15,4 +15,4 @@ automation:
     - service_template: media_player.volume_set
       data_template:
         entity_id: media_player.yamaha_receiver
-        volume_level: '{%- if is_state("sensor.cccommercial", "true")%}0.5{%- else -%}0.7{%- endif %}'
+        volume_level: '{%- if is_state("sensor.cccommercial", "true")%}0.5{%- elif is_state("sensor.cccommercial", "false") -%}0.7{%- else -%}{%- endif %}'
