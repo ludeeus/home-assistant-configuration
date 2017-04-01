@@ -1,6 +1,0 @@
-control: hidden
-entities:
-  - sensor.speedtest_ping
-  - sensor.speedtest_download
-  - sensor.speedtest_upload
-  - sensor.esp8266_1
