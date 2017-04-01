@@ -1,0 +1,23 @@
+sensor:
+  - platform: speedtest
+    minute:
+      - 0
+      - 30
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+  - platform: template
+    sensors:
+      esp8266_1:
+        friendly_name: 'MQTT RF-Transmitter (WiFi)'
+        value_template: '{% if is_state("device_tracker.esp8266", "home") %}Online{% else %}Offline{% endif %}'
+        icon_template: 'mdi: {%- if is_state("device_tracker.esp8266", "home") %}lan-connect{% else %}lan-disconnect{%- endif %}'
+group:
+  network:
+    control: hidden
+    entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.esp8266_1
