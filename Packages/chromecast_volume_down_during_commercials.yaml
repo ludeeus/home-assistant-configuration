@@ -3,7 +3,7 @@ sensor:
   sensors:
     cccommercial:
       friendly_name: 'Reklame'
-      value_template: '{%if states.media_player.chrome_cast.attributes.media_duration < 70 %}true{%else%}false{%endif%}'
+      value_template: '{%if states.media_player.chrome_cast.attributes.media_duration and states.media_player.chrome_cast.attributes.media_duration < 70 %}true{%else%}false{%endif%}'
 
 automation:
   alias: Mute Volume during comersials on ChromeCast
