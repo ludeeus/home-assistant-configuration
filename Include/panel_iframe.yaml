@@ -7,3 +7,8 @@ plex:
   title: 'PLEX'
   url: !secret url-plex
   icon: mdi:plex
+  
+glances_winbox:
+  title: 'Glances - WinBOX'
+  url: http://192.168.1.10:61208/
+  icon: mdi:server

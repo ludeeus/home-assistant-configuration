@@ -1,0 +1,22 @@
+sensor:
+  - platform: speedtest
+    minute:
+      - 0
+      - 30
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+group:
+  network_external:
+    control: hidden
+    entities:
+    - sensor.speedtest_ping
+    - sensor.speedtest_download
+    - sensor.speedtest_upload   
+
+homeassistant:
+  customize:
+    group.network_external:
+      friendly_name: 'Network - External'
