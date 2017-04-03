@@ -14,7 +14,7 @@ sensor:
         value_template: '{% if is_state("device_tracker.esp8266", "home") %}Online{% else %}Offline{% endif %}'
         icon_template: 'mdi: {%- if is_state("device_tracker.esp8266", "home") %}lan-connect{% else %}lan-disconnect{%- endif %}'
 group:
-  Network:
+  network:
     control: hidden
     entities:
     - sensor.speedtest_ping
