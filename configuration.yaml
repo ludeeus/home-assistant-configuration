@@ -42,6 +42,7 @@ sensor: !include_dir_list Sensor/
 ##  Include functions
 #######################################################################################################################################
 #discovery:
+sun:
 frontend:
 updater:
 history:
