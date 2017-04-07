@@ -3,12 +3,14 @@ sensor:
     resources:
       - type: memory_use_percent
       - type: processor_use
-      - type: since_last_boot
+      - type: last_boot
       - type: process
         arg: hass
       - type: process
         arg: mysqld
-    
+      - type: process
+        arg: mosquitto
+        
   - platform: glances
     host: 192.168.1.10
     resources:
@@ -24,7 +26,8 @@ group:
       - sensor.ram_use
       - sensor.process_hass
       - sensor.process_mysqld
-      - sensor.since_last_boot
+      - sensor.process_mosquitto
+      - sensor.last_boot
       - sensor.cpu_use
   winbox:
     entities:
@@ -39,6 +42,7 @@ group:
       - group.network_external
       - group.network_internal
       - group.winbox
+      - group.all_scripts
 
 homeassistant:
   customize:
