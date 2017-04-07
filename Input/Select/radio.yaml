@@ -1,8 +1,0 @@
-name: Velg radiokanal
-options:
-  - "Stopp"
-  - "P4"
-  - "Radio Norge"
-  - "Solør Radio"
-initial: "Stopp"
-icon: mdi:radio

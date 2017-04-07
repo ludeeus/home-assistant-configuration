@@ -1,9 +1,0 @@
-control: hidden
-entities:
-  - sensor.netatmo_inne_co2
-  - sensor.netatmo_inne_humidity
-  - sensor.netatmo_inne_noise
-  - sensor.netatmo_inne_pressure
-  - sensor.netatmo_inne_temperature
-  - sensor.netatmo_ute_humidity
-  - sensor.netatmo_ute_temperature

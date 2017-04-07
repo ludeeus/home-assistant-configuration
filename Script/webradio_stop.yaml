@@ -1,4 +1,0 @@
-alias: Stop webradio
-sequence:
-  - service: media_player.media_stop
-    entity_id: media_player.chrome_cast

@@ -1,4 +1,0 @@
-api_key: !secret netatmo-id
-secret_key: !secret netatmo-secret
-username: !secret netatmo-user
-password: !secret netatmo-password

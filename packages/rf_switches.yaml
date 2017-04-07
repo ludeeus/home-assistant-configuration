@@ -1,0 +1,65 @@
+#######################################################################################################################################
+##  RF Switches
+#######################################################################################################################################
+homeassistant:
+  customize:
+    script.webradio_start:
+      friendly_name: Start webradio
+      hidden: true
+    script.webradio_stop:
+      friendly_name: Stop webradio
+      hidden: true
+    input_select.radio:
+      icon: mdi:radio
+#######################################################################################################################################
+switch:
+  - platform: mqtt
+    name: "rf01"
+    state_topic: "HA/RF/rf01"
+    command_topic: "HA/RF/rf01"
+    payload_on: "4|101|110111010100010101010100"
+    payload_off: "4|101|110111010100010101010001"
+    retain: true
+    
+  - platform: mqtt
+    name: "rf02"
+    state_topic: "HA/RF/rf02"
+    command_topic: "HA/RF/rf02"
+    payload_on: "4|101|110111010101000101010100"
+    payload_off: "4|101|110111010101000101010001"
+    retain: true
+    
+  - platform: mqtt
+    name: "rf03"
+    state_topic: "HA/RF/rf03"
+    command_topic: "HA/RF/rf03"
+    payload_on: "4|101|110111010101010001010100"
+    payload_off: "4|101|110111010101010001010001"
+    retain: true
+    
+  - platform: mqtt
+    name: "rf04"
+    state_topic: "HA/RF/rf04"
+    command_topic: "HA/RF/rf04"
+    payload_on: "4|101|110111010101010100010100"
+    payload_off: "4|101|110111010101010100010001"
+    retain: true
+    
+  - platform: mqtt
+    name: "rf05"
+    state_topic: "HA/RF/rf05"
+    command_topic: "HA/RF/rf05"
+    payload_on: "4|101|111111010100010101010100"
+    payload_off: "4|101|111111010100010101010001"
+    retain: true
+    
+  - platform: mqtt
+    name: "rf06"
+    state_topic: "HA/RF/rf06"
+    command_topic: "HA/RF/rf06"
+    payload_on: "4|101|111111010101000101010100"
+    payload_off: "4|101|111111010101000101010001"
+    retain: true
+#######################################################################################################################################
+
+#######################################################################################################################################

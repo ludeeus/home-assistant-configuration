@@ -1,8 +1,0 @@
-platform: netatmo
-modules:
-  Inne:
-    - temperature
-    - co2
-  Ute:
-    - temperature
-    - battery_vp
