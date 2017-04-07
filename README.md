@@ -1,7 +1,7 @@
 # Home Assistant
 My [Home Assistant](https://home-assistant.io) Config
 
-<img src=https://raw.githubusercontent.com/ludeeus/hass-config/master/Files/hass.PNG></img>
+<img src=https://raw.githubusercontent.com/ludeeus/hass-config/master/Files/ha_overview.gif></img>
 
 ### Devices:
 * Raspberry Pi 3B (Hassbian)
