@@ -1,3 +1,0 @@
-alias: Update files from git
-sequence:
-  - service: shell_command.updatefromgit

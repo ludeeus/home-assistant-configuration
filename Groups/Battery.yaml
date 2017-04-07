@@ -1,5 +1,0 @@
-control: hidden
-entities:
-  - sensor.battery_iphone
-  - sensor.battery_ipad
-  - sensor.battery_netatmo

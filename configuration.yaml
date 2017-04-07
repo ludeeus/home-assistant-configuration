@@ -9,32 +9,41 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Oslo
   customize: !include customize.yaml
-  packages: !include_dir_named Packages
-
+  packages: !include_dir_named packages
+  customize_domain:
+    script:
+      icon: mdi:settings
+    automation:
+      icon: mdi:circle-outline
+  customize_glob:
+    'sensor.glances_*':
+      icon: mdi:windows
+      
 #######################################################################################################################################
 ##  Include files
 #######################################################################################################################################
-binary_sensor: !include Include/binary_sensor.yaml
-camera: !include Include/camera.yaml
-device_tracker: !include Include/device_tracker.yaml
-http: !include Include/http.yaml
-ifttt: !include Include/ifttt.yaml
-media_player: !include Include/media_player.yaml
-mqtt: !include Include/mqtt.yaml
-netatmo: !include Include/netatmo.yaml
-notify: !include Include/notify.yaml
-panel_iframe: !include Include/panel_iframe.yaml
-shell_command: !include Include/shell.yaml
-switch: !include Include/switch.yaml
-tts: !include Include/tts.yaml
+device_tracker:
+  - platform: icloud
+    username: !secret ios-user
+    password: !secret ios-password
+  - platform: owntracks
 
+ifttt:
+  key: !secret ifttt-apikey
+mqtt:
+  broker: 192.168.1.2
+  username: !secret mqtt-user
+  password: !secret mqtt-password
+tts:
+  - platform: google
+    language: 'no'
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
 #######################################################################################################################################
 ##  Include folders
 #######################################################################################################################################
 automation: !include_dir_list Automation/
-group: !include_dir_named Groups/
-input_boolean: !include_dir_named Input/Boolean/
-input_select: !include_dir_named Input/Select/
 script: !include_dir_named Script/
 sensor: !include_dir_list Sensor/
 
@@ -64,36 +73,11 @@ logger:
   default: warning
   logs:
     homeassistant.core: error
-    #homeassistant.setup: critical
-    #homeassistant.components.camera: critical
-    #homeassistant.components.media_player: error
-    #homeassistant.components.binary_sensor.template: error
     
 google:
  client_id: !secret googleid
  client_secret: !secret googlesecret
 
-#######################################################################################################################################
-##  Zones
-#######################################################################################################################################
-zone:
-  name: Home
-  latitude: !secret z1la
-  longitude: !secret z1lo
-  radius: 30
-  icon: mdi:home
-zone 2:
-  name: Skole
-  latitude: !secret z2la
-  longitude: !secret z2lo
-  radius: 250
-  icon: mdi:school
-zone 3:
-  name: Jobb
-  latitude: !secret z3la
-  longitude: !secret z3lo
-  radius: 80
-  icon: mdi:account-multiple
 #######################################################################################################################################
 # End of configuration file
 #######################################################################################################################################

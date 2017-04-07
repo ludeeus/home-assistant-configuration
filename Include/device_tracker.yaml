@@ -1,5 +1,0 @@
-- platform: icloud
-  username: !secret ios-user
-  password: !secret ios-password
-  
-- platform: owntracks

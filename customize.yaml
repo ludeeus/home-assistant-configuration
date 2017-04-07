@@ -37,21 +37,12 @@ switch.rf06:
   icon: mdi:television
 camera.cam01:
   friendly_name: 'Security Cam #01'
-#######################################################
-##  Groups
-#######################################################
-group.all_automations:
-  control: hidden
-  hidden: false
-  friendly_name: Automations
-group.all_scripts:
-  control: hidden
-  hidden: false
-  friendly_name: Script
-#######################################################
-##  Inputs
-#######################################################
-
+device_tracker.iphone:
+  icon: mdi:cellphone-iphone
+device_tracker.ipad:
+  icon: mdi:tablet-ipad
+device_tracker.mqtt_android:
+  icon: mdi:cellphone-android
 #######################################################
 ##  Scripts
 #######################################################
@@ -64,10 +55,6 @@ script.spotify_stue_stop:
   icon: mdi:spotify
 script.spotify_stue_start:
   icon: mdi:spotify
-script.webradio_start:
-  hidden: true
-script.webradio_stop:
-  hidden: true
 script.updatefromgit:
   hidden: true
 #######################################################
@@ -84,6 +71,7 @@ sensor.speedtest_upload:
   icon: mdi:upload
 sensor.phone_to_home:
   friendly_name: Tid til hjemme
+  icon: mdi:walk
 binary_sensor.vaskemaskin:
   hidden: true
 sensor.netatmo_ute_battery:
@@ -100,3 +88,4 @@ sensor.cccommercial:
   hidden: true
 sun.sun:
   hidden: true
+  

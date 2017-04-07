@@ -1,9 +1,0 @@
-alias: Web-radio in the livingroom
-initial_state: 'on'
-trigger:
-  - platform: state
-    entity_id: input_select.radio
-action:
-  - service_template: script.turn_on
-    data_template:
-      entity_id: 'script.webradio_{%if is_state("input_select.radio","Stopp")%}stop{%else%}start{%endif%}'
