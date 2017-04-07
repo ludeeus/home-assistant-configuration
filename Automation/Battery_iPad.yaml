@@ -1,0 +1,14 @@
+alias: 'Battery Alert for iPad'
+initial_state: 'on'
+trigger:
+  - platform: time
+    after: '20:00:00'
+condition:
+  - condition: numeric_state
+    entity_id: sensor.battery_ipad
+    below: 20
+action:
+  - service: notify.all
+    data:
+      title: 'Jarvis'
+      message: 'iPad battery is low, you need to charge.'
