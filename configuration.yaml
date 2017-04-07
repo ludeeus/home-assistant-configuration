@@ -30,7 +30,6 @@ device_tracker:
 
 ifttt:
   key: !secret ifttt-apikey
-media_player: !include Include/media_player.yaml
 mqtt:
   broker: 192.168.1.2
   username: !secret mqtt-user
