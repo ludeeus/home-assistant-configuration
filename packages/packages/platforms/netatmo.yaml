@@ -1,0 +1,41 @@
+#######################################################################################################################################
+##  Netatmo
+#######################################################################################################################################
+homeassistant:
+  customize:
+    group.media_players:
+      friendly_name: 'Media Players'
+#######################################################################################################################################
+netatmo:
+  api_key: !secret netatmo-id
+  secret_key: !secret netatmo-secret
+  username: !secret netatmo-user
+  password: !secret netatmo-password
+#######################################################################################################################################
+binary_sensor:
+  - platform: netatmo
+#######################################################################################################################################
+sensor:
+  - platform: netatmo
+    modules:
+      Inne:
+        - temperature
+        - co2
+      Ute:
+        - temperature
+        - battery_vp
+#######################################################################################################################################
+camera:
+  - platform: netatmo
+#######################################################################################################################################
+group:
+  netatmo:
+    control: hidden
+    entities:
+      - sensor.netatmo_inne_co2
+      - sensor.netatmo_inne_humidity
+      - sensor.netatmo_inne_noise
+      - sensor.netatmo_inne_pressure
+      - sensor.netatmo_inne_temperature
+      - sensor.netatmo_ute_humidity
+      - sensor.netatmo_ute_temperature
