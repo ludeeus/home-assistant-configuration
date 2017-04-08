@@ -1,7 +1,7 @@
 # Home Assistant
 My [Home Assistant](https://home-assistant.io) Config
 
-<img src=https://raw.githubusercontent.com/ludeeus/hass-config/master/Files/hass.PNG></img>
+<img src=https://raw.githubusercontent.com/ludeeus/hass-config/master/files/ha_overview.gif></img>
 
 ### Devices:
 * Raspberry Pi 3B (Hassbian)
@@ -15,8 +15,6 @@ My [Home Assistant](https://home-assistant.io) Config
 * 433mhz RF Outlets (Unkown brand)
 
 ### Additional software
-* <a href="https://github.com/">Git</a>
-* <a href="https://github.com/nfarina/homebridge">Homebridge</a>
 * <a href="https://github.com/dale3h/hassctl">Hassctl</a>
 
 ## Usefull notes
