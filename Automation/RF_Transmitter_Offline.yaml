@@ -1,0 +1,12 @@
+alias: Send alert if RF-Transmitter is offline
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id: sensor.esp8266_1
+    from: 'Online'
+    to: 'Offline'
+action:
+  service: notify.all
+  data:
+    title: 'Jarvis'
+    message: 'RF-Transmitter is down... That is a problem... FIX IT NOW!'

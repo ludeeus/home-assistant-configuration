@@ -1,0 +1,28 @@
+alias: Welcome Home
+initial_state: 'on'
+trigger:
+  - platform: state
+    entity_id:
+      - device_tracker.iphone
+    to: 'home'
+    for: '00:02:00'
+action:
+  - service: tts.google_say
+    entity_id: media_player.cast_audio
+    data_template:
+      language: "en"
+      message: >
+        {% set person = trigger.to_state.attributes.friendly_name%}
+        {%- macro greeting_sentence(person) -%}
+        {{ [
+        "Welcome home " ~ person,
+        "Guess who is home? "  ~ person +" is!",
+        "Attention: " ~ person + " is now in the house.",
+        "Welcome Home " ~ person + ".  We've missed you. or at least Molly did.",
+        "Our home is now complete, Rest your head and relax your feet! Welcome Back " ~ person,
+        "Life is like a song, you’re back where you belong. Welcome home " ~ person,
+        "Hey there " ~ person + " Welcome Home!",
+        person ~ "! You're home!"
+        ] | random }}
+        {%- endmacro -%}
+        "{{greeting_sentence(person)}}"

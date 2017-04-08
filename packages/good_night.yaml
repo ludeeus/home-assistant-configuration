@@ -1,0 +1,15 @@
+#######################################################################################################################################
+##  Good Night
+#######################################################################################################################################
+script:
+  goodnight:
+    alias: 'Good Night'
+    sequence:
+      - service: switch.turn_off
+        entity_id: 
+          - switch.rf02
+      - service: media_player.turn_off
+        entity_id: media_player.yamaha_receiver
+      - service: switch.turn_on
+        entity_id: 
+          - switch.rf04

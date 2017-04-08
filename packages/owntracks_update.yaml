@@ -1,0 +1,20 @@
+#######################################################################################################################################
+##  Owntracks Update (Not sure if this works xD )
+#######################################################################################################################################
+script:
+  owntracks_refresh:
+    alias: 'Owntracks Refresh'
+    sequence:
+      - service: mqtt.publish
+        data:
+          topic: 'owntracks/mqtt/Android/cmd'
+          payload_template: '{"_type":"cmd","action":"reportLocation"}'
+#######################################################################################################################################
+automation:
+  - alias: 'Owntracks Refresh'
+    trigger:
+      - platform: time
+        minutes: '/5'
+        seconds: 0
+    action:
+      - service: script.refresh_devices

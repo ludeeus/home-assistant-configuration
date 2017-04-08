@@ -1,0 +1,32 @@
+#######################################################################################################################################
+##  Sends an notification when the washer is done
+#######################################################################################################################################
+binary_sensor:
+  - platform: template
+    sensors:
+      vaskemaskin:
+        value_template: >-
+          {%- if states.switch.w01.attributes.current_power_w %}
+              {{ states.switch.w01.attributes.current_power_w > 0.4}}
+          {%  else %}
+              0
+          {%- endif %}
+        friendly_name: 'Vaskemaskin'
+#######################################################################################################################################
+automation:
+  - alias: 'Alert when washer is done'
+    initial_state: 'on'
+    trigger:
+      platform: state
+      entity_id: binary_sensor.vaskemaskin
+      from: "on"
+      to: "off"
+    action:
+      - service: notify.pushbullet
+        data:
+          title: 'Jarvis'
+          message: 'Vaskemaskinen er ferdig.'
+#######################################################################################################################################
+wemo:
+  static:
+    - 192.168.1.30
