@@ -39,6 +39,7 @@ group:
       - switch.rf03
       - switch.rf04
       - switch.rf06
+      - switch.desk_lamp
   
 #Views:
   view_master:

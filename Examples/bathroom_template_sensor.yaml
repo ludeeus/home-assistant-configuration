@@ -1,0 +1,24 @@
+#######################################################################################################################################
+##  Bathroom sensor template
+#######################################################################################################################################    
+sensor:
+  - platform: template
+    sensors:
+      bathroom_door:
+        friendly_name: 'Bathroom'
+        value_template: >
+        {%- if  states.binary_sensor.bathroom.state == "1" %}
+          'Occupied'
+        {%- elif states.binary_sensor.bathroom.state == "0" %}
+          'Not occupied'
+        {% else %}
+          'Sensor error'
+        {%- endif %}
+        icon_template: >
+        {%- if  states.binary_sensor.bathroom.state == "1" %}
+          mdi:block-helper
+        {%- elif states.binary_sensor.bathroom.state == "0" %}
+          mdi:emoticon-happy
+        {% else %}
+          mdi:alert
+        {%- endif %}

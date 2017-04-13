@@ -8,6 +8,7 @@ script:
       - service: switch.turn_off
         entity_id: 
           - switch.rf02
+          - switch.desk_lamp
       - service: media_player.turn_off
         entity_id: media_player.yamaha_receiver
       - service: switch.turn_on

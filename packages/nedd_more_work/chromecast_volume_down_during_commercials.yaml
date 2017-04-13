@@ -14,6 +14,10 @@ automation:
     trigger:
       - platform: state
         entity_id: sensor.cccommercial
+        to: 'true'
+      - platform: state
+        entity_id: sensor.cccommercial
+        to: 'false'
     condition:
       - condition: state
         entity_id: media_player.chrome_cast

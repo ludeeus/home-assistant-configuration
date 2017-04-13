@@ -1,0 +1,24 @@
+#######################################################################################################################################
+##  Fix for: Apple TV - Takes control over TV while off/playing Chrome Cast
+#######################################################################################################################################
+automation:
+  - alias: 'Fix for: Apple TV'
+    initial_state: 'on'
+    hide_entity: true
+    trigger:
+      platform: template
+      value_template: '{% if is_state_attr("media_player.yamaha_receiver", "source", "ATV") %}true{% endif %}'
+    condition:
+      condition: or
+      conditions:
+        - condition: state
+          entity_id: media_player.lg_tv_remote
+          state: 'on'
+        - condition: state
+          entity_id: media_player.chrome_cast
+          state: 'playing'
+    action:
+      - service: media_player.select_source
+        entity_id: media_player.yamaha_receiver
+        data:
+          source: 'ChromeCast'

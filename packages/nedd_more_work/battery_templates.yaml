@@ -1,0 +1,11 @@
+#######################################################################################################################################
+##  Battery Templates
+#######################################################################################################################################
+
+sensor:
+  platform: template
+  sensors:
+    battery_netatmo:
+      friendly_name: 'Netatmo ute modul'
+      value_template: '{{states.sensor.netatmo_ute_battery.state}}'
+      icon_template: '{%- if  states.sensor.netatmo_ute_battery.state == "Full" %}mdi:battery{%- elif states.sensor.netatmo_ute_battery.state == "Low" %}mdi:battery-outline{% else %}mdi:battery-50{%- endif %}'

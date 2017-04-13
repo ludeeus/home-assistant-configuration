@@ -51,7 +51,7 @@ script:
       - service: script.tts
         data:
           message: restarter hass
-      - service: shell_command.updatefromgit
+#      - service: shell_command.updatefromgit
       - service: homeassistant.restart
   tts:
     alias: TTS
