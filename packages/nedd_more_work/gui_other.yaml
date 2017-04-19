@@ -24,8 +24,7 @@ group:
   enheter:
     control: hidden
     entities:
-      - device_tracker.iphone
-      - sensor.phone_to_home
+      - sensor.template_iphone
       - device_tracker.ipad
       - device_tracker.mqtt_android
   master:

@@ -22,11 +22,6 @@ input_boolean:
     icon: mdi:volume-off
 #######################################################################################################################################
 sensor:
-  - name: Phone To Home
-    platform: google_travel_time
-    api_key: !secret googleapi
-    origin: device_tracker.iphone
-    destination: zone.home
   - name: cn_joke
     platform: rest
     resource: http://api.icndb.com/jokes/random?firstName=Joakim&lastName=Sorensen
