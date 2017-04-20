@@ -3,26 +3,22 @@
 #######################################################################################################################################
 homeassistant:
   customize:
-    sensor.iphone_battery_level:
+    device_tracker.android_sgs7e:
       hidden: true
-    sensor.iphone_battery_state:
-      hidden: true
-    device_tracker.iphone:
-      hidden: true
-    sensor.phone_to_home_iphone_6:
+    sensor.phone_to_home_android_sgs7e:
       hidden: true
 #######################################################################################################################################
 sensor:
   - platform: template
     sensors:
-      template_iphone:
-        friendly_name: iPhone 6
-        value_template: '{%if (states.device_tracker.iphone.state) != "not_home" %}{{states.device_tracker.iphone.state}}{%- elif is_state("sensor.phone_to_home_iphone_6", "unknown")%}Error getting location{%- else -%}{{states.sensor.phone_to_home_iphone_6.state}} Minutes to home{%- endif %}'
-        icon_template: '{{states.sensor.iphone_battery_level.attributes.icon}}'
+      template_android_sgs7e:
+        friendly_name: Samsung Galaxy S7 Edge
+        value_template: '{%if (states.device_tracker.android_sgs7e.state) != "not_home" %}{{states.device_tracker.android_sgs7e.state}}{%- elif is_state("sensor.phone_to_home_android_sgs7e", "unknown")%}Error getting location{%- else -%}{{states.sensor.phone_to_home_android_sgs7e.state}} Minutes to home{%- endif %}'
+        icon_template: '{%- if  states.device_tracker.android_sgs7e.attributes.battery <= 5 %}mdi:battery-outline{%- elif states.device_tracker.android_sgs7e.attributes.battery >= 95 %}mdi:battery{% else %}mdi:battery-{{(states.device_tracker.android_sgs7e.attributes.battery|float / 10)|round*10}}{%- endif %}'
 #######################################################################################################################################
   - platform: google_travel_time
-    name: Phone To Home iPhone 6
+    name: Phone To Home Android sgs7e
     api_key: !secret googleapi
-    origin: device_tracker.iphone
+    origin: device_tracker.android_sgs7e
     destination: zone.home
 #######################################################################################################################################

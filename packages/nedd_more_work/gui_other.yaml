@@ -25,8 +25,8 @@ group:
     control: hidden
     entities:
       - sensor.template_iphone
+      - sensor.template_android_sgs7e
       - device_tracker.ipad
-      - device_tracker.mqtt_android
   master:
     control: hidden
     entities:
