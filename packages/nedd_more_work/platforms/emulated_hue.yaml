@@ -1,0 +1,8 @@
+emulated_hue:
+  type: alexa
+  expose_by_default: false
+homeassistant:
+  customize:
+    switch.desk_lamp:
+      emulated_hue: true
+      emulated_hue_name: "Desk Lamp"
