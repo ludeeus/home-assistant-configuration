@@ -1,4 +1,0 @@
-media_player:
-  - platform: spotify
-    client_id: !secret spotify-id
-    client_secret: !secret spotify-secret
