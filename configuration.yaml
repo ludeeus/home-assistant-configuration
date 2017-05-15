@@ -1,7 +1,7 @@
 homeassistant:
   name: JARVIS
-  latitude: 60.8833
-  longitude: 11.5667
+  latitude: !secret z1la
+  longitude: !secret z1lo
   elevation: 200
   unit_system: metric
   time_zone: Europe/Oslo
