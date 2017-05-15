@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 # Check if current week is odd/even
 {% set weeknumber= (as_timestamp(now())|timestamp_custom("%W"))|int %}
-=======
+
 # Check if current week is odd/even
 {% set weeknumber= (as_timestamp(now())|timestamp_custom("%W"))|int %}
->>>>>>> 32e93ec188e941241f26ffad7863ec9f27731cdd
 {% if weeknumber is divisibleby 2 %}ev{{'\n'}}en{% else%}odd{% endif %}
