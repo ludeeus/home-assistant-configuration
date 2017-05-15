@@ -3,6 +3,8 @@
 #######################################################################################################################################
 homeassistant:
   customize:
+    automation.webradio_in_the_livingroom:
+      hidden: true
     script.webradio_start:
       friendly_name: Start webradio
       hidden: true

@@ -10,7 +10,7 @@ homeassistant:
 frontend:
 config:
 updater:
-discovery:
+hassio:
 conversation:
 history:
 logbook:
