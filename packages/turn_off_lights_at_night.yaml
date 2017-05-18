@@ -1,9 +1,18 @@
 #######################################################################################################################################
-##  Vacation Mode
+##  Turn off lights at night
 #######################################################################################################################################
-
+homeassistant:
+  customize:
+    automation.turn_off_lights_at_night:
+      hidden: true
 #######################################################################################################################################
-input_boolean:
-  vacation_mode:
-    name: "Aktiver 'Vacation mode'"
-    icon: mdi:airplane-takeoff
+automation:
+  alias: "Turn off lights at night"
+  trigger:
+    platform: time
+    after: "00:01:00"
+  action:
+    service: switch.turn_off
+    entity_id: 
+      - switch.rf05
+      - switch.desk_lamp
