@@ -5,4 +5,3 @@ homeassistant:
   customize_domain:
     automation:
       hidden: false
-      icon: mdi:home
