@@ -4,4 +4,4 @@
 homeassistant:
   customize_domain:
     automation:
-      hidden: false
+      hidden: true
