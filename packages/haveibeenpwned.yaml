@@ -1,9 +1,40 @@
 #######################################################################################################################################
-##  Test
+##  Haveibeenpwned
+#######################################################################################################################################
+homeassistant:
+  customize:
+    automation.alert_if_breaches_are_detected:
+      hidden: true
+  customize_glob:
+    sensor.breaches_*:
+      icon: mdi:alert
+#######################################################################################################################################
+automation:
+  - alias: "Alert if breaches are detected"
+    trigger:
+      - platform: state
+        entity_id: !secret shibp1
+      - platform: state
+        entity_id: !secret shibp2
+      - platform: state
+        entity_id: !secret shibp3
+    action:
+      - service: notify.pushbullet
+        data_template:
+          title: "JARVIS"
+          message: "{{ trigger.to_state.state }} detected on {{ trigger.to_state.name}}" 
+#######################################################################################################################################
+group:
+  haveibeenpwned:
+    name: "';--have i been pwned?"
+    entities:
+      - !secret shibp1
+      - !secret shibp2
+      - !secret shibp3
 #######################################################################################################################################
 sensor:
-  platform: haveibeenpwned
-  email: 
-    - !secret hibp1
-    - !secret hibp2
-    - !secret hibp3
+  - platform: haveibeenpwned
+    email: 
+      - !secret hibp1
+      - !secret hibp2
+      - !secret hibp3
