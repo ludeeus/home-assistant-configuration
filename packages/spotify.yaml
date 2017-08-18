@@ -1,0 +1,4 @@
+media_player:
+  - platform: spotify
+    client_id: 11e***********************95
+    client_secret: 24f*********************9fc
