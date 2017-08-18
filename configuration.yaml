@@ -1,0 +1,23 @@
+homeassistant:
+  name: Home
+  latitude: LATCOR
+  longitude: LONCOR
+  elevation: 5
+  unit_system: metric
+  time_zone: TZ
+  packages: !include_dir_named packages
+  customize:
+config:
+hassio:
+http:
+  api_password: SUPERSECRETPASSWORD
+updater:
+conversation:
+recorder:
+history:
+logbook:
+sun:
+tts:
+  - platform: google
+group: !include groups.yaml
+automation: !include automations.yaml
