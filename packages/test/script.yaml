@@ -1,0 +1,6 @@
+script:
+  test:
+    sequence:
+      service: notify.ios_iphone
+      data:
+        message: "Something happened at home!"
