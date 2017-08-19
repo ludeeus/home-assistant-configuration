@@ -8,7 +8,11 @@ homeassistant:
       hidden: true
     sensor.nestebuss:
       icon: mdi:bus
-
+group:
+  nestebuss:
+    name: '# Ruter'
+    entities:
+      - sensor.nestebuss
 
 sensor:
   - platform: rest
