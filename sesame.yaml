@@ -1,4 +1,0 @@
-lock:
-  - platform: sesame
-    email: !secret gmail
-    password: !secret password1
