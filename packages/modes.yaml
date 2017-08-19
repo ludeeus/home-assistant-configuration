@@ -11,11 +11,12 @@ homeassistant:
 group:
   modes:
     name: 'Modes'
+    control: hidden
     entities:
       - input_boolean.vacation_mode
       - input_boolean.guest_mode
       - input_boolean.workday_tomorrow
-
+#######################################################################################################################################
 automation:
   - alias: "Aktiver 'Workday Tomorrow'"
     initial_state: "on"
