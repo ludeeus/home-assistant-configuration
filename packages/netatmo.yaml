@@ -1,0 +1,14 @@
+homeassistant:
+  customize:
+    camera.ncam01:
+      friendly_name: 'Netatmo cam #01'
+
+netatmo:
+  api_key: !secret netatmo_key
+  secret_key: !secret netatmo_secret
+  username: !secret gmail
+  password: !secret netatmo_password
+  discovery: false
+
+camera:
+  - platform: netatmo
