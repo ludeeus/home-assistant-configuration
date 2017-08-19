@@ -1,2 +1,6 @@
 tts:
   - platform: google
+    language: 'no'
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
