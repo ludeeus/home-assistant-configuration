@@ -1,3 +1,6 @@
+############################################################################
+##  Base `configuration.yaml` most stuff is in ./packages/*.yaml
+############################################################################
 homeassistant:
   name: Home
   latitude: !secret latitude
@@ -6,19 +9,24 @@ homeassistant:
   unit_system: metric
   time_zone: Europe/Oslo
   packages: !include_dir_named packages
+############################################################################
   customize:
     sun.sun:
       hidden: true
     sensor.yr_symbol:
       hidden: true
     group.all_automations:
-      hidden: false
-ios:    
+      hidden: true
+    group.al_scripts:
+      hidden: true
+############################################################################
+ios:
 config:
-hassio:
 updater:
 conversation:
 recorder:
 history:
 logbook:
 sun:
+############################################################################
+

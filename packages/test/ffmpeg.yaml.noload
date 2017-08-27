@@ -1,8 +1,7 @@
 ############################################################################
-## PLEX component
+##  test the ffmpeg comonent - Does not work in 0.52 - HA crash after ~10min
 ############################################################################
-media_player:
-  - platform: plex
-    IP_ADDRESS: 192.168.1.10
-    entity_namespace: 'plex'
+camera:
+  - platform: ffmpeg
+    input: !secret ffmpeg_netatmo_url
 ############################################################################

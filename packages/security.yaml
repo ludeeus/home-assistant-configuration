@@ -1,0 +1,28 @@
+############################################################################
+##  Security: My Alarm system, thives be aware!
+############################################################################
+automation:
+  - alias: 'Motion detected!'
+    trigger:
+      - platform: state
+        entity_id: binary_sensor.home__ncam01_motion
+        from: 'off'
+        to: 'on'
+    condition:
+      condition: or
+      conditions:
+        - condition: state
+          entity_id: input_boolean.not_home
+          state: 'on'
+        - condition: state
+          entity_id: input_boolean.vacation_mode
+          state: 'on'
+    action:
+      - service: notify.ios_iphone
+        data:
+          message: 'Motion detected!'
+          data:
+            push:
+              category: camera
+            entity_id: camera.ncam01
+############################################################################

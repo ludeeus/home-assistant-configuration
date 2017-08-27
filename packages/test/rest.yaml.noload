@@ -1,8 +1,9 @@
 ############################################################################
-## PLEX component
+## Getting last value in json array
 ############################################################################
-media_player:
-  - platform: plex
-    IP_ADDRESS: 192.168.1.10
-    entity_namespace: 'plex'
+sensor:
+  - platform: rest
+    resource: https://davehakkens.nl/wp-json/map/v1/pins
+    name: test
+    value_template: 'ID: {{ value_json[-1].ID}} Name: {{ value_json[-1].name}}'
 ############################################################################

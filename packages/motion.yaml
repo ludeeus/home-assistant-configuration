@@ -1,8 +1,11 @@
 ############################################################################
-## PLEX component
+##  Motion detection
 ############################################################################
-media_player:
-  - platform: plex
-    IP_ADDRESS: 192.168.1.10
-    entity_namespace: 'plex'
+group:
+  motion:
+    name: Motion
+    entities:
+      - binary_sensor.home__ncam01_motion
+      - binary_sensor.home__ncam01_someone_known
+      - binary_sensor.home__ncam01_someone_unknown
 ############################################################################

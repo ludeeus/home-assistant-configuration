@@ -1,13 +1,13 @@
-#######################################################################################################################################
-##  Modes
-#######################################################################################################################################
+############################################################################
+##  
+############################################################################
 homeassistant:
   customize:
     automation.aktiver_workday_tomorrow:
       hidden: true
     automation.deaktiver_workday_tomorrow:
       hidden: true
-#######################################################################################################################################
+############################################################################
 group:
   modes:
     name: 'Modes'
@@ -17,7 +17,7 @@ group:
       - input_boolean.guest_mode
       - input_boolean.workday_tomorrow
       - input_boolean.not_home
-      
+############################################################################      
 automation:
   - alias: "Aktiver 'Workday Tomorrow'"
     initial_state: "on"
@@ -38,7 +38,7 @@ automation:
     action:
       - service: homeassistant.turn_on
         entity_id: input_boolean.workday_tomorrow
-#--------------------------------------------------------------    
+#---------------------------------------------------------------------------
   - alias: "Deaktiver 'Workday Tomorrow'"
     initial_state: "on"
     trigger:
@@ -55,17 +55,21 @@ automation:
     action:
       - service: homeassistant.turn_off
         entity_id: input_boolean.workday_tomorrow
-#######################################################################################################################################
+#---------------------------------------------------------------------------
 input_boolean:
   vacation_mode:
     name: "Aktiver 'Vacation mode'"
     icon: mdi:airplane-takeoff
+#---------------------------------------------------------------------------
   guest_mode:
     name: "Aktiver 'Guest mode'"
     icon: mdi:account-off
+#---------------------------------------------------------------------------
   workday_tomorrow:
     name: "Aktiver 'Workday Tomorrow'"
     icon: mdi:factory
+#---------------------------------------------------------------------------
   not_home:
     name: "Aktiver 'Not Home'"
     icon: mdi:home-outline
+############################################################################
