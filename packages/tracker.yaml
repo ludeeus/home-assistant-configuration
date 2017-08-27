@@ -1,6 +1,20 @@
 ############################################################################
 ##  Tracker
 ############################################################################
+automation:
+  - alias: 'Set "Not Home" mode'
+    trigger:
+      platform: state
+      entity_id: device_tracker.iphone
+    action:
+      service_template: >
+        {% if is_state("device_tracker.iphone", "home") %}
+        input_boolean.turn_off
+        {%- else -%}
+        input_boolean.turn_on
+        {%- endif %}
+      entity_id: input_boolean.not_home
+############################################################################
 group:
   tracker:
     name: Tracker
