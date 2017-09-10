@@ -15,4 +15,14 @@ group:
     name: Admin
     entities:
       - group.logger_input_select_card
+#---------------------------------------------------------------------------
+  lights_view:
+    view: yes
+    icon: mdi:lightbulb
+    entities:
+      - group.hue_lights
+      - group.ikea_lights
+      - group.hallway_lights
+      - group.kitchen_lights
+      - group.livingroom_lights
 ############################################################################

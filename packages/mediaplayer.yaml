@@ -1,7 +1,9 @@
 ############################################################################
-##  test the ffmpeg comonent - Does not work in 0.53 - HA crash after ~10min
+##  Media players
 ############################################################################
-camera:
-  - platform: ffmpeg
-    input: !secret ffmpeg_netatmo_url
+media_player:
+  - platform: spotify
+    client_id: !secret spotify_id
+    client_secret: !secret spotify_secret
+  - platform: cast
 ############################################################################
