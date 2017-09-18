@@ -1,6 +1,9 @@
 ############################################################################
 ## Hassbian-Config Scripts
 ############################################################################
+# For this to work the homeassistant user need to be allowed to use ssh without password:
+# https://github.com/ludeeus/Home-Assistant-Config/wiki#ssh-from-homeassistant-user
+############################################################################
 group:
   hassbian_config:
     name: 'Hassbian-Config'
