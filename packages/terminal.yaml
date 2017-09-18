@@ -5,5 +5,5 @@ panel_iframe:
   terminal:
     title: 'Terminal'
     icon: mdi:console
-    url: 'http://hassbian.local:4200/'
+    url: 'https://hassbian.local:4200/'
 ############################################################################
