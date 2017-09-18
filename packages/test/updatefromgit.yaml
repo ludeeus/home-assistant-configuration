@@ -2,7 +2,8 @@ shell_command:
   updatefromgit: cd /home/homeassistant/.homeassistant && git fetch --all && git reset --hard origin/Configuration
 
 script:
-  alias: 'Update from GIT && Restart HA'
-  sequence:
-    - service: shell_command.updatefromgit
-    - service: homeassistant.restart
+  update_and_restart:
+    alias: 'Update from GIT && Restart HA'
+    sequence:
+      - service: shell_command.updatefromgit
+      - service: homeassistant.restart
