@@ -6,3 +6,4 @@ secrets.yaml
 known_devices.yaml
 *.conf
 *.spotify-token-cache
+*.db
