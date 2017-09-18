@@ -8,10 +8,20 @@ group:
   hassbian_config:
     name: 'Hassbian-Config'
     entities:
-      - shell_command.hc_upgrade_ha
-      - shell_command.hc_upgrade_hc
+      - script.hc_upgrade_ha
+      - script.hc_upgrade_hs
+############################################################################
+script:
+  hc_upgrade_ha:
+    alias: 'Hassbian-Config "Upgrade Home-Assistant"'
+    sequence:
+      - service: shell_command.hc_upgrade_ha
+  hc_upgrade_hs:
+    alias: 'Hassbian-Config "Upgrade Hassbian-Scripts"'
+    sequence:
+      - service: shell_command.hc_upgrade_ha
 ############################################################################
 shell_command:
   hc_upgrade_ha: ssh pi@127.0.0.1 && sudo hassbian-config upgrade home-assistant
-  hc_upgrade_hc: ssh pi@127.0.0.1 && sudo hassbian-config upgrade hassbian-script
+  hc_upgrade_hs: ssh pi@127.0.0.1 && sudo hassbian-config upgrade hassbian-script
 ############################################################################
