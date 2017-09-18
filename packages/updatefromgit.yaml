@@ -1,0 +1,13 @@
+############################################################################
+## Uppdate config from Github and restart Home-Assistant
+############################################################################
+shell_command:
+  updatefromgit: cd /home/homeassistant/.homeassistant && git fetch --all && git reset --hard origin/Configuration
+############################################################################
+script:
+  update_and_restart:
+    alias: 'Update from GIT && Restart HA'
+    sequence:
+      - service: shell_command.updatefromgit
+      - service: homeassistant.restart
+############################################################################
