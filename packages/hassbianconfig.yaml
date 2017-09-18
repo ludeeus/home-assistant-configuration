@@ -7,6 +7,7 @@
 group:
   hassbian_config:
     name: 'Hassbian-Config'
+    control: hidden
     entities:
       - script.hc_upgrade_ha
       - script.hc_upgrade_hs
