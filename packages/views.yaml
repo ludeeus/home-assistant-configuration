@@ -33,4 +33,5 @@ group:
       - group.modes
       - group.nestebuss
       - script.good_night
+      - script.update_and_restart
 ############################################################################
