@@ -1,0 +1,14 @@
+############################################################################
+## Hassbian-Config Scripts
+############################################################################
+group:
+  hassbian_config:
+    name: 'Hassbian-Config'
+    entities:
+      - shell_command.hc_upgrade_ha
+      - shell_command.hc_upgrade_hc
+############################################################################
+shell_command:
+  hc_upgrade_ha: ssh pi@127.0.0.1 && sudo hassbian-config upgrade home-assistant
+  hc_upgrade_hc: ssh pi@127.0.0.1 && sudo hassbian-config upgrade hassbian-script
+############################################################################
