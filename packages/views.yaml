@@ -15,6 +15,7 @@ group:
     name: Admin
     entities:
       - group.logger_input_select_card
+      - group.hassbian_config
 #---------------------------------------------------------------------------
   lights_view:
     view: yes
