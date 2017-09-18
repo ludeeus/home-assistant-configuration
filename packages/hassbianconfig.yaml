@@ -14,11 +14,11 @@ group:
 ############################################################################
 script:
   hc_upgrade_ha:
-    alias: 'Hassbian-Config "Upgrade Home-Assistant"'
+    alias: 'Upgrade Home-Assistant'
     sequence:
       - service: shell_command.hc_upgrade_ha
   hc_upgrade_hs:
-    alias: 'Hassbian-Config "Upgrade Hassbian-Scripts"'
+    alias: 'Upgrade Hassbian-Scripts'
     sequence:
       - service: shell_command.hc_upgrade_ha
 ############################################################################
