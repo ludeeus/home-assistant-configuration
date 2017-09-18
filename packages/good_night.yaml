@@ -1,0 +1,15 @@
+############################################################################
+## Good Night Seequence
+############################################################################
+script:
+  good_night:
+    alias: Good Night
+    sequence:
+      - service: switch.turn_off
+        data:
+          entity_id: switch.w01
+      - delay: '00:00:20'
+      - service: light.turn_off
+        data:
+          entity_id: light.i01, light.i02, light.i03, light.i04, light.h01, light.h02, light.h03, light.h04
+############################################################################

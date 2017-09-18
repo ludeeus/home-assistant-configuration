@@ -4,17 +4,20 @@
 automation:
   - alias: 'Turn off ligths when I leave'
     trigger:
-      platform: state
-      entity_id: input_boolean.not_home
-      to: 'on'
+      - platform: state
+        entity_id: input_boolean.not_home
+        to: 'on'
     action:
       service: homeassistant.turn_off
       entity_id: group.all_lights
   - alias: 'Turn on ligths when there is motion'
     trigger:
-      platform: state
-      entity_id: binary_sensor.home__ncam01_motion, binary_sensor.home__ncam01_someone_known, binary_sensor.home__ncam01_someone_unknown
-      to: 'on'
+      - platform: state
+        entity_id: binary_sensor.home__ncam01_motion, binary_sensor.home__ncam01_someone_known, binary_sensor.home__ncam01_someone_unknown
+        to: 'on'
+      - platform: state
+        entity_id: input_boolean.not_home
+        to: 'off'
     action:
       service: homeassistant.turn_on
       entity_id: group.all_lights

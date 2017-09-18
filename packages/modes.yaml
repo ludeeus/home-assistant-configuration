@@ -17,6 +17,7 @@ group:
       - input_boolean.guest_mode
       - input_boolean.workday_tomorrow
       - input_boolean.not_home
+      - input_boolean.working_from_home
 ############################################################################      
 automation:
   - alias: "Aktiver 'Workday Tomorrow'"
@@ -58,18 +59,22 @@ automation:
 #---------------------------------------------------------------------------
 input_boolean:
   vacation_mode:
-    name: "Aktiver 'Vacation mode'"
+    name: "Vacation mode"
     icon: mdi:airplane-takeoff
 #---------------------------------------------------------------------------
   guest_mode:
-    name: "Aktiver 'Guest mode'"
+    name: "Guest mode"
     icon: mdi:account-off
 #---------------------------------------------------------------------------
   workday_tomorrow:
-    name: "Aktiver 'Workday Tomorrow'"
+    name: "Workday Tomorrow"
     icon: mdi:factory
 #---------------------------------------------------------------------------
   not_home:
-    name: "Aktiver 'Not Home'"
+    name: "Not Home"
     icon: mdi:home-outline
+#---------------------------------------------------------------------------
+  working_from_home:
+    name: "Working From Home"
+    icon: mdi:home
 ############################################################################
