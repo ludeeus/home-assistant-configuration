@@ -16,6 +16,7 @@ group:
     entities:
       - group.logger_input_select_card
       - group.hassbian_config
+      - script.update_and_restart
 #---------------------------------------------------------------------------
   lights_view:
     view: yes
