@@ -1,0 +1,42 @@
+############################################################################
+##  Configuration for the Broadlin RM Mini3 IR Sender
+############################################################################
+group:
+  ir_devices:
+    control: hidden
+    name: 'IR Devices'
+    entities:
+      - script.tv_power
+      - script.fan_power
+      - script.fan_speed
+############################################################################
+switch:
+  - platform: broadlink
+    host: 192.168.1.188
+    mac: "34:EA:34:E3:BF:B4"
+############################################################################
+script:
+  tv_power:
+    alias: 'TV - Power'
+    sequence:
+      - service: broadlink.send_packet_192_168_1_188
+        data:
+          packet: 
+            - "JgBwAAABKZITEhMSEzcTEhMSEhMSEhMSEzcTNxITEjcTNxM3EjcTNxMSExISExI3ExITEhMSExISNxM3EzcSExI3EzcTNxI3EwAFJwABKkgTAAxZAAEpSRMADFgAASlJEwAMVQABLEkSAAxZAAEpSRIADQUAAAAAAAAAAA=="
+#---------------------------------------------------------------------------
+  fan_power:
+    alias: 'Livingroom Fan - Power'
+    sequence:
+      - service: broadlink.send_packet_192_168_1_188
+        data:
+          packet: 
+            - "JgDCACkOKQ4NKykOKA8OKQ8pDCsMKw4pDikp7CkOKBAMKikPKA8NKg0qDikNKw0qDSop6yoOKA8NKigQJw8OKgwrDSoOKQ4pDiop6ioOKQ4OKigQKQ0NKg0rDCsNKg0qDikq6ioOKQ4OKSkPKQ4MKw4pDikOKg0qDSop6ykOKg4NKigOKg0PKgwrDSoOKQ4pDSso7CkOKA8NKykOKA8PKA4pDioMKw4pDikp6ykMLA4OKSgQKA8MKw0qDSoOKg0qDSooAA0FAAAAAAAA=="
+#---------------------------------------------------------------------------
+  fan_speed:
+    alias: 'Livingroom Fan - Speed'
+    sequence:
+      - service: broadlink.send_packet_192_168_1_188
+        data:
+          packet: 
+            - "JgAEASgPKQ8NKikOKA8NKg4qDSoOKQ4pKQ8NAAEHKA8pDwwqKg4oDw0qDSoNKw0qDikoEAwAAQcpDykMDispDikPDCsNKg0qDikOKikPDAABBykOKQ8NKigPKQ4OKQ0rDCsNKg0qKQ8MAAEIKQ8nDw4pKg4pDg0rDCoNKg4qDSopDwwAAQcpDykODSopDikPDSoNKg0qDikOKikODQABByoOKA4NKygPKQ4NKg4qDCsOKQ4pKQ8NAAEHKA8pDwwqKQ8pDg4pDikNKg0rDSooDw4AAQYpDioODSopDigQDSoMKw4pDikOKSkPDQABBygPKQ8NKikOKBANKQ4pDSsNKg0qKA8NAA0FAAAAAA==" 
+############################################################################

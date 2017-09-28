@@ -1,5 +1,5 @@
 ############################################################################
-##  test the ffmpeg comonent - Does not work in 0.53 - HA crash after ~10min
+##  test the ffmpeg comonent - Does not work HA crash after ~10min
 ############################################################################
 camera:
   - platform: ffmpeg

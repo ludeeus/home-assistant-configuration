@@ -3,7 +3,7 @@
 ############################################################################
 sensor:
   - platform: rest
-    resource: https://davehakkens.nl/wp-json/map/v1/pins
+    resource: https://api.site.com/v1/GetStuff
     name: test
     value_template: 'ID: {{ value_json[-1].ID}} Name: {{ value_json[-1].name}}'
 ############################################################################

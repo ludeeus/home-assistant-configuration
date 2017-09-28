@@ -8,8 +8,10 @@ automation:
         entity_id: input_boolean.not_home
         to: 'on'
     action:
-      service: homeassistant.turn_off
-      entity_id: group.all_lights
+      - service: homeassistant.turn_off
+        entity_id: group.all_lights
+      - service: homeassistant.turn_off
+        entity_id: switch.w01
   - alias: 'Turn on ligths when there is motion'
     trigger:
       - platform: state
@@ -19,6 +21,8 @@ automation:
         entity_id: input_boolean.not_home
         to: 'off'
     action:
-      service: homeassistant.turn_on
-      entity_id: group.all_lights
+      - service: homeassistant.turn_on
+        entity_id: group.all_lights
+      - service: homeassistant.turn_on
+        entity_id: switch.w01
 ############################################################################
