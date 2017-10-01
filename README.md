@@ -9,5 +9,3 @@ RaspberryPi 3 running the [Hassbian](https://home-assistant.io/docs/installation
 
 ## Usefull notes
 ### [See WIKI](https://github.com/ludeeus/hass-config/wiki)
-
-<script src="https://gist.github.com/ludeeus/89376d1243be337010ecafb7d1e774d7.js"></script>
