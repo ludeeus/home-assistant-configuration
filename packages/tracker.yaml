@@ -26,8 +26,10 @@ group:
     entities:
       - device_tracker.00155d010a01
       - device_tracker.3ccd93dfb53d
+      - device_tracker.686359c9e5ad
       - device_tracker.70ee50061284
       - device_tracker.94103e3e8f31
+      - device_tracker.b827eb88db7a
       - device_tracker.b827ebee3dd8
       - device_tracker.broadlink_rmminie3bfb4
       - device_tracker.chromecastaudio

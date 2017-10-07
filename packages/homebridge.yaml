@@ -1,9 +1,11 @@
 ############################################################################
-## WebTerminal
+## Homebridge
 ############################################################################
-panel_iframe:
-  terminal:
-    title: 'Terminal'
-    icon: mdi:console
-    url: 'http://192.168.1.20:4200/'
+homeassistant:
+  customize:
+    switch.w01:
+      homebridge_visible: true
+  customize_domain:
+    light:
+      homebridge_visible: true
 ############################################################################

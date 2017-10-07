@@ -27,6 +27,7 @@ group:
       - group.hallway_lights
       - group.kitchen_lights
       - group.livingroom_lights
+      - group.bedroom_lights
       
   hallway_view:
     view: yes

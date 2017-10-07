@@ -25,6 +25,7 @@ config:
 updater:
 conversation:
 recorder:
+  db_url: mysql://homeassistantuser:password@localhost/homeassistant
 history:
 logbook:
 sun:

@@ -2,7 +2,7 @@
 ##  Logger control
 ############################################################################
 logger:
-  default: warn
+  default: critical
   logs:
     homeassistant.components.camera: critical
     homeassistant.components.sun: critical
