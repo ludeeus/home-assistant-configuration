@@ -13,14 +13,14 @@ group:
 ############################################################################
 switch:
   - platform: broadlink
-    host: 192.168.1.80
+    host: 192.168.2.80
     mac: "34:EA:34:E3:BF:B4"
 ############################################################################
 script:
   tv_power:
     alias: 'TV - Power'
     sequence:
-      - service: broadlink.send_packet_192_168_1_80
+      - service: broadlink.send_packet_192_168_2_80
         data:
           packet: 
             - "JgBwAAABKZITEhMSEzcTEhMSEhMSEhMSEzcTNxITEjcTNxM3EjcTNxMSExISExI3ExITEhMSExISNxM3EzcSExI3EzcTNxI3EwAFJwABKkgTAAxZAAEpSRMADFgAASlJEwAMVQABLEkSAAxZAAEpSRIADQUAAAAAAAAAAA=="
@@ -28,7 +28,7 @@ script:
   fan_power:
     alias: 'Livingroom Fan - Power'
     sequence:
-      - service: broadlink.send_packet_192_168_1_80
+      - service: broadlink.send_packet_192_168_2_80
         data:
           packet: 
             - "JgDCACkOKQ4NKykOKA8OKQ8pDCsMKw4pDikp7CkOKBAMKikPKA8NKg0qDikNKw0qDSop6yoOKA8NKigQJw8OKgwrDSoOKQ4pDiop6ioOKQ4OKigQKQ0NKg0rDCsNKg0qDikq6ioOKQ4OKSkPKQ4MKw4pDikOKg0qDSop6ykOKg4NKigOKg0PKgwrDSoOKQ4pDSso7CkOKA8NKykOKA8PKA4pDioMKw4pDikp6ykMLA4OKSgQKA8MKw0qDSoOKg0qDSooAA0FAAAAAAAA=="
@@ -36,7 +36,7 @@ script:
   fan_speed:
     alias: 'Livingroom Fan - Speed'
     sequence:
-      - service: broadlink.send_packet_192_168_1_80
+      - service: broadlink.send_packet_192_168_2_80
         data:
           packet: 
             - "JgAEASgPKQ8NKikOKA8NKg4qDSoOKQ4pKQ8NAAEHKA8pDwwqKg4oDw0qDSoNKw0qDikoEAwAAQcpDykMDispDikPDCsNKg0qDikOKikPDAABBykOKQ8NKigPKQ4OKQ0rDCsNKg0qKQ8MAAEIKQ8nDw4pKg4pDg0rDCoNKg4qDSopDwwAAQcpDykODSopDikPDSoNKg0qDikOKikODQABByoOKA4NKygPKQ4NKg4qDCsOKQ4pKQ8NAAEHKA8pDwwqKQ8pDg4pDikNKg0rDSooDw4AAQYpDioODSopDigQDSoMKw4pDikOKSkPDQABBygPKQ8NKikOKBANKQ4pDSsNKg0qKA8NAA0FAAAAAA==" 
@@ -44,7 +44,7 @@ script:
   fan_tilt:
     alias: 'Livingroom Fan - Tilt'
     sequence:
-      - service: broadlink.send_packet_192_168_1_80
+      - service: broadlink.send_packet_192_168_2_80
         data:
           packet:  
             - "JgDUASkKLQwQKSoOKQ4OKQ4pKg4MKw0qDikOAAEGKg4pDg0qKQ4qDQ4qDSopDg0qDSsNKg0AAQcpDikODiopDikODSoNKykODCsOKQ4pDQABCCoNKA8NKioOKA8NKg4pKg0NKw0qDSoOAAEGKg0qDg0qKQ4pDg0rDSopDg4pDikNKw0AAQcpDygODSoqDikODSoNKikPDCsNKg4pDQABBysNKQ4NKikPKQ4MKw4pKA8OKgwrDSoNAAEHKQ4qDgwrKQ4pDg0rDSopDg0qDSoOKg0AAQcoDykODSoqDygODSoOKSoODCsNKg0qDgABBioOKQ4NKikOKQ8NKg0qKQ8NKQ4qDCsNAAEHKA8pDw0qKQ4oDw0qDiopDg4pDikOKg0AAQcpDygODSopECgPDSkNKikPDSoNKg0qDgABBioPKA4NKikPKQ4NKg0qKA8NKg4qDSoNAAEHKQ4pDg0rKQ4pDg0qDiopDw0pDikOKQ0AAQgpDygODSoqDikPDCoOKSkPDCsMKw4pDgABBikOKg4NKikOKQ4NKw0qKQ8MKg0rDSoNAAEHKA8pDwwrKQ8oDg4pDiooDwwrDikOKQ4AAQcoDykODSopDikPDCsOKSoNDioNKg0qDgANBQ4qDSo=="

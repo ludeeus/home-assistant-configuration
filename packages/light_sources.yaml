@@ -2,12 +2,12 @@
 ##  Light Sources
 ############################################################################
 tradfri:
-  host: 192.168.1.101
+  host: 192.168.2.61
   api_key: !secret tradfri
   allow_tradfri_groups: false
 light:
   - platform: hue
-    host: 192.168.1.223
+    host: 192.168.2.60
     allow_unreachable: true
     allow_hue_groups: false
 
