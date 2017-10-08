@@ -25,7 +25,7 @@ Used to further develop the toolset [`hassbian-config`](https://github.com/home-
 - iPhone
 - iPad
 - Yamaha Reiciever
-- Broadlink RM mini
+- Broadlink RM mini 3
   - Fan
   - LG TV
 - 4 Philips hue
