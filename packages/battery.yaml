@@ -9,4 +9,5 @@ group:
       - sensor.joakims_ipad_battery_level
       - sensor.iphone_battery_state
       - sensor.joakims_ipad_battery_state
+      - sensor.tradfri_remote_control
 ############################################################################
