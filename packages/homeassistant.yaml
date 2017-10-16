@@ -1,17 +1,6 @@
 ############################################################################
 ## HA Sensors, "borrowed" from @dale3h
 ############################################################################
-homeassistant:
-  customize:
-    sensor.avgang:
-      hidden: true
-    sensor.avgang_source:
-      hidden: true
-    sensor.linje__retning:
-      hidden: true
-    sensor.nestebuss:
-      icon: mdi:bus
-############################################################################
 group:
   home_assistant:
     name: 'Home-Assistant'
