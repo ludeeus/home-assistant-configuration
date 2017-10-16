@@ -8,4 +8,7 @@ http:
     - 192.168.2.0/24
   ip_ban_enabled: True
   login_attempts_threshold: 5
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
 ############################################################################
