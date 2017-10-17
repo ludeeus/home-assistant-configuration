@@ -15,20 +15,19 @@ group:
     name: Admin
     entities:
       - group.logger_input_select_card
-      - group.hassbian_config
+      - group.hassbian
+      - group.home_assistant
       - script.update_and_restart
 #---------------------------------------------------------------------------
   lights_view:
     view: yes
     icon: mdi:lightbulb
     entities:
-      - group.hue_lights
-      - group.ikea_lights
       - group.hallway_lights
       - group.kitchen_lights
       - group.livingroom_lights
       - group.bedroom_lights
-      
+
   hallway_view:
     view: yes
     icon: mdi:crop-portrait
