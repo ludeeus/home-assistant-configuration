@@ -12,26 +12,6 @@ light:
     allow_hue_groups: false
 
 group:
-  hue_lights:
-    entities:
-      - light.h01
-      - light.h02
-      - light.h03
-      - light.h04
-  ikea_lights:
-    entities:
-      - light.i01
-      - light.i02
-      - light.i03
-      - light.i04
-      - light.i05
-      - light.i06
-      - light.i07
-      - light.i08
-      - light.i09
-      - light.i10
-      - light.i11
-      - light.i12
   hallway_lights:
     entities:
       - light.i01
@@ -40,19 +20,19 @@ group:
       - light.i04
   kitchen_lights:
     entities:
-      - light.h02
       - light.i05
       - light.i06
       - light.i07
       - light.i08
+      - light.i11
   livingroom_lights:
-    entities:
-      - light.h01
-      - light.h03
-      - light.h04
-  bedroom_lights:
     entities:
       - light.i09
       - light.i10
-      - light.i11
       - light.i12
+  bedroom_lights:
+    entities:
+      - light.h01
+      - light.h02
+      - light.h03
+      - light.h04
