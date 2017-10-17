@@ -9,20 +9,20 @@ script:
         data:
           entity_id: switch.w01
       - delay: '00:00:05'
-      - service: light.turn_off
+      - service: homeassistant.turn_off
         data:
-          entity_id: light.i01, light.i02, light.i03, light.i04
+          entity_id: group.hallway_lights
       - delay: '00:00:10'
-      - service: light.turn_off
+      - service: homeassistant.turn_off
         data:
-          entity_id: light.h01, light.h03, light.h04
+          entity_id: group.livingroom_lights
       - delay: '00:00:10'
-      - service: light.turn_off
+      - service: homeassistant.turn_off
         data:
-          entity_id: light.h02, light.i05, light.i06, light.i07, light.i08
+          entity_id: group.kitchen_lights
       - delay: '00:04:00'
-      - service: light.turn_off
+      - service: homeassistant.turn_off
         data:
-          entity_id: light.i09, light.i10, light.i11, light.i12
+          entity_id: group.bedroom_lights
 
 ############################################################################
