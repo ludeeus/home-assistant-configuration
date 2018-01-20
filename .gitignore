@@ -1,10 +1,5 @@
 *
 !*.yaml
-!scenes
 !.gitignore
 secrets.yaml
-known_devices.yaml
 ip_bans.yaml
-*.conf
-*.spotify-token-cache
-*.db
