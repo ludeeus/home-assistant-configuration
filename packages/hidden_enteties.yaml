@@ -1,0 +1,18 @@
+homeassistant:
+  customize:
+    device_tracker.iphone:
+      hidden: true
+    media_player.chrome_cast:
+      hidden: true
+    media_player.mediabox:
+      hidden: true
+    media_player.stua_atv:
+      hidden: true
+    remote.stua_atv:
+      hidden: true
+    sensor.iphone_battery_level:
+      hidden: true
+    sensor.iphone_battery_state:
+      hidden: true
+    sun.sun:
+      hidden: true
