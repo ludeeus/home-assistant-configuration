@@ -1,11 +1,10 @@
 ############################################################################
-## Hidden entities
+## Homebridge
 ############################################################################
 homeassistant:
-  customize_glob: # Hide eveyting.
-    "*.*":
-      hidden: true
-  customize: # Opt-in the stuff I actually want to show.
-    light.bathroom:
-      hidden: false
+  customize_domain:
+    switch:
+      homebridge_visible: true
+    light:
+      homebridge_visible: true
 ############################################################################

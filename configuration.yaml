@@ -10,15 +10,6 @@ homeassistant:
   time_zone: Europe/Oslo
   packages: !include_dir_named packages
 ############################################################################
-ios:
-discovery:
-config:
-updater:
-conversation:
-history:
-logbook:
-sun:
-############################################################################
 http:
   api_password: !secret http_password
   trusted_networks:
@@ -29,3 +20,25 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
   base_url: !secret base_url
+############################################################################
+ios:
+discovery:
+config:
+updater:
+conversation:
+history:
+logbook:
+sun:
+############################################################################
+
+
+############################################################################
+##  Hubs
+############################################################################
+netatmo:
+  api_key: !secret netatmo_key
+  secret_key: !secret netatmo_secret
+  username: !secret gmail
+  password: !secret netatmo_password
+  discovery: false
+############################################################################
