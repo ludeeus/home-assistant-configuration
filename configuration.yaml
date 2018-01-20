@@ -1,5 +1,5 @@
 ############################################################################
-##  Base `configuration.yaml` most stuff is in ./packages/*.yaml
+##  Base `configuration.yaml` most stuff is in packages/*.yaml
 ############################################################################
 homeassistant:
   name: Home
