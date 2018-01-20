@@ -21,17 +21,21 @@ homeassistant:
       hidden: true
 ############################################################################
 ios:
+discovery:
 config:
 updater:
 conversation:
-recorder:
-  db_url: mysql://homeassistantuser:password@localhost/homeassistant
 history:
 logbook:
 sun:
 ############################################################################
-mqtt:
-  broker: 127.0.0.1
-  username: debian
-  password: debian
-  port: 1883
+http:
+  api_password: !secret http_password
+  trusted_networks:
+    - 127.0.0.1
+    - 192.168.2.0/24
+  ip_ban_enabled: true
+  login_attempts_threshold: 5
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url

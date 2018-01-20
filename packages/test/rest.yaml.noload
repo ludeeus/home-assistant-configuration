@@ -1,9 +1,0 @@
-############################################################################
-## Getting last value in json array
-############################################################################
-sensor:
-  - platform: rest
-    resource: https://api.site.com/v1/GetStuff
-    name: test
-    value_template: 'ID: {{ value_json[-1].ID}} Name: {{ value_json[-1].name}}'
-############################################################################
