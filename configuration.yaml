@@ -10,16 +10,6 @@ homeassistant:
   time_zone: Europe/Oslo
   packages: !include_dir_named packages
 ############################################################################
-  customize:
-    sun.sun:
-      hidden: true
-    sensor.yr_symbol:
-      hidden: true
-    group.all_automations:
-      hidden: true
-    group.al_scripts:
-      hidden: true
-############################################################################
 ios:
 discovery:
 config:
