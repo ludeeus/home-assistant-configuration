@@ -1,0 +1,8 @@
+############################################################################
+##  MQTT Statestream
+############################################################################
+mqtt_statestream:
+  base_topic: homeassistant
+  include:
+    entities:
+      - alarm_control_panel.house

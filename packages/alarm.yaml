@@ -6,12 +6,6 @@ sensor:
     name: "Alarm"
     state_topic: "homeassistant/alarm_control_panel/house/state"
 ############################################################################
-mqtt_statestream:
-  base_topic: homeassistant
-  include:
-    entities:
-      - alarm_control_panel.house
-############################################################################
 panel_custom:
    - name: alarm
      sidebar_title: Alarm
