@@ -1,0 +1,74 @@
+############################################################################
+##  Modes
+############################################################################
+group:
+  modes:
+    name: 'Modes'
+    control: hidden
+    entities:
+      - input_boolean.vacation_mode
+      - input_boolean.guest_mode
+      - input_boolean.workday_tomorrow
+      - input_boolean.not_home
+      - input_boolean.working_from_home
+############################################################################
+automation:
+  - alias: "Activate 'Workday Tomorrow mode'"
+    initial_state: !secret automation
+    trigger:
+      platform: time
+      at: "20:00:00"
+    condition:
+      - condition: time
+        weekday:
+          - sun
+          - mon
+          - tue
+          - wed
+          - thu
+      - condition: state
+        entity_id: input_boolean.vacation_mode
+        state: "off"
+    action:
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.workday_tomorrow
+#---------------------------------------------------------------------------
+  - alias: "Deactivate 'Workday Tomorrow mode'"
+    initial_state: !secret automation
+    trigger:
+      - platform: time
+        at: "20:00:00"
+      - platform: state
+        entity_id: input_boolean.vacation_mode
+        to: "on"
+    condition:
+      - condition: time
+        weekday:
+          - fri
+          - sat
+    action:
+      - service: homeassistant.turn_off
+        entity_id: input_boolean.workday_tomorrow
+############################################################################
+input_boolean:
+#---------------------------------------------------------------------------
+  vacation_mode:
+    name: "Vacation mode"
+    icon: mdi:airplane-takeoff
+#---------------------------------------------------------------------------
+  guest_mode:
+    name: "Guest mode"
+    icon: mdi:account-off
+#---------------------------------------------------------------------------
+  workday_tomorrow:
+    name: "Workday Tomorrow"
+    icon: mdi:factory
+#---------------------------------------------------------------------------
+  not_home:
+    name: "Not Home"
+    icon: mdi:home-outline
+#---------------------------------------------------------------------------
+  working_from_home:
+    name: "Working From Home"
+    icon: mdi:home
+############################################################################

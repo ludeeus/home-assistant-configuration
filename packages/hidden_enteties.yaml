@@ -6,6 +6,16 @@ homeassistant:
     "*.*":
       hidden: true
   customize: # Opt-in the stuff I actually want to show.
-    light.bathroom:
+    group.modes:
+      hidden: false
+    input_boolean.guest_mode:
+      hidden: false
+    input_boolean.not_home:
+      hidden: false
+    input_boolean.vacation_mode:
+      hidden: false
+    input_boolean.workday_tomorrow:
+      hidden: false
+    input_boolean.working_from_home:
       hidden: false
 ############################################################################
