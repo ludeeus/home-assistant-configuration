@@ -1,16 +1,9 @@
 ############################################################################
-##  Modes
+##  Workday mode
 ############################################################################
-group:
-  modes:
-    name: 'Modes'
-    control: hidden
-    entities:
-      - input_boolean.vacation_mode
-      - input_boolean.guest_mode
-      - input_boolean.workday_tomorrow
-      - input_boolean.not_home
-      - input_boolean.working_from_home
+  workday_tomorrow:
+    name: "Workday Tomorrow"
+    icon: mdi:factory
 ############################################################################
 automation:
   - alias: "Activate 'Workday Tomorrow mode'"
@@ -49,26 +42,3 @@ automation:
     action:
       - service: homeassistant.turn_off
         entity_id: input_boolean.workday_tomorrow
-############################################################################
-input_boolean:
-#---------------------------------------------------------------------------
-  vacation_mode:
-    name: "Vacation mode"
-    icon: mdi:airplane-takeoff
-#---------------------------------------------------------------------------
-  guest_mode:
-    name: "Guest mode"
-    icon: mdi:account-off
-#---------------------------------------------------------------------------
-  workday_tomorrow:
-    name: "Workday Tomorrow"
-    icon: mdi:factory
-#---------------------------------------------------------------------------
-  not_home:
-    name: "Not Home"
-    icon: mdi:home-outline
-#---------------------------------------------------------------------------
-  working_from_home:
-    name: "Working From Home"
-    icon: mdi:home
-############################################################################

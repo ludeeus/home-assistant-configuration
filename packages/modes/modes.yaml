@@ -1,0 +1,13 @@
+############################################################################
+##  Modes
+############################################################################
+group:
+  modes:
+    name: 'Modes'
+    control: hidden
+    entities:
+      - input_boolean.vacation_mode
+      - input_boolean.guest_mode
+      - input_boolean.workday_tomorrow
+      - input_boolean.not_home
+      - input_boolean.working_from_home
