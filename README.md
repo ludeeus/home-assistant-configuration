@@ -12,6 +12,7 @@ Most installations is done with [hassbian-config](https://github.com/home-assist
 
 ### Stuff beeing controlled/observerd by HA:
 Work in progress...  
+* [Alarm Panel](https://community.home-assistant.io/t/yet-another-take-on-an-alarm-system/32386)
 * [Apple TV](https://home-assistant.io/components/apple_tv/)
 * [Belkin WeMo](https://home-assistant.io/components/wemo/)
 * [Google Cast](https://home-assistant.io/components/media_player.cast/)
