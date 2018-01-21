@@ -2,6 +2,6 @@
 ##  Working from home mode
 ############################################################################
 input_boolean:
-  workday_tomorrow:
+  working_from_home:
     name: "Workday Tomorrow"
     icon: mdi:factory
