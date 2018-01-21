@@ -18,4 +18,6 @@ homeassistant:
       hidden: false
     input_boolean.working_from_home:
       hidden: false
+    script.good_night:
+      hidden: false
 ############################################################################
