@@ -1,11 +1,3 @@
 ############################################################################
 ##  TEST FILE
 ############################################################################
-alarm_control_panel:
-  - platform: manual_mqtt
-    name: "Alarm panel"
-    state_topic: "home/alarm"
-    command_topic: "home/alarm/set"
-    code: !secret alarm_code
-    pending_time: 15
-    payload_arm_home: "ARM_AWAY"

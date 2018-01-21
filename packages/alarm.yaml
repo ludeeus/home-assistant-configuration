@@ -41,10 +41,10 @@ alarm_control_panel:
 ############################################################################
 automation:
   - alias: "Alarm activating."
-    initial_state: "on"
+    initial_state: !secret automation
     trigger:
       platform: state
-      entity_id: alarm_control_panel.house
+      entity_id: sensor.alarm
       to: "pending"
     action:
       - service: homeassistant.turn_off
@@ -56,10 +56,10 @@ automation:
         entity_id: media_player.lg_tv_remote
 #---------------------------------------------------------------------------
   - alias: "Alarm activated."
-    initial_state: "on"
+    initial_state: !secret automation
     trigger:
       - platform: state
-        entity_id: alarm_control_panel.house
+        entity_id: sensor.alarm
         to: "armed_away"
     action:
       - service: notify.ios_iphone
@@ -67,19 +67,19 @@ automation:
           message: 'Alarm armed!'
 #---------------------------------------------------------------------------
   - alias: "Alarm detected."
-    initial_state: "on"
+    initial_state: !secret automation
     trigger:
       - platform: state
-        entity_id: alarm_control_panel.house
+        entity_id: sensor.alarm
         to: "triggered"
     action:
-      - service: notify.ios_iphone
-        data:
-          message: 'Alarm!'
-          data:
-            push:
-              category: camera
-            entity_id: camera.ncam01
+#      - service: notify.ios_iphone
+#        data:
+#          message: 'Alarm!'
+#          data:
+#            push:
+#              category: camera
+#            entity_id: camera.ncam01
       - service: light.turn_on
         entity_id: light.h02
         data:
@@ -88,10 +88,10 @@ automation:
           flash: "long"
 #---------------------------------------------------------------------------
   - alias: "Alarm deactivated."
-    initial_state: "on"
+    initial_state: !secret automation
     trigger:
       - platform: state
-        entity_id: alarm_control_panel.house
+        entity_id: sensor.alarm
         to: "disarmed"
     action:
       - service: homeassistant.turn_on
