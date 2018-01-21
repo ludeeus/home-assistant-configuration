@@ -12,6 +12,15 @@ Most installations is done with [hassbian-config](https://github.com/home-assist
 
 ### Stuff beeing controlled/observerd by HA:
 Work in progress...  
-
+* [Apple TV](https://home-assistant.io/components/apple_tv/)
+* [Belkin WeMo](https://home-assistant.io/components/wemo/)
+* [Google Cast](https://home-assistant.io/components/media_player.cast/)
+* [IKEA Trådfri](https://home-assistant.io/components/tradfri/)
+* [iOS](https://home-assistant.io/docs/ecosystem/ios/)
+* [MQTT](https://home-assistant.io/components/mqtt/)
+* [Netatmo camera](https://home-assistant.io/components/camera.netatmo/)
+* [Philips Hue](https://home-assistant.io/components/hue/)
+* [PLEX](https://home-assistant.io/components/media_player.plex/)
+* [Yamaha Receiver](https://home-assistant.io/components/media_player.yamaha/)
 
 #### Usefull notes [see WIKI](https://github.com/ludeeus/hass-config/wiki)
