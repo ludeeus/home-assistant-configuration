@@ -1,7 +1,16 @@
 ############################################################################
 ##  Working from home mode
 ############################################################################
-input_boolean:
-  working_from_home:
-    name: "Workday Tomorrow"
-    icon: mdi:factory
+homeassistant:
+  customize:
+    switch.working_from_home:
+      icon: mdi:factory
+############################################################################
+switch:
+  - platform: mqtt
+    name: "Working from home"
+    state_topic: "boolean/working_from_home"
+    command_topic: "boolean/working_from_home"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true

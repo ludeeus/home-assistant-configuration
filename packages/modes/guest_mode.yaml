@@ -1,7 +1,16 @@
 ############################################################################
 ##  Guest mode
 ############################################################################
-input_boolean:
-  guest_mode:
+homeassistant:
+  customize:
+    switch.guest_mode:
+      icon: mdi:account-off
+############################################################################
+switch:
+  - platform: mqtt
     name: "Guest mode"
-    icon: mdi:account-off
+    state_topic: "boolean/guest_mode"
+    command_topic: "boolean/guest_mode"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true

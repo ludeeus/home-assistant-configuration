@@ -1,7 +1,16 @@
 ############################################################################
 ##  Not home mode
 ############################################################################
-input_boolean:
-  not_home:
+homeassistant:
+  customize:
+    switch.not_home:
+      icon: mdi:home-outline
+############################################################################
+switch:
+  - platform: mqtt
     name: "Not Home"
-    icon: mdi:home-outline
+    state_topic: "boolean/not_home"
+    command_topic: "boolean/not_home"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true

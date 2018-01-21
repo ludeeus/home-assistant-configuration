@@ -1,0 +1,11 @@
+############################################################################
+##  Default View
+############################################################################
+group:
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.modes
+      - script.good_night
+      - alarm_control_panel.alarm_panel

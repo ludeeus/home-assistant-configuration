@@ -1,10 +1,19 @@
 ############################################################################
 ##  Workday mode
 ############################################################################
-input_boolean:
-  workday_tomorrow:
+homeassistant:
+  customize:
+    switch.workday_tomorrow:
+      icon: mdi:factory
+############################################################################
+switch:
+  - platform: mqtt
     name: "Workday Tomorrow"
-    icon: mdi:factory
+    state_topic: "boolean/workday_tomorrow"
+    command_topic: "boolean/workday_tomorrow"
+    payload_on: "ON"
+    payload_off: "OFF"
+    retain: true
 ############################################################################
 automation:
   - alias: "Activate 'Workday Tomorrow mode'"
@@ -24,8 +33,11 @@ automation:
         entity_id: input_boolean.vacation_mode
         state: "off"
     action:
-      - service: homeassistant.turn_on
-        entity_id: input_boolean.workday_tomorrow
+      - service: mqtt.publish
+        data:
+          topic: "boolean/workday_tomorrow"
+          message: "ON"
+          retain: true
 #---------------------------------------------------------------------------
   - alias: "Deactivate 'Workday Tomorrow mode'"
     initial_state: !secret automation
@@ -41,5 +53,8 @@ automation:
           - fri
           - sat
     action:
-      - service: homeassistant.turn_off
-        entity_id: input_boolean.workday_tomorrow
+      - service: mqtt.publish
+        data:
+          topic: "boolean/workday_tomorrow"
+          message: "OFF"
+          retain: true
