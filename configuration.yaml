@@ -41,4 +41,10 @@ netatmo:
   username: !secret gmail
   password: !secret netatmo_password
   discovery: false
+#---------------------------------------------------------------------------
+mqtt:
+  broker: !secret mqtt-broker
+  port: 1883
+  username: !secret mqtt-user
+  password: !secret mqtt-pass
 ############################################################################
