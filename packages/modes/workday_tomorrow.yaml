@@ -30,7 +30,7 @@ automation:
           - wed
           - thu
       - condition: state
-        entity_id: input_boolean.vacation_mode
+        entity_id: switch.vacation_mode
         state: "off"
     action:
       - service: mqtt.publish
@@ -45,7 +45,7 @@ automation:
       - platform: time
         at: "20:00:00"
       - platform: state
-        entity_id: input_boolean.vacation_mode
+        entity_id: switch.vacation_mode
         to: "on"
     condition:
       - condition: time
