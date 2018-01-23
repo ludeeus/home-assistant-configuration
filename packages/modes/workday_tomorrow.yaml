@@ -36,7 +36,7 @@ automation:
       - service: mqtt.publish
         data:
           topic: "boolean/workday_tomorrow"
-          message: "ON"
+          payload: "ON"
           retain: true
 #---------------------------------------------------------------------------
   - alias: "Deactivate 'Workday Tomorrow mode'"
@@ -56,5 +56,5 @@ automation:
       - service: mqtt.publish
         data:
           topic: "boolean/workday_tomorrow"
-          message: "OFF"
+          payload: "OFF"
           retain: true
