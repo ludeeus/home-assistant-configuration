@@ -4,3 +4,4 @@ secrets.yaml
 ip_bans.yaml
 known_devices.yaml
 *.conf
+entity_registry.yaml

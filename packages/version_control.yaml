@@ -1,0 +1,17 @@
+############################################################################
+##  TEST FILE
+############################################################################
+automation:
+  - alias: Hass Updater
+    trigger:
+      - platform: state
+        entity_id: sensor.pypi_ha_version
+    action:
+      - service: notify.pushbullet
+        data_template:
+          title: 'New Home Assistant Release Available'
+          message: "Home Assistant  {{ states.sensor.pypi_ha_version.state }}  is now available."
+sensor:
+  - platform: command_line
+    name: 'PyPi HA Version'
+    command: curl -s https://pypi.python.org/pypi/homeassistant/json | grep '"version":' | awk -F'"' '{print $4}'
