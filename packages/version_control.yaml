@@ -7,9 +7,8 @@ automation:
       - platform: state
         entity_id: sensor.pypi_ha_version
     action:
-      - service: notify.pushbullet
+      - service: script.notify
         data_template:
-          title: 'New Home Assistant Release Available'
           message: "Home Assistant  {{ states.sensor.pypi_ha_version.state }}  is now available."
 sensor:
   - platform: command_line

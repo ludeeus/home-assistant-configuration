@@ -1,7 +1,10 @@
 ############################################################################
-##  Pushbullet
+##  Notify
 ############################################################################
 notify:
   - name: pushbullet
     platform: pushbullet
     api_key: !secret pushbullet-apikey
+  - platform: nfandroidtv
+    name: Livingroom
+    host: 192.168.2.142

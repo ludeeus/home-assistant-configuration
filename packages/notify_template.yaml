@@ -1,0 +1,20 @@
+############################################################################
+##  notify script
+############################################################################
+script:
+  notify:
+    sequence:
+      - service: notify.pushbullet
+        data_template:
+          title: "Home Assistant"
+          message: "{{message}}"
+      - service: notify.livingroom
+        data_template:
+          title: "Home Assistant"
+          message: "{{message}}"
+          data:
+            position: "top-right"
+            duration: 5
+            transparency: "70%"
+            color: "green"
+            interrupt: 0
