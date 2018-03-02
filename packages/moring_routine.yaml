@@ -18,7 +18,7 @@ switch:
 homeassistant:
   customize:
     switch.morning_routine:
-      icon: mdi:sun
+      icon: mdi:weather-sunset-up
 
 # The PIR used for this is in an other package:
 # https://github.com/ludeeus/Home-Assistant-Config/blob/master/packages/motion_sensor.yaml
