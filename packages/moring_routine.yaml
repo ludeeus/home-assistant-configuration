@@ -1,7 +1,7 @@
 ############################################################################
 ##  Morning Routine
 ############################################################################
-# This is a package, to learn more abour packages se this: https://home-assistant.io/docs/configuration/packages/
+# This is a package, to learn more about packages se this: https://home-assistant.io/docs/configuration/packages/
 
 # A dummy MQTT Switch to keep track of the state so automation don't run multiple times.
 # Can also be an input_boolean
