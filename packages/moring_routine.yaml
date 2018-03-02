@@ -3,7 +3,7 @@
 ############################################################################
 
 # A dummy MQTT Switch to keep track of the state so automation don't run multiple times.
-# Can also be an input_boolean 
+# Can also be an input_boolean
 switch:
   - platform: mqtt
     name: "Morning Routine"
@@ -60,7 +60,7 @@ automation:
           message: "Good morning! \nThe lights are on, and the coffee is brewing. "
 
 # I want to turn off the dummy switch so this can run the next workday.
-# automation: ## This is added on line 31, therefore commented here.
+# automation: # This is added on line 30, therefore commented here.
   - alias: "Deactivate morning routine."
     trigger:
       - platform: time
