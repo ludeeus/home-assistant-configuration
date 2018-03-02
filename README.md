@@ -10,7 +10,7 @@
 Most installations is done with [hassbian-config](https://github.com/home-assistant/hassbian-scripts/releases/latest)  
 
 ### Stuff beeing controlled/observerd by HA:
-* [Alarm Panel](https://community.home-assistant.io/t/yet-another-take-on-an-alarm-system/32386) [Config](/packages/alarm.yaml)
+* [Alarm Panel](https://community.home-assistant.io/t/yet-another-take-on-an-alarm-system/32386)
 * [AndroidTV notifications](https://home-assistant.io/components/notify.nfandroidtv/)
 * [Apple TV](https://home-assistant.io/components/apple_tv/)
 * [Belkin WeMo](https://home-assistant.io/components/wemo/)
