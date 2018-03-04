@@ -4,7 +4,10 @@
 ## My setups
 **Debian VM**      - [Virtual environment installations](https://home-assistant.io/docs/installation/virtualenv/)  
 **Debian VM**      - [hassio installation](https://home-assistant.io/hassio/installation/#alternative-install-on-generic-linux-server)  
-**Raspberry Pi 3** - [Hassbian installation](https://github.com/home-assistant/pi-gen/releases/latest)  
+**Raspberry Pi 3** - [Hassbian installation](https://github.com/home-assistant/pi-gen/releases/latest)
+
+## Flowchart
+<img src=https://raw.githubusercontent.com/ludeeus/Home-Assistant-Config/master/www/flow.png></img> 
 
 
 Most installations is done with [hassbian-config](https://github.com/home-assistant/hassbian-scripts/releases/latest)  

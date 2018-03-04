@@ -7,7 +7,7 @@ automation:
       - platform: state
         entity_id: sensor.pypi_ha_version
     action:
-      - service: script.notify
+      - service: script.notify # source: https://github.com/ludeeus/Home-Assistant-Config/blob/master/packages/notify_template.yaml
         data_template:
           message: "Home Assistant  {{ states.sensor.pypi_ha_version.state }}  is now available."
 sensor:
