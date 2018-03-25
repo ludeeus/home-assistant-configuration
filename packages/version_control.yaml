@@ -7,10 +7,10 @@ automation:
       - platform: state
         entity_id: sensor.pypi_ha_version
     action:
-      - service: script.notify # source: https://github.com/ludeeus/Home-Assistant-Config/blob/master/packages/notify_template.yaml
+      - service: script.notify
         data_template:
           message: "Home Assistant  {{ states.sensor.pypi_ha_version.state }}  is now available."
 sensor:
   - platform: command_line
     name: 'PyPi HA Version'
-    command: curl -s https://pypi.python.org/pypi/homeassistant/json | grep '"version":' | awk -F'"' '{print $4}'
+    command: curl -s https://api.github.com/repos/home-assistant/home-assistant/releases/latest | grep tag_name | awk -F'"' '{print $4}'

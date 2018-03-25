@@ -8,3 +8,4 @@ group:
     entities:
       - group.modes
       - script.good_night
+      - media_player.spotify
