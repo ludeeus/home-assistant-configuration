@@ -12,5 +12,5 @@ automation:
           message: "Home Assistant  {{ states.sensor.github_ha_version.state }}  is now available."
 sensor:
   - platform: command_line
-    name: 'Github HA Version'
-    command: curl -s https://api.github.com/repos/home-assistant/home-assistant/releases/latest | grep tag_name | awk -F'"' '{print $4}'
+    name: 'GitHub HA Version'
+    command: curl -s https://github.com/home-assistant/home-assistant/releases/latest | awk -F'/' '{print $8}' | awk -F'"' '{print $1 }'
