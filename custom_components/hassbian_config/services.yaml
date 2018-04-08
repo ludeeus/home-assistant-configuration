@@ -2,13 +2,13 @@ install_suite:
   description: Installs a suite with hassbian-config.
   fields:
     suite:
-      description: '(recuired) Can be one of: hue, cloud9, tradfri, samba, appdaemon.'
+      description: '(recuired) Can be one of: hue, cloud9, mosquitto, tradfri, samba, appdaemon.'
       example: hue
 upgrade_suite:
   description: Upgrades a suite with hassbian-config.
   fields:
     suite:
-      description: '(recuired) Can be one of: appdaemon, cloud9, hassbian-script'
+      description: '(recuired) Can be one of: appdaemon, cloud9, hassbian-script, homeassistant'
       example: hassbian-script
     beta:
       description: '(optional) Can be true true or false, defaults to false'
@@ -16,3 +16,6 @@ upgrade_suite:
     dev:
       description: '(optional) Can be true true or false, defaults to false'
       example: false
+    version:
+      description: '(optional) Set target version for homeassistant'
+      example: 0.65.5
