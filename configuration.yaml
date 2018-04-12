@@ -21,6 +21,7 @@ http:
 discovery:
 config:
 updater:
+  include_used_components: true
 conversation:
 history:
 logbook:

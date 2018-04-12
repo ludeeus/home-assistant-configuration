@@ -14,3 +14,12 @@ switch:
     payload_on: "ON"
     payload_off: "OFF"
     retain: true
+
+automation:
+  alias: "Activate Guest Docker container for HA for guests."
+  trigger:
+    - platform: state
+      entity_id: switch.guest_mode
+  action:
+    - service_template: 'switch.turn_{{ trigger.to_state.state }}'
+      entity_id: switch.homeassistantguest
