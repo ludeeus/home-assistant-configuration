@@ -24,8 +24,22 @@ updater:
 conversation:
 history:
 logbook:
+homekit:
+  auto_start: False
+
+automation for_homekit:
+  - alias: 'Start HomeKit'
+    trigger:
+      - platform: homeassistant
+        event: start
+    action:
+      - delay: 00:01
+      - service: homekit.start
 sun:
 hassbian_config:
+switch:
+  - platform: hadockermon
+    host: 192.168.2.11
 ############################################################################
 ##  Hubs
 ############################################################################
