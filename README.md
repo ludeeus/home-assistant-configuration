@@ -9,7 +9,6 @@
 ## Flowchart
 <img src=https://raw.githubusercontent.com/ludeeus/Home-Assistant-Config/master/www/flow.png></img> 
 
-
 Most installations is done with [hassbian-config](https://github.com/home-assistant/hassbian-scripts/releases/latest)  
 
 ### Stuff beeing controlled/observerd by HA:
