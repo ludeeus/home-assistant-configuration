@@ -30,3 +30,5 @@ Most installations is done with [hassbian-config](https://github.com/home-assist
 * [Yamaha Receiver](https://home-assistant.io/components/media_player.yamaha/)
 
 #### Usefull notes [see WIKI](https://github.com/ludeeus/hass-config/wiki)
+  
+#### [Install Home Assistant in 4 easy steps](https://youtu.be/0ca_ap3sj1c)
