@@ -46,7 +46,7 @@ automation:
         state: 'off'
       - condition: state #check if I'm working.
         entity_id: switch.workday_tomorrow
-        state: 'off'
+        state: 'on'
       - condition: time
         after: '06:30:00'
         before: '08:00:00'
