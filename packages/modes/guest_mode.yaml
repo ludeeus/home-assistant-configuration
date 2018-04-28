@@ -1,6 +1,16 @@
 ############################################################################
 ##  Guest mode
 ############################################################################
+## Packages / Modes / Guest Mode
+##
+## @description Add a guest mode, and spin up a docker container for them.
+## @component   automation, custom_component, customize, switch
+## @license     MIT
+## @author      @ludeeus
+############################################################################
+# This package uses resources from other packages:
+# custom_component: https://github.com/ludeeus/Home-Assistant-Config/blob/master/custom_components/switch/hadockermon.py
+
 homeassistant:
   customize:
     switch.guest_mode:
@@ -8,15 +18,15 @@ homeassistant:
 ############################################################################
 switch:
   - platform: mqtt
-    name: "Guest mode"
-    state_topic: "boolean/guest_mode"
-    command_topic: "boolean/guest_mode"
-    payload_on: "ON"
-    payload_off: "OFF"
+    name: 'Guest mode'
+    state_topic: 'boolean/guest_mode'
+    command_topic: 'boolean/guest_mode'
+    payload_on: 'ON'
+    payload_off: 'OFF'
     retain: true
 
 automation:
-  alias: "Activate Guest Docker container for HA for guests."
+  alias: "Activate Guest Docker container of Home Assistant for guests to use."
   trigger:
     - platform: state
       entity_id: switch.guest_mode

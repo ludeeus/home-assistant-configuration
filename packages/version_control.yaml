@@ -1,8 +1,16 @@
 ############################################################################
-##  Version Control
+## Packages / Version Control
+##
+## @description Send a notification when there is a new version of HA.
+## @component   automation, notify, sensor
+## @license     MIT
+## @author      @ludeeus
 ############################################################################
+# This package uses resources from other packages:
+# Notifications: https://github.com/ludeeus/Home-Assistant-Config/blob/master/packages/notify_template.yaml
+
 automation:
-  - alias: Hass Updater
+  - alias: "Home Assistant updata notification"
     trigger:
       - platform: state
         entity_id: sensor.github_ha_version
