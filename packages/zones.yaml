@@ -1,0 +1,20 @@
+############################################################################
+## Packages / Zones
+##
+## @description Define zones to be used in Home Assistant
+## @component   zone
+## @license     MIT
+## @author      @ludeeus
+############################################################################
+zone:
+  - name: Home
+    latitude: !secret latitude
+    longitude: !secret longitude
+    radius: 60
+    icon: mdi:account-multiple
+
+  - name: Work
+    latitude: !secret zone_work_lat
+    longitude: !secret zone_work_lon
+    radius: 120
+    icon: mdi:worker

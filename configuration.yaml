@@ -36,7 +36,8 @@ automation for_homekit:
     action:
       - delay: 00:01
       - service: homekit.start
-sun:
+map:
+ios:
 hassbian_config:
 switch:
   - platform: hadockermon

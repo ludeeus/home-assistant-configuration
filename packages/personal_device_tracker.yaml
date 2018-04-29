@@ -1,0 +1,27 @@
+############################################################################
+## Packages / Personal device tracker
+##
+## @description Personalize the states of the device tracker
+## @component   device_tracker, sensor
+## @license     MIT
+## @author      @ludeeus
+############################################################################
+sensor:
+  - platform: template
+    sensors:
+      personal_device_tracker1:
+        friendly_name: "Where is the master?"
+        value_template: >-
+          {%- set device_state = states('device_tracker.iphone') -%}
+          {%- set custom_state = {
+            'work': 'Jobb',
+            'home': 'Hjemme',
+            'not_home': 'Ikke hjemme',
+            'away': 'Borte',
+            'undefined': 'Ukjent status'
+          } -%}
+          {% if custom_state[device_state] == '' %}
+           {{custom_state[undefined]}}
+          {% else %}
+           {{custom_state[device_state]}}
+          {% endif%}
