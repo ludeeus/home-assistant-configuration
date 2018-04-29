@@ -5,3 +5,12 @@ ip_bans.yaml
 known_devices.yaml
 *.conf
 entity_registry.yaml
+*.log
+.config_entries*
+.HA_VERSION
+.homekit.state
+.uuid
+.spotify-token*
+*.db
+__pycache__
+.cloud

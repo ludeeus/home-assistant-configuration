@@ -27,7 +27,7 @@ history:
 logbook:
 homekit:
   auto_start: False
-
+cloud:
 automation for_homekit:
   - alias: 'Start HomeKit'
     trigger:
