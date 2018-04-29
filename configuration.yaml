@@ -3,8 +3,8 @@
 ############################################################################
 homeassistant:
   name: Home
-  latitude: !secret latitude
-  longitude: !secret longitude
+  latitude: !secret zone_home_lat
+  longitude: !secret zone_home_lon
   elevation: 5
   unit_system: metric
   time_zone: Europe/Oslo
@@ -42,6 +42,9 @@ hassbian_config:
 switch:
   - platform: hadockermon
     host: 192.168.2.11
+recorder:
+  purge_keep_days: 30
+  db_url: !secret db_url
 ############################################################################
 ##  Hubs
 ############################################################################

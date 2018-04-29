@@ -8,8 +8,8 @@
 ############################################################################
 zone:
   - name: Home
-    latitude: !secret latitude
-    longitude: !secret longitude
+    latitude: !secret zone_home_lat
+    longitude: !secret zone_home_lon
     radius: 60
     icon: mdi:account-multiple
 
