@@ -1,0 +1,14 @@
+############################################################################
+## Packages / Active clients
+##
+## @description Display the number of active clients from NMAP
+## @component   device_tracker, sensor
+## @license     MIT
+## @author      @ludeeus
+############################################################################
+sensor:
+  - platform: template
+    sensors:
+      active_clients:
+        unit_of_measurement: 'clients'
+        value_template: "{{ states.device_tracker | selectattr('state', 'eq', 'home') | selectattr('attributes.scanner', 'eq', 'NmapDeviceScanner') | list | count}}"

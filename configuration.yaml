@@ -37,6 +37,9 @@ automation for_homekit:
       - delay: 00:01
       - service: homekit.start
 map:
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.2.0/24
 ios:
 hassbian_config:
 switch:
