@@ -1,0 +1,18 @@
+- id: '1526064355462'
+  alias: New Automationrw
+  trigger:
+  - entity_id: alarm_control_panel.house
+    platform: state
+    to: aasda
+  condition: []
+  action:
+  - service: camera.snapshot
+- id: '1526064384258'
+  alias: New Automation
+  trigger:
+  - entity_id: camera.ncam01_2
+    platform: state
+    to: gds
+  condition: []
+  action:
+  - service: automation.turn_off

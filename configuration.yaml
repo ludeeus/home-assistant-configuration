@@ -17,37 +17,40 @@ http:
   ip_ban_enabled: true
   login_attempts_threshold: 5
   base_url: !secret base_url
+  use_x_forwarded_for: true
 ############################################################################
-discovery:
+#discovery:
 config:
 updater:
   include_used_components: true
 conversation:
 history:
 logbook:
-homekit:
-  auto_start: False
+python_script:
+sensor:
+  - platform: yr
 cloud:
-automation for_homekit:
-  - alias: 'Start HomeKit'
-    trigger:
-      - platform: homeassistant
-        event: start
-    action:
-      - delay: 00:01
-      - service: homekit.start
+# homekit:
+  # auto_start: False
+
+# automation for_homekit:
+  # - alias: 'Start HomeKit'
+    # trigger:
+      # - platform: homeassistant
+        # event: start
+    # action:
+      # - delay: 00:01
+      # - service: homekit.start
 map:
-device_tracker:
-  - platform: nmap_tracker
-    hosts: 192.168.2.0/24
 ios:
 hassbian_config:
 switch:
   - platform: hadockermon
     host: 192.168.2.11
+    stats: true
 recorder:
   purge_keep_days: 30
-  db_url: !secret db_url
+  db_url: mysql://root:root@192.168.2.11:3306/HA?charset=utf8
 ############################################################################
 ##  Hubs
 ############################################################################
@@ -64,3 +67,5 @@ mqtt:
   username: !secret mqtt-user
   password: !secret mqtt-pass
 ############################################################################
+logger:
+  default: critical
