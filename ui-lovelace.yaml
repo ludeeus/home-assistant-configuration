@@ -1,24 +1,21 @@
-name: Home
 views:
-  - name: default_view
+  - title: default_view
     tab_icon: mdi:home
     cards:
-      - type: entities
-        title: Modes
-        entities:
-          - switch.vacation_mode
-          - switch.guest_mode
-          - switch.workday_tomorrow
-          - switch.not_home
-          - switch.working_from_home
-          - script.good_night
+      - type: vertical-stack
+        cards:
+          - type: entities
+            show_header_toggle: false
+            title: Modes
+            entities:
+              - switch.vacation_mode
+              - switch.guest_mode
+              - switch.workday_tomorrow
+              - switch.not_home
+              - switch.working_from_home
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - script.good_night
       - type: media-control
         entity: media_player.spotify
-  - name: All Entities
-    tab_icon: mdi:settings
-    cards:
-      - type: entity-filter
-        card_config:
-          title: All Entities
-        filter:
-          - {}
