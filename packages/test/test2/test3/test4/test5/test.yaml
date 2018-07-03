@@ -2,4 +2,4 @@
 ##  TEST FILE
 ############################################################################
 shell_command:
-  write_data_to_file: "echo {{content}} | tee -a {{now().strftime('%Y-%m-%d.csv')}}"
+  write_data_to_file: "echo '{{content}}aaa' >> /config/{{now().strftime('%Y-%m-%d.csv')}}"
