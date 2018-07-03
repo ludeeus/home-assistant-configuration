@@ -13,12 +13,9 @@ automation:
   - alias: "Home Assistant updata notification"
     trigger:
       - platform: state
-        entity_id: sensor.github_ha_version
+        #https://gitlab.com/custom_components/versions
+        entity_id: sensor.home_assistant_version
     action:
       - service: script.notify
         data_template:
           message: "Home Assistant  {{ states.sensor.github_ha_version.state }}  is now available."
-sensor:
-  - platform: command_line
-    name: 'GitHub HA Version'
-    command: curl -s https://github.com/home-assistant/home-assistant/releases/latest | awk -F'/' '{print $8}' | awk -F'"' '{print $1 }'
