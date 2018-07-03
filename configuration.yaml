@@ -68,4 +68,6 @@ mqtt:
   password: !secret mqtt-pass
 ############################################################################
 logger:
-  default: critical
+  default: info
+  logs:
+    homeassistant.components.shell_command: debug
