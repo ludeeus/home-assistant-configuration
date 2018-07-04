@@ -13,12 +13,14 @@ from homeassistant.components.sensor import (PLATFORM_SCHEMA)
 
 CONF_INSTALLATION = 'installation'
 CONF_BRANCH = 'branch'
+ATTR_INSTALL = 'install'
+ATTR_BRANCH = 'branch'
 
 SCAN_INTERVAL = timedelta(seconds=300)
 
 ICON = 'mdi:package-up'
 PLATFORM_NAME = 'versions'
-PLATFORM_VERSION = '0.0.2'
+PLATFORM_VERSION = '0.0.3'
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Optional(CONF_INSTALLATION, default='venv'): cv.string,
@@ -98,10 +100,16 @@ class HomeAssistantVersion(Entity):
         self._state = version
     @property
     def name(self):
-        return 'Home Assistant version'
+        return 'HA version ' + self._installation + ' ' + self._branch
     @property
     def state(self):
         return self._state
     @property
     def icon(self):
         return ICON
+    @property
+    def device_state_attributes(self):
+        return {
+            ATTR_INSTALL: self._installation,
+            ATTR_BRANCH: self._branch,
+        }

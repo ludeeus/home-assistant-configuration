@@ -14,7 +14,7 @@ automation:
     trigger:
       - platform: state
         #https://gitlab.com/custom_components/versions
-        entity_id: sensor.home_assistant_version
+        entity_id: sensor.ha_version_docker_stable
     action:
       - service: script.notify
         data_template:

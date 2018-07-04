@@ -30,7 +30,22 @@ python_script:
 sensor:
   - platform: yr
   - platform: versions
-    install: docker
+    installation: docker
+    branch: rc
+  - platform: versions
+    installation: docker
+    branch: stable
+  - platform: versions
+    installation: venv
+    branch: stable
+  - platform: versions
+    installation: venv
+    branch: rc
+  - platform: versions
+    installation: hassio
+    branch: stable
+  - platform: versions
+    installation: hassio
     branch: rc
 cloud:
 # homekit:
