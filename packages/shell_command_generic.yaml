@@ -1,0 +1,25 @@
+############################################################################
+## Packages / Generic Shell command
+##
+## @description Creates an generic shell command
+## @component   shell_command
+## @license     MIT
+## @author      @ludeeus
+############################################################################
+
+# for this to work you need to create a file in your config dir named 'sh.sh'
+# content of 'sh.sh':
+# $1
+
+shell_command:
+  generic: 'bash /home/homeassistant/.homeassistant/sh.sh "{{ cmd }}"'
+
+# usage:
+# In 'dev-service' add this to 'Service Data':
+# {"cmd":"touch /home/homeassistant/.homeassistant/test"}
+# change the value of 'cmd' to the command you want to execute.
+# in an automation:
+# action:
+#   service: shell_command.generic
+#   data:
+#     cmd: 'touch /home/homeassistant/.homeassistant/test'
