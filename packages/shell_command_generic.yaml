@@ -10,6 +10,7 @@
 # for this to work you need to create a file in your config dir named 'sh.sh'
 # content of 'sh.sh':
 # $1
+# example: https://gitlab.com/ludeeus/homeassistant-config/raw/master/sh.sh
 
 shell_command:
   generic: 'bash /home/homeassistant/.homeassistant/sh.sh "{{ cmd }}"'
