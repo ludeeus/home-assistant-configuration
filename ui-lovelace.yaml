@@ -1,21 +1,13 @@
+resources:
+  - url: /local/monster-card.js
+    type: js
 views:
-  - title: default_view
-    tab_icon: mdi:home
+  - name: Second view
     cards:
-      - type: vertical-stack
-        cards:
-          - type: entities
-            show_header_toggle: false
-            title: Modes
-            entities:
-              - switch.vacation_mode
-              - switch.guest_mode
-              - switch.workday_tomorrow
-              - switch.not_home
-              - switch.working_from_home
-          - type: entities
-            show_header_toggle: false
-            entities:
-              - script.good_night
-      - type: media-control
-        entity: media_player.spotify
+      - type: custom:monster-card
+        card:
+          type: glance
+          title: Monster
+        filter:
+          include:
+            - domain: switch
