@@ -48,6 +48,7 @@ sensor:
   - platform: versions
     installation: hassio
     branch: rc
+  - platform: authenticated
 cloud:
 # homekit:
   # auto_start: False
