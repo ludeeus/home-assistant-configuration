@@ -1,120 +1,68 @@
-auth: # https://developers.home-assistant.io/blog/2018/07/02/trying-new-auth.html
+homeassistant:
+  {
+    'name': 'HassBOX',
+    'latitude': 0,
+    'longitude': 0,
+    'elevation': 0,
+    'unit_system': 'metric',
+    'time_zone': 'UTC'
+  }
 
-automation: !include automations.yaml # https://www.home-assistant.io/docs/automation/
+frontend:
+config:
+hassio:
+conversation:
+history:
+logger:
+  {
+    'default': 'info'
+  }
+logbook:
+map:
+sun:
+cloud:
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
 
-config: # https://www.home-assistant.io/components/config/
+binary_sensor: [
+  {
+    'platform': 'ping',
+    'name': 'Netatmo Welcome',
+    'host': '192.168.2.203',
+    'count': 3,
+    'scan_interval': 30
+  }
+]
 
-hassio: # https://www.home-assistant.io/hassio/installation/#migrating-from-a-non-hassio-install
+influxdb:
+  {
+    'host': '192.168.2.200',
+    'port': 8086,
+    'username': 'homeassistant',
+    'password': 'homeassistant',
+    'database': 'homeassistant'
+  }
 
-frontend: # https://www.home-assistant.io/components/frontend/
-  themes: !include themes.yaml
+sensor: [
+  {
+    'platform': 'version',
+    'source': 'hassio',
+    'name': 'Published Hass.io version'
+  },
+  {
+    'platform': 'version',
+    'name': 'Installed Hass.io version'
+  },
+  {
+    'platform': 'speedtest',
+    'minute': [0, 10, 20, 30, 40, 50],
+    'monitored_conditions': ['ping', 'download', 'upload']
+  }
+]
 
-group: !include groups.yaml # https://www.home-assistant.io/components/group/
-
-history: # https://www.home-assistant.io/components/history/
-
-homeassistant: # https://www.home-assistant.io/docs/configuration/basic/
-  name: Home Assistant
-  latitude: !secret homeassistant_latitude
-  longitude: !secret homeassistant_longitude
-  elevation: 5
-  unit_system: metric
-  time_zone: Europe/Oslo
-  auth_providers:
-   - type: homeassistant
-   - type: legacy_api_password
-
-http: # https://www.home-assistant.io/components/http/
-  api_password: !secret http_api_password
-  use_x_forwarded_for: true
-  trusted_proxies:
-   - 192.168.2.11
-
-logbook: # https://www.home-assistant.io/components/logbook/
-
-logger: # https://www.home-assistant.io/components/logger/
-  default: warn
-  logs:
-    custom_components: debug
-
-media_player:
-  - platform: spotify # https://www.home-assistant.io/components/media_player.spotify/
-    client_id: !secret media_player_spotify_client_id
-    client_secret: !secret media_player_spotify_client_secret
-    scan_interval: 5
-
-netatmo: # https://www.home-assistant.io/components/netatmo/
-  api_key: !secret netatmo_api_key
-  secret_key: !secret netatmo_secret_key
-  username: !secret netatmo_username
-  password: !secret netatmo_password
-
-script: !include scripts.yaml # https://www.home-assistant.io/docs/scripts/
-
-sensor core:
-  - platform: netatmo # https://www.home-assistant.io/components/sensor.netatmo/
-    station: BAZINGA
-    modules:
-      Inne:
-        - temperature
-        - max_temp
-
-updater: # https://www.home-assistant.io/components/updater/
-  include_used_components: true
-
-###################################################
-###        CUSTOM COMPONENTS / PLATFORMS:       ###
-###################################################
-custom_updater: # https://github.com/custom-components/custom_updater
-  hide_sensor: true
-
-usps_mail: # https://github.com/custom-components/usps_mail
-  provider: gmail
-  email: !secret usps_mail_email
-  password: !secret usps_mail_password
-  output_dir: '/config/www/USPS/'
-
-sensor custom:
-  - platform: authenticated # https://github.com/custom-components/sensor.authenticated
-    exclude:
-      - 172.30.32.2
-      - 192.168.2.11
-  - platform: rpi_power # https://github.com/custom-components/sensor.rpi_power
-    text_state: True
-  - platform: tautulli # https://github.com/custom-components/sensor.tautulli
-    host: 192.168.2.11
-    port: 32867
-    api_key: !secret sensor_tautulli_api_key
-    attributes:
-      - title
-      - grandparent_title
-      - parent_title
-      - media_index
-      - player
-      - show_senum
-      - s_senum_e
-      - senum
-  - platform: untappd # https://github.com/custom-components/sensor.untapped
-    username: !secret sensor_untappd_username
-    id: !secret sensor_untappd_id
-    secret: !secret sensor_untappd_secret
-  - platform: versions #https://github.com/custom-components/sensor.versions
-    installation: hassio
-    image: raspberrypi3
-    name: Current publised HA version stable
-  - platform: versions #https://github.com/custom-components/sensor.versions
-    installation: hassio
-    branch: rc
-    image: raspberrypi3
-    name: Current publised HA version rc
-
-sickrage: # https://github.com/custom-components/sickrage
-  host: 'http://192.168.2.236:8081/api'
-  api_key: !secret sickrage_api_key
-
-camera custom:
-  - platform: unsplash #https://github.com/custom-components/camera.unsplash
-    api_key: !secret camera_unsplash_api_key
-    output_dir: /www/
-    collection_id: "2461850,2467206"
-    interval: 10
+wemo: 
+  {
+    'discovery': false,
+    'static': ['192.168.2.106']
+  }
