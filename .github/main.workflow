@@ -1,6 +1,10 @@
 workflow "Check Home Assistant Configuration" {
   on = "push"
-  resolves = ["DEV"]
+  resolves = [
+    "hmarr/debug-action",
+    "hmarr/debug-action@master",
+    "hmarr/debug-action@master-1",
+  ]
 }
 
 action "STABLE" {
@@ -27,4 +31,19 @@ action "DEV" {
     HAALLOWFAIL = "True"
   }
   needs = ["RC"]
+}
+
+action "hmarr/debug-action" {
+  uses = "hmarr/debug-action@master"
+  needs = ["STABLE"]
+}
+
+action "hmarr/debug-action@master" {
+  uses = "hmarr/debug-action@master"
+  needs = ["RC"]
+}
+
+action "hmarr/debug-action@master-1" {
+  uses = "hmarr/debug-action@master"
+  needs = ["DEV"]
 }
