@@ -1,9 +1,7 @@
 workflow "Check  HA config" {
   on = "push"
   resolves = [
-    "ludeeus/actions/ha-config-chekc@master",
-    "Debug Action",
-  ]
+    "ludeeus/actions/ha-config-chekc@master"]
 }
 
 action "ludeeus/actions/ha-config-chekc@master" {
@@ -11,8 +9,4 @@ action "ludeeus/actions/ha-config-chekc@master" {
   env = {
     HAVERSION = "DEV"
   }
-}
-
-action "Debug Action" {
-  uses = "hmarr/debug-action@v1.0.0"
 }
