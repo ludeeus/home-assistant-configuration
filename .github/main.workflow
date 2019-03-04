@@ -6,7 +6,7 @@ workflow "Check Home Assistant Configuration" {
 action "STABLE" {
   uses = "ludeeus/actions/ha-config-check@master"
   env = {
-    HAVERSION = "DEV"
+    HAVERSION = "STABLE"
   }
 }
 
@@ -20,8 +20,8 @@ action "RC" {
 
 action "DEV" {
   uses = "ludeeus/actions/ha-config-check@master"
-  needs = ["RC"]
   env = {
     HAVERSION = "DEV"
   }
+  needs = ["RC"]
 }
