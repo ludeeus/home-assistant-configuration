@@ -8,7 +8,7 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 Value | Description
 -- | --
-28 | State objects (`{{ states | count}}`)
+28 | State objects
 
 ## Hardware and general setup
 
