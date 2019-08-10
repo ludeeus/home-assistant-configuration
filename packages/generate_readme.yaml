@@ -1,0 +1,23 @@
+# This pacakge generates my README.md content
+
+shell_command:
+  remove_readme: "rm /config/README.md"
+  clean_readme: "tail -n +3 /config/README.md > /config/README.md.tmp"
+  move_readme_temp: "mv /config/README.md.tmp /config/README.md"
+
+notify:
+  name: generate_readme
+  platform: file
+  filename: README.md
+
+automation:
+  alias: Generate README content
+  trigger:
+    platform: time_pattern
+    minutes: 37  # Once every day this will be 13:37 😎
+  action:
+    - service: shell_command.remove_readme
+    - service: notify.generate_readme
+      data_template: !include ../templates/readme.yaml
+    - service: shell_command.clean_readme
+    - service: shell_command.move_readme_temp

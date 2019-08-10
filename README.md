@@ -8,7 +8,15 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 Value | Description
 -- | --
-28 | State objects
+29 | Total state objects
+2 | Automations
+1 | Binary sensors
+2 | Groups
+2 | Input booleans
+3 | Media players
+9 | Sensors
+7 | Switches
+7 | Switches
 
 ## Hardware and general setup
 
@@ -34,11 +42,13 @@ To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/)
 ## Core integrations that I use
 
 - [AdGuard Home](https://www.home-assistant.io/components/adguard/)
-- [Default Config](https://www.home-assistant.io/components/default_config/)
-- [Input Boolean](https://www.home-assistant.io/components/input_boolean/)
-- [Spotify](https://www.home-assistant.io/components/spotify/)
-- [Met.no](https://www.home-assistant.io/components/met/)
 - [Belkin WeMo](https://www.home-assistant.io/components/wemo/)
+- [Default Config](https://www.home-assistant.io/components/default_config/)
+- [File](https://www.home-assistant.io/components/file/)
+- [Input Boolean](https://www.home-assistant.io/components/input_boolean/)
+- [Met.no](https://www.home-assistant.io/components/met/)
+- [Shell command](https://www.home-assistant.io/components/shell_command/)
+- [Spotify](https://www.home-assistant.io/components/spotify/)
 
 
 ## custom_components that I use
