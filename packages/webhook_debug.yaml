@@ -1,0 +1,20 @@
+# Stolen from: https://gist.github.com/dale3h/62cc5a9a359c75d4efc8d1b2df777b10
+# Webhook URL: https://[your-hass-domain]/api/webhook/debugger
+
+automation:
+  alias: "Webhook Debugger"
+  trigger:
+    - platform: webhook
+      webhook_id: debugger
+  action:
+    - service: persistent_notification.create
+      data_template:
+        message: >-
+          {% if 'data' in trigger %}
+            Data: {{ dict(trigger.data)|tojson }}
+          {% elif 'json' in trigger %}
+            JSON: {{ dict(trigger.json)|tojson }}
+          {% endif %}
+          {% if 'query' in trigger and trigger.query|length > 0 %}
+            Query: {{ dict(trigger.query)|tojson }}
+          {% endif %}

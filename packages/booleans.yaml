@@ -1,0 +1,9 @@
+input_boolean:
+  system_restart:
+    name: Restarting
+    initial: off
+    icon: mdi:settings
+  system_upgrade:
+    name: Upgrading
+    initial: off
+    icon: mdi:settings

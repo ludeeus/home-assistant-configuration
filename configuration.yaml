@@ -1,0 +1,17 @@
+# "Core" configuration
+homeassistant:
+  packages: !include_dir_named packages
+http:
+  base_url: !secret nabu_casa_url
+default_config:
+logger:
+  default: info
+frontend:
+  themes: !include_dir_merge_named themes
+recorder:
+  purge_keep_days: 3
+
+media_player:
+  - platform: spotify
+    client_id: !secret spotify_id
+    client_secret: !secret spotify_secret
