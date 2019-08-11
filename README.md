@@ -8,7 +8,7 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 Description | Value
 -- | --
-Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 2
+Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 3
 Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 1
 Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 2
 Entities in the [`input_boolean`](https://www.home-assistant.io/components/input_boolean) domain | 2

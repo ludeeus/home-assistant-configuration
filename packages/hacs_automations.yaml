@@ -1,0 +1,17 @@
+# Handles HACS automatons until I can use GitHub Actions
+rest_command:
+  hacs_webhook:
+    url: 'http://127.0.0.1:8080/hacs'
+    method: post
+    content_type:  'application/json; charset=utf-8'
+    payload: "{{data}}"
+
+automation:
+  alias: "HACS: Pull request trigger from GitHub webhook"
+  trigger:
+    - platform: webhook
+      webhook_id: !secret hacs_webhook_id
+  action:
+    - service: rest_command.hacs_webhook
+      data_template:
+        data: "{{ dict(trigger.json)|tojson }}"
