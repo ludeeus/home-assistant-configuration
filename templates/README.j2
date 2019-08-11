@@ -18,16 +18,17 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 ## Statistics from the instance
 
-Value | Description
+Description | Value
 -- | --
-{{states|count}} | Total state objects
-{{states.automation|count}} | Automations
-{{states.binary_sensor|count}} | Binary sensors
-{{states.group|count}} | Groups
-{{states.input_boolean|count}} | Input booleans
-{{states.media_player|count}} | Media players
-{{states.sensor|count}} | Sensors
-{{states.switch|count}} | Switches
+{%- set data = namespace(domains=[]) %}
+{%- for state in states %}
+{%- if state.domain not in data.domains %}
+{%- set data.domains = data.domains + [state.domain] %}
+{%- endif %}
+{%- endfor %}
+{%- for domain in data.domains %}
+Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain}}) domain | {{states[domain] | count }}
+{%- endfor %}
 
 ## Hardware and general setup
 

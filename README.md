@@ -6,16 +6,18 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 ## Statistics from the instance
 
-Value | Description
+Description | Value
 -- | --
-32 | Total state objects
-2 | Automations
-1 | Binary sensors
-2 | Groups
-2 | Input booleans
-3 | Media players
-12 | Sensors
-7 | Switches
+Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 2
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 1
+Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 2
+Entities in the [`input_boolean`](https://www.home-assistant.io/components/input_boolean) domain | 2
+Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 3
+Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 12
+Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
+Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
+Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
 
 ## Hardware and general setup
 
