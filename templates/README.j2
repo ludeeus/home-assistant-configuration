@@ -1,3 +1,15 @@
+{%- set custom_component_descriptions = 
+    {
+	"readme": {
+		"description": "Generates this awesome readme file.",
+		"usage": "I use this integration to generate this readme, and to convert my lovelace configuration."
+	},
+	"hacs": {
+		"description": "Manage (Install, track, upgrade) and discover custom elements for Home Assistant.",
+		"usage": "I use this to discover new awesome stuff, and to keep the custom elements I use up to date with the latest version of it from the developer."
+	}
+}
+-%}
 # Hello there! 👋
 
 So this is my Home Assistant instance 🎉
@@ -8,15 +20,15 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 Value | Description
 -- | --
-29 | Total state objects
-2 | Automations
-1 | Binary sensors
-2 | Groups
-2 | Input booleans
-3 | Media players
-9 | Sensors
-7 | Switches
-7 | Switches
+{{states|count}} | Total state objects
+{{states.automation|count}} | Automations
+{{states.binary_sensor|count}} | Binary sensors
+{{states.group|count}} | Groups
+{{states.input_boolean|count}} | Input booleans
+{{states.media_player|count}} | Media players
+{{states.sensor|count}} | Sensors
+{{states.switch|count}} | Switches
+{{states.switch|count}} | Switches
 
 ## Hardware and general setup
 
@@ -54,19 +66,14 @@ To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/)
 ## custom_components that I use
 
 A summary of custom_components that I use.
+{% for integration in custom_components %}
+### [{{integration.name}}]({{integration.documentation}})
+{% if integration.domain in custom_component_descriptions %}
+_{{custom_component_descriptions[integration.domain]["description"]}}_
 
-### [HACS (Home Assistant Community Store)](https://custom-components.github.io/hacs)
-
-_Manage (Install, track, upgrade) and discover custom elements for Home Assistant._
-
-I use this to discover new awesome stuff, and to keep the custom elements I use up to date with the latest version of it from the developer.
-
-### [Generate readme](https://github.com/custom-components/readme)
-
-_Generates this awesome readme file._
-
-I use this integration to generate this readme, and to convert my lovelace configuration.
-
+{{custom_component_descriptions[integration.domain]["usage"]}}
+{% endif -%}
+{% endfor %}
 
 ## Custom Lovelace plugins that I use
 
