@@ -16,7 +16,6 @@ Value | Description
 3 | Media players
 9 | Sensors
 7 | Switches
-7 | Switches
 
 ## Hardware and general setup
 
