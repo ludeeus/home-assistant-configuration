@@ -11,7 +11,12 @@ frontend:
 recorder:
   purge_keep_days: 3
 
-media_player:
-  - platform: spotify
-    client_id: !secret spotify_id
-    client_secret: !secret spotify_secret
+media_player spotify:
+  platform: spotify
+  client_id: !secret spotify_id
+  client_secret: !secret spotify_secret
+
+sensor entur_public_transport:
+  platform: entur_public_transport
+  stop_ids:
+    - !secret entur_stop_id

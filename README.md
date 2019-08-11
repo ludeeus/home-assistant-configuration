@@ -8,13 +8,13 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 Value | Description
 -- | --
-29 | Total state objects
+32 | Total state objects
 2 | Automations
 1 | Binary sensors
 2 | Groups
 2 | Input booleans
 3 | Media players
-9 | Sensors
+12 | Sensors
 7 | Switches
 
 ## Hardware and general setup

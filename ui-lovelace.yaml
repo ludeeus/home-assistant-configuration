@@ -41,6 +41,14 @@ views:
     type: weather-forecast
   - entity: media_player.spotify
     type: media-control
+  - entities:
+    - entity: sensor.entur_solvikveien_platform_7099
+      name: Rettning Oslo
+    - entity: sensor.entur_solvikveien_platform_7101
+      name: Rettning Rykkin
+    show_header_toggle: false
+    title: Neste buss avgang
+    type: entities
   panel: false
   path: controllbox
   title: ControllBox
