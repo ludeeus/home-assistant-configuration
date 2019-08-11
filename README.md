@@ -8,16 +8,16 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 Description | Value
 -- | --
-Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 2
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 1
-Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 2
-Entities in the [`input_boolean`](https://www.home-assistant.io/components/input_boolean) domain | 2
-Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 3
-Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 12
-Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
-Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
-Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
+Entities in the <a href="https://www.home-assistant.io/components/automation" target="_blank">`automation`</a>domain | 2
+Entities in the <a href="https://www.home-assistant.io/components/binary_sensor" target="_blank">`binary_sensor`</a>domain | 1
+Entities in the <a href="https://www.home-assistant.io/components/group" target="_blank">`group`</a>domain | 2
+Entities in the <a href="https://www.home-assistant.io/components/input_boolean" target="_blank">`input_boolean`</a>domain | 2
+Entities in the <a href="https://www.home-assistant.io/components/media_player" target="_blank">`media_player`</a>domain | 3
+Entities in the <a href="https://www.home-assistant.io/components/person" target="_blank">`person`</a>domain | 1
+Entities in the <a href="https://www.home-assistant.io/components/sensor" target="_blank">`sensor`</a>domain | 12
+Entities in the <a href="https://www.home-assistant.io/components/sun" target="_blank">`sun`</a>domain | 1
+Entities in the <a href="https://www.home-assistant.io/components/switch" target="_blank">`switch`</a>domain | 7
+Entities in the <a href="https://www.home-assistant.io/components/weather" target="_blank">`weather`</a>domain | 1
 
 ## Hardware and general setup
 
