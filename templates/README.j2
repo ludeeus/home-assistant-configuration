@@ -27,7 +27,7 @@ Description | Value
 {%- endif %}
 {%- endfor %}
 {%- for domain in data.domains %}
-Entities in the <a href="https://www.home-assistant.io/components/{{domain}}" target="_blank">`{{domain}}`</a>domain | {{states[domain] | count }}
+Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain}}) domain | {{states[domain] | count }}
 {%- endfor %}
 
 ## Hardware and general setup
