@@ -9,15 +9,15 @@ This repository exists mostly for my own amusement, but it may contain some thin
 Description | Value
 -- | --
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 3
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 1
-Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 2
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 3
+Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 3
 Entities in the [`input_boolean`](https://www.home-assistant.io/components/input_boolean) domain | 2
+Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 5
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 3
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 12
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 14
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
-Entities in the [`updater`](https://www.home-assistant.io/components/updater) domain | 1
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
 
 ## Hardware and general setup
@@ -45,7 +45,7 @@ To have this work I added this line to my `/etc/fstab` file:
 
 For my theme I use [slate](https://github.com/seangreen2/slate_theme) on all my devices for two reasons, it looks good and I can track it in HACS.
 
-To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link both intenally and externally.
+To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link both internally and externally.
 
 ## Core integrations that I use
 
@@ -75,6 +75,18 @@ I use this to discover new awesome stuff, and to keep the custom elements I use 
 _Generates this awesome readme file._
 
 I use this integration to generate this readme, and to convert my lovelace configuration.
+
+### [Healthchecks.io](https://github.com/custom-components/healthchecksio)
+
+_Update and display the status of your healthchecks.io checks._
+
+I use this to update my check for Home Assistant, and to keep track of all my other checks.
+
+### [esxi_stats](https://www.github.com/wxt9861)
+
+_ESXi component for Home Assistant_
+
+I use this to get information about my ESXi host.
 
 
 ## Custom Lovelace plugins that I use
