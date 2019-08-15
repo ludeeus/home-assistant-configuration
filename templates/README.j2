@@ -55,7 +55,7 @@ To have this work I added this line to my `/etc/fstab` file:
 
 For my theme I use [slate](https://github.com/seangreen2/slate_theme) on all my devices for two reasons, it looks good and I can track it in HACS.
 
-To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link.
+To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link both intenally and externally.
 
 ## Core integrations that I use
 
@@ -103,6 +103,19 @@ I use this to show a badge on the Home Assistant tab in my browser when there ar
 _Minimalistic graph card for Home Assistant Lovelace UI_
 
 I use this to create beautiful statistics cards for my UI.
+
+### Neat stuff going on here
+
+#### HACS Bot
+
+I use a Nabu Casa Cloud Webhook to trigger the [`hacs-bot`](https://github.com/ludeeus/hacs-bot) that helps me manage the [HACS Repository](https://github.com/custom-components/hacs)
+
+**Flow:**
+
+1. GitHub sends a Webhook trigger with the selected event data I want to my Cloud webhook address.
+2. Home Assistant save the data to a logfile using the `notify.file` integration.
+3. Home Assistant sends the data to a container on my internal network that runs [`hacs-bot`](https://github.com/ludeeus/hacs-bot)
+4. [`hacs-bot`](https://github.com/ludeeus/hacs-bot) Do stuff in  the repository.
 
 ***
 
