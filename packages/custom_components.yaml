@@ -1,6 +1,0 @@
-esxi_stats:
-  host: 192.168.2.2
-  username: !secret esxi_user
-  password: !secret esxi_pass
-  monitored_conditions:
-    - vms

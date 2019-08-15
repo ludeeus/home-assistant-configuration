@@ -15,7 +15,7 @@ Entities in the [`input_boolean`](https://www.home-assistant.io/components/input
 Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 5
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 3
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 14
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 16
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
@@ -82,7 +82,7 @@ _Update and display the status of your healthchecks.io checks._
 
 I use this to update my check for Home Assistant, and to keep track of all my other checks.
 
-### [esxi_stats](https://www.github.com/wxt9861)
+### [ESXi Stats](https://github.com/wxt9861/esxi_stats)
 
 _ESXi component for Home Assistant_
 
