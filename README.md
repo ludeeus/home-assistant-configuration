@@ -99,15 +99,17 @@ _Minimalistic graph card for Home Assistant Lovelace UI_
 
 I use this to create beautiful statistics cards for my UI.
 
-### Neat stuff going on here
+## Neat stuff going on here
 
-#### HACS Bot
+### HACS Bot
 
 I use a Nabu Casa Cloud Webhook to trigger the [`hacs-bot`](https://github.com/ludeeus/hacs-bot) that helps me manage the [HACS Repository](https://github.com/custom-components/hacs)
 
+[You can see the automation here](https://github.com/ludeeus/Home-Assistant-Config/blob/master/packages/hacs_automations.yaml)
+
 **Flow:**
 
-1. Github sends a Webhook trigger with the selected event data I want to my Cloud webhook address.
+1. GitHub sends a Webhook trigger with the selected event data I want to my Cloud webhook address.
 2. Home Assistant save the data to a logfile using the `notify.file` integration.
 3. Home Assistant sends the data to a container on my internal network that runs [`hacs-bot`](https://github.com/ludeeus/hacs-bot)
 4. [`hacs-bot`](https://github.com/ludeeus/hacs-bot) Do stuff in  the repository.
