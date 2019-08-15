@@ -47,6 +47,12 @@ This method stores the files used by hassio/Home Assistant in `/usr/share/hassio
 
 I have mounted a share from my NAS to the `/usr/share/hassio` dir, that way I can handle backups and replication on my NAS.
 
+To have this work I added this line to my `/etc/fstab` file:
+
+```
+192.168.2.123:/volume1/SSD/hassio       /usr/share/hassio       nfs     auto    0       0
+```
+
 For my theme I use [slate](https://github.com/seangreen2/slate_theme) on all my devices for two reasons, it looks good and I can track it in HACS.
 
 To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link.

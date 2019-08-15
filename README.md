@@ -17,6 +17,7 @@ Entities in the [`person`](https://www.home-assistant.io/components/person) doma
 Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 12
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
+Entities in the [`updater`](https://www.home-assistant.io/components/updater) domain | 1
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
 
 ## Hardware and general setup
@@ -35,6 +36,12 @@ For the installation method of Home Assistant I went with [the generic Linux ins
 This method stores the files used by hassio/Home Assistant in `/usr/share/hassio`.
 
 I have mounted a share from my NAS to the `/usr/share/hassio` dir, that way I can handle backups and replication on my NAS.
+
+To have this work I added this line to my `/etc/fstab` file:
+
+```
+192.168.2.123:/volume1/SSD/hassio       /usr/share/hassio       nfs     auto    0       0
+```
 
 For my theme I use [slate](https://github.com/seangreen2/slate_theme) on all my devices for two reasons, it looks good and I can track it in HACS.
 
