@@ -50,22 +50,24 @@ views:
   title: Home
 - badges: []
   cards:
-  - entity: weather.area_51
-    type: weather-forecast
-  - entity: media_player.spotify
-    type: media-control
-  - entities:
-    - entity: sensor.entur_solvikveien_platform_7099
-      name: Rettning Oslo
-    - entity: sensor.entur_solvikveien_platform_7101
-      name: Rettning Rykkin
-    show_header_toggle: false
-    title: Neste buss avgang
-    type: entities
-  - content: "# <ha-icon icon=\"mdi:calendar\"></ha-icon> [[ sensor.date ]]  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ha-icon\
-      \ icon=\"mdi:clock\"></ha-icon>[[ sensor.time ]] \n"
-    type: markdown
-  panel: false
+  - cards:
+    - entity: media_player.spotify
+      type: media-control
+    - entity: weather.area_51
+      type: weather-forecast
+    - entities:
+      - entity: sensor.entur_solvikveien_platform_7099
+        name: Rettning Oslo
+      - entity: sensor.entur_solvikveien_platform_7101
+        name: Rettning Rykkin
+      show_header_toggle: false
+      title: Neste buss avgang
+      type: entities
+    - content: "# <ha-icon icon=\"mdi:calendar\"></ha-icon> [[ sensor.date ]]  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ha-icon\
+        \ icon=\"mdi:clock\"></ha-icon>[[ sensor.time ]] \n"
+      type: markdown
+    type: horizontal-stack
+  panel: true
   path: controllbox
   title: ControllBox
 - badges: []
