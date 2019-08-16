@@ -1,3 +1,12 @@
+animated_background:
+  default_url: /community_plugin/lovelace-animated-background/background-animations/night.html
+  entity: weather.area_51
+  included_users:
+  - ControlBox User
+  state_url:
+    cloudy: /community_plugin/lovelace-animated-background/background-animations/cloudy.html
+    partaly cloudy: /community_plugin/lovelace-animated-background/background-animations/cloudy.html
+    sunny: /community_plugin/lovelace-animated-background/background-animations/sunny.html
 cch:
   exceptions:
   - conditions:
@@ -19,6 +28,8 @@ resources:
   url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
 - type: js
   url: /community_plugin/favicon-counter/favicon-counter.js
+- type: module
+  url: /community_plugin/lovelace-animated-background/animated-background.js
 title: Area 51
 views:
 - badges: []

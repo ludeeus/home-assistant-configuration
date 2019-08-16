@@ -43,7 +43,8 @@ To have this work I added this line to my `/etc/fstab` file:
 192.168.2.123:/volume1/SSD/hassio       /usr/share/hassio       nfs     auto    0       0
 ```
 
-For my theme I use [slate](https://github.com/seangreen2/slate_theme) on all my devices for two reasons, it looks good and I can track it in HACS.
+For my theme I use a [custom version](https://paste.ubuntu.com/p/jvVdXM8sY5/) of [slate](https://github.com/seangreen2/slate_theme) theme modified by [@Villhellm](https://github.com/Villhellm) on all my devices.  
+
 
 To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link both internally and externally.
 
@@ -110,6 +111,12 @@ I use this to show a badge on the Home Assistant tab in my browser when there ar
 _Minimalistic graph card for Home Assistant Lovelace UI_
 
 I use this to create beautiful statistics cards for my UI.
+
+### [Animated Lovelace Background](https://github.com/Villhellm/lovelace-animated-background)
+
+_Create animated backgrounds based on the state of one of your entities._
+
+I use this to display animated backgrounds on my hallway touchscreen based on the state of the weather entity.
 
 ## Neat stuff going on here
 
