@@ -72,11 +72,15 @@ _Manage (Install, track, upgrade) and discover custom elements for Home Assistan
 
 I use this to discover new awesome stuff, and to keep the custom elements I use up to date with the latest version of it from the developer.
 
+This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
+
 ### [Generate readme](https://github.com/custom-components/readme)
 
 _Generates this awesome readme file._
 
 I use this integration to generate this readme, and to convert my lovelace configuration.
+
+This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
 
 ### [Healthchecks.io](https://github.com/custom-components/healthchecksio)
 
@@ -84,11 +88,15 @@ _Update and display the status of your healthchecks.io checks._
 
 I use this to update my check for Home Assistant, and to keep track of all my other checks.
 
+This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
+
 ### [ESXi Stats](https://github.com/wxt9861/esxi_stats)
 
 _ESXi component for Home Assistant_
 
 I use this to get information about my ESXi host.
+
+This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
 
 
 ## Custom Lovelace plugins that I use

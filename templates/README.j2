@@ -2,19 +2,23 @@
     {
 	"readme": {
 		"description": "Generates this awesome readme file.",
-		"usage": "I use this integration to generate this readme, and to convert my lovelace configuration."
+		"usage": "I use this integration to generate this readme, and to convert my lovelace configuration.",
+		"config_flow": True
 	},
 	"hacs": {
 		"description": "Manage (Install, track, upgrade) and discover custom elements for Home Assistant.",
-		"usage": "I use this to discover new awesome stuff, and to keep the custom elements I use up to date with the latest version of it from the developer."
+		"usage": "I use this to discover new awesome stuff, and to keep the custom elements I use up to date with the latest version of it from the developer.",
+		"config_flow": True
 	},
 	"esxi_stats": {
 		"description": "ESXi component for Home Assistant",
-		"usage": "I use this to get information about my ESXi host."
+		"usage": "I use this to get information about my ESXi host.",
+		"config_flow": True
 	},
 	"healthchecksio": {
 		"description": "Update and display the status of your healthchecks.io checks.",
-		"usage": "I use this to update my check for Home Assistant, and to keep track of all my other checks."
+		"usage": "I use this to update my check for Home Assistant, and to keep track of all my other checks.",
+		"config_flow": True
 	}
 }
 -%}
@@ -89,6 +93,9 @@ A summary of custom_components that I use.
 _{{custom_component_descriptions[integration.domain]["description"]}}_
 
 {{custom_component_descriptions[integration.domain]["usage"]}}
+{% if custom_component_descriptions[integration.domain]["config_flow"] %}
+This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
+{% endif -%}
 {% endif -%}
 {% endfor %}
 
