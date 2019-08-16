@@ -15,7 +15,7 @@ Entities in the [`input_boolean`](https://www.home-assistant.io/components/input
 Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 5
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 3
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 18
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 21
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
@@ -58,6 +58,7 @@ To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/)
 - [Input Boolean](https://www.home-assistant.io/components/input_boolean/)
 - [Met.no](https://www.home-assistant.io/components/met/)
 - [Shell command](https://www.home-assistant.io/components/shell_command/)
+- [Speedtest.net](https://www.home-assistant.io/components/speedtestdotnet/)
 - [Spotify](https://www.home-assistant.io/components/spotify/)
 - [Time & Date](https://www.home-assistant.io/components/time_date/)
 

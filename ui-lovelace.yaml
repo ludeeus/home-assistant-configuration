@@ -80,5 +80,18 @@ views:
     icon: mdi:server
     name: AdGuard DNS Queries
     type: custom:mini-graph-card
+  - entities:
+    - color: green
+      entity: sensor.speedtest_download
+      name: Upload
+    - color: blue
+      entity: sensor.speedtest_upload
+      name: Download
+    - color: red
+      entity: sensor.speedtest_ping
+      name: Ping
+    icon: mdi:server
+    name: Speedtest.net
+    type: custom:mini-graph-card
   path: stats
   title: Stats

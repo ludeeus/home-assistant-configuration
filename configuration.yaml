@@ -6,6 +6,8 @@ http:
 default_config:
 logger:
   default: info
+  logs:
+    homeassistant.components.speedtestdotnet: debug
 frontend:
   themes: !include_dir_merge_named themes
 recorder:
@@ -24,3 +26,7 @@ sensor entur_public_transport:
 sensor time_date:
   platform: time_date
   display_options: ['time', 'date']
+
+speedtestdotnet:
+  scan_interval:
+    minutes: 15
