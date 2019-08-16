@@ -119,6 +119,12 @@ _Create animated backgrounds based on the state of one of your entities._
 
 I use this to display animated backgrounds on my hallway touchscreen based on the state of the weather entity.
 
+### [Lovelace Markdown Mod](https://github.com/thomasloven/lovelace-markdown-mod)
+
+_Makes the built-in [markdown](https://www.home-assistant.io/lovelace/markdown/) card better._
+
+I use this to add functions to the markdown card, like showing states of entities.
+
 ## Neat stuff going on here
 
 ### HACS Bot

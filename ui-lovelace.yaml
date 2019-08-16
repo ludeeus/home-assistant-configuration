@@ -30,6 +30,8 @@ resources:
   url: /community_plugin/favicon-counter/favicon-counter.js
 - type: module
   url: /community_plugin/lovelace-animated-background/animated-background.js
+- type: module
+  url: /community_plugin/lovelace-markdown-mod/markdown-mod.js
 title: Area 51
 views:
 - badges: []
@@ -60,6 +62,9 @@ views:
     show_header_toggle: false
     title: Neste buss avgang
     type: entities
+  - content: "# <ha-icon icon=\"mdi:calendar\"></ha-icon> [[ sensor.date ]]  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ha-icon\
+      \ icon=\"mdi:clock\"></ha-icon>[[ sensor.time ]] \n"
+    type: markdown
   panel: false
   path: controllbox
   title: ControllBox
