@@ -20,3 +20,7 @@ sensor entur_public_transport:
   platform: entur_public_transport
   stop_ids:
     - !secret entur_stop_id
+
+sensor time_date:
+  platform: time_date
+  display_options: ['time', 'date']

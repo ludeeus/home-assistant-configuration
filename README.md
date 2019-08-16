@@ -15,7 +15,7 @@ Entities in the [`input_boolean`](https://www.home-assistant.io/components/input
 Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 5
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 3
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 16
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 18
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
@@ -59,6 +59,7 @@ To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/)
 - [Met.no](https://www.home-assistant.io/components/met/)
 - [Shell command](https://www.home-assistant.io/components/shell_command/)
 - [Spotify](https://www.home-assistant.io/components/spotify/)
+- [Time & Date](https://www.home-assistant.io/components/time_date/)
 
 
 ## custom_components that I use
@@ -131,7 +132,7 @@ I use a Nabu Casa Cloud Webhook to trigger the [`hacs-bot`](https://github.com/l
 1. GitHub sends a Webhook trigger with the selected event data I want to my Cloud webhook address.
 2. Home Assistant save the data to a logfile using the `notify.file` integration.
 3. Home Assistant sends the data to a container on my internal network that runs [`hacs-bot`](https://github.com/ludeeus/hacs-bot)
-4. [`hacs-bot`](https://github.com/ludeeus/hacs-bot) Do stuff in  the repository.
+4. [`hacs-bot`](https://github.com/ludeeus/hacs-bot) Does stuff in  the repository.
 
 ***
 
