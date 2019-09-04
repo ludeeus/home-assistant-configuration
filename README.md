@@ -8,17 +8,18 @@ This repository exists mostly for my own amusement, but it may contain some thin
 
 Description | Value
 -- | --
-Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 3
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 3
+Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 2
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 6
 Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 3
 Entities in the [`input_boolean`](https://www.home-assistant.io/components/input_boolean) domain | 2
 Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 5
-Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 3
+Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 4
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
 Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 21
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
+Total state objects | 53
 
 ## Hardware and general setup
 
@@ -56,12 +57,13 @@ To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/)
 - [Entur public transport](https://www.home-assistant.io/components/entur_public_transport/)
 - [File](https://www.home-assistant.io/components/file/)
 - [Input Boolean](https://www.home-assistant.io/components/input_boolean/)
+- [LG webOS Smart TV](https://www.home-assistant.io/components/webostv/)
 - [Met.no](https://www.home-assistant.io/components/met/)
 - [Shell command](https://www.home-assistant.io/components/shell_command/)
 - [Speedtest.net](https://www.home-assistant.io/components/speedtestdotnet/)
 - [Spotify](https://www.home-assistant.io/components/spotify/)
 - [Time & Date](https://www.home-assistant.io/components/time_date/)
-
+- [Wake on LAN](https://www.home-assistant.io/components/wake_on_lan/)
 
 ## custom_components that I use
 
@@ -122,32 +124,11 @@ _Minimalistic graph card for Home Assistant Lovelace UI_
 
 I use this to create beautiful statistics cards for my UI.
 
-### [Animated Lovelace Background](https://github.com/Villhellm/lovelace-animated-background)
-
-_Create animated backgrounds based on the state of one of your entities._
-
-I use this to display animated backgrounds on my hallway touchscreen based on the state of the weather entity.
-
 ### [Lovelace Markdown Mod](https://github.com/thomasloven/lovelace-markdown-mod)
 
 _Makes the built-in [markdown](https://www.home-assistant.io/lovelace/markdown/) card better._
 
 I use this to add functions to the markdown card, like showing states of entities.
-
-## Neat stuff going on here
-
-### HACS Bot
-
-I use a Nabu Casa Cloud Webhook to trigger the [`hacs-bot`](https://github.com/ludeeus/hacs-bot) that helps me manage the [HACS Repository](https://github.com/custom-components/hacs)
-
-[You can see the automation here](https://github.com/ludeeus/Home-Assistant-Config/blob/master/packages/hacs_automations.yaml)
-
-**Flow:**
-
-1. GitHub sends a Webhook trigger with the selected event data I want to my Cloud webhook address.
-2. Home Assistant save the data to a logfile using the `notify.file` integration.
-3. Home Assistant sends the data to a container on my internal network that runs [`hacs-bot`](https://github.com/ludeeus/hacs-bot)
-4. [`hacs-bot`](https://github.com/ludeeus/hacs-bot) Does stuff in  the repository.
 
 ***
 
