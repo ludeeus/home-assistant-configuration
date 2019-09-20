@@ -30,6 +30,8 @@ views:
   - entities:
     - entity: input_boolean.system_restart
     - entity: input_boolean.system_upgrade
+    - type: cast
+      view: stats
     show_header_toggle: false
     title: System information
     type: entities

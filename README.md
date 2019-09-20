@@ -15,11 +15,11 @@ Entities in the [`input_boolean`](https://www.home-assistant.io/components/input
 Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 5
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 4
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 21
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 23
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
-Total state objects | 53
+Total state objects | 55
 
 ## Hardware and general setup
 
@@ -100,6 +100,8 @@ _ESXi component for Home Assistant_
 I use this to get information about my ESXi host.
 
 This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
+
+### [UI Template sensor configuration](https://github.com/custom-components/templatesensor)
 
 
 ## Custom Lovelace plugins that I use

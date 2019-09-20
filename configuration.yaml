@@ -7,6 +7,7 @@ default_config:
 logger:
   default: info
   logs:
+    hacs: info
     homeassistant.components.speedtestdotnet: debug
 frontend:
   themes: !include_dir_merge_named themes
