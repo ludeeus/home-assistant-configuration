@@ -103,6 +103,12 @@ This integration has been configured in the UI "Configuration" -> "Integrations"
 
 ### [UI Template sensor configuration](https://github.com/custom-components/templatesensor)
 
+_Add template sensors from the UI._
+
+I don't use this much ATM, but it's nice to be able to add/change template sensors without restarting Home Assistant.
+
+This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
+
 
 ## Custom Lovelace plugins that I use
 
