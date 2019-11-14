@@ -1,15 +1,17 @@
 # "Core" configuration
 homeassistant:
   packages: !include_dir_named packages
+
 http:
   base_url: !secret nabu_casa_url
 default_config:
 logger:
   default: info
   logs:
-    hacs: info
-    homeassistant.components.speedtestdotnet: debug
+    hacs: debug
 frontend:
+  extra_module_url:
+    - /local/ThemeOverride.js # https://gist.github.com/ludeeus/fb0a8410d6c04e7f2f58b23cbd4e1542
   themes: !include_dir_merge_named themes
 recorder:
   purge_keep_days: 3

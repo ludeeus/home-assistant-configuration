@@ -1,26 +1,11 @@
-cch:
-  exceptions:
-  - conditions:
-      user: ControlBox User
-    config:
-      default_tab: '1'
-      disable_sidebar: false
-      hide_tabs: []
-      kiosk_mode: true
-      menu: show
-      notifications: show
-      options: show
-      show_tabs: '1'
-      voice: show
+custom_header: null
 resources:
 - type: module
-  url: /community_plugin/compact-custom-header/compact-custom-header.js
+  url: /community_plugin/custom-header/custom-header.js
 - type: module
   url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
 - type: js
   url: /community_plugin/favicon-counter/favicon-counter.js
-- type: module
-  url: /community_plugin/lovelace-animated-background/animated-background.js
 - type: module
   url: /community_plugin/lovelace-markdown-mod/markdown-mod.js
 title: Area 51
@@ -87,6 +72,11 @@ views:
       name: Ping
     icon: mdi:server
     name: Speedtest.net
+    type: custom:mini-graph-card
+  - entities:
+    - entity: sensor.hacs_downloads_latest
+    icon: mdi:download
+    name: HACS Release downloads
     type: custom:mini-graph-card
   path: stats
   title: Stats

@@ -10,16 +10,15 @@ Description | Value
 -- | --
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 2
 Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 6
-Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 3
+Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 2
 Entities in the [`input_boolean`](https://www.home-assistant.io/components/input_boolean) domain | 2
-Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 5
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 4
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 23
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 19
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
-Total state objects | 55
+Total state objects | 45
 
 ## Hardware and general setup
 
@@ -44,9 +43,6 @@ To have this work I added this line to my `/etc/fstab` file:
 192.168.2.123:/volume1/SSD/hassio       /usr/share/hassio       nfs     auto    0       0
 ```
 
-For my theme I use a [custom version](https://paste.ubuntu.com/p/jvVdXM8sY5/) of [slate](https://github.com/seangreen2/slate_theme) theme modified by [@Villhellm](https://github.com/Villhellm) on all my devices.  
-
-
 To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link both internally and externally.
 
 ## Core integrations that I use
@@ -69,7 +65,7 @@ To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/)
 
 A summary of custom_components that I use.
 
-### [HACS (Home Assistant Community Store)](https://custom-components.github.io/hacs)
+### [HACS (Home Assistant Community Store)](https://hacs.xyz)
 
 _Manage (Install, track, upgrade) and discover custom elements for Home Assistant._
 
