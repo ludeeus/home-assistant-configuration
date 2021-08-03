@@ -1,9 +1,0 @@
-# This pacakge generates my README.md content with the help of https://github.com/custom-components/readme
-
-automation:
-  alias: Generate README content
-  trigger:
-    platform: time_pattern
-    minutes: 37  # Once every day this will be 13:37 😎
-  action:
-    service: readme.generate
