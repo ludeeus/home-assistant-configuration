@@ -1,42 +1,14 @@
-{%- set custom_component_descriptions = 
-    {
-	"readme": {
-		"description": "Generates this awesome readme file.",
-		"usage": "I use this integration to generate this readme, and to convert my lovelace configuration.",
-		"config_flow": True
-	},
-	"hacs": {
-		"description": "Manage (Install, track, upgrade) and discover custom elements for Home Assistant.",
-		"usage": "I use this to discover new awesome stuff, and to keep the custom elements I use up to date with the latest version of it from the developer.",
-		"config_flow": True
-	},
-	"esxi_stats": {
-		"description": "ESXi component for Home Assistant",
-		"usage": "I use this to get information about my ESXi host.",
-		"config_flow": True
-	},
-	"healthchecksio": {
-		"description": "Update and display the status of your healthchecks.io checks.",
-		"usage": "I use this to update my check for Home Assistant, and to keep track of all my other checks.",
-		"config_flow": True
-	},
-	"templatesensor": {
-		"description": "Add template sensors from the UI.",
-		"usage": "I don't use this much ATM, but it's nice to be able to add/change template sensors without restarting Home Assistant.",
-		"config_flow": True
-	}
-}
--%}
-# Hello there! 👋
+{#- Template file for https://github.com/custom-components/readme -#}
+# Welcome 👋!
 
-So this is my Home Assistant instance 🎉
+This is my Home Assistant installation.
 
-This repository exists mostly for my own amusement, but it may contain some things that others might find useful.
+## Some statistics about my installation:
 
-## Statistics from the instance
-
-Description | Value
--- | --
+Description | value
+--|--
+Installed version | {{ states('sensor.current_version') }}
+Total entity objects | {{ states | count }}
 {%- set data = namespace(domains=[]) %}
 {%- for state in states %}
 {%- if state.domain not in data.domains %}
@@ -46,91 +18,57 @@ Description | Value
 {%- for domain in data.domains %}
 Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain}}) domain | {{states[domain] | count }}
 {%- endfor %}
-Total state objects | {{ states | count }}
 
-## Hardware and general setup
 
-For my setup I use an old Lenovo Yoga Pro 2, it has a touch screen so I have mounted it on the wall by the front door so I can easily access some controls in my Lovelace UI.
-
-OS | Ubuntu desktop 18.04
--- | --
-SSD | 512GB
-RAM | 8GB
-Processor | Intel® Core™ i7-4500U Processor
-Connectivity | WiFi
-
-For the installation method of Home Assistant I went with [the generic Linux installation of Hassio](https://www.home-assistant.io/hassio/installation/#alternative-install-on-a-generic-linux-host)
-
-This method stores the files used by hassio/Home Assistant in `/usr/share/hassio`.
-
-I have mounted a share from my NAS to the `/usr/share/hassio` dir, that way I can handle backups and replication on my NAS.
-
-To have this work I added this line to my `/etc/fstab` file:
-
-```
-192.168.2.123:/volume1/SSD/hassio       /usr/share/hassio       nfs     auto    0       0
-```
-
-To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link both internally and externally.
+{%- set custom_categories = [
+    {
+        "key": "integration",
+        "name": "integrations"
+    },
+    {
+        "key": "plugin",
+        "name": "lovelace plugins"
+    },
+    {
+        "key": "theme",
+        "name": "themes"
+    }
+] %}
 
 ## Core integrations that I use
 
-- [AdGuard Home](https://www.home-assistant.io/components/adguard/)
-- [Belkin WeMo](https://www.home-assistant.io/components/wemo/)
-- [Default Config](https://www.home-assistant.io/components/default_config/)
-- [Entur public transport](https://www.home-assistant.io/components/entur_public_transport/)
-- [File](https://www.home-assistant.io/components/file/)
-- [Input Boolean](https://www.home-assistant.io/components/input_boolean/)
-- [LG webOS Smart TV](https://www.home-assistant.io/components/webostv/)
-- [Met.no](https://www.home-assistant.io/components/met/)
-- [Shell command](https://www.home-assistant.io/components/shell_command/)
-- [Speedtest.net](https://www.home-assistant.io/components/speedtestdotnet/)
-- [Spotify](https://www.home-assistant.io/components/spotify/)
-- [Time & Date](https://www.home-assistant.io/components/time_date/)
-- [Wake on LAN](https://www.home-assistant.io/components/wake_on_lan/)
+Integration | Configuration
+--|--
+[AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow (UI configuration)
+[Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
+[Default Config](https://home-assistant.io/integrations/default_config) | Config flow (UI configuration)
+[LG webOS Smart TV](https://home-assistant.io/integrations/webostv) | [./packages/integrations/core/webostv.yaml](./packages/integrations/core/webostv.yaml)
+[Met.no](https://home-assistant.io/integrations/met) | Config flow (UI configuration)
+[Spotify](https://home-assistant.io/integrations/spotify) | Hidden
 
-## custom_components that I use
+{% for category in custom_categories -%}
+{%- set entries = hacs_components | selectattr("category", "eq", category.key) | selectattr("installed", "eq", True) | list -%}
+{% if entries | count != 0 %}
+## The custom {{category.name}} that I use
+{% for entry in entries -%}
+{% if entry.installed %}
+### [{{entry.name}}]({{entry.documentation}})
 
-A summary of custom_components that I use.
-{% for integration in custom_components %}
-### [{{integration.name}}]({{integration.documentation}})
-{% if integration.domain in custom_component_descriptions %}
-_{{custom_component_descriptions[integration.domain]["description"]}}_
+_{{entry.description}}_
 
-{{custom_component_descriptions[integration.domain]["usage"]}}
-{% if custom_component_descriptions[integration.domain]["config_flow"] %}
-This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
+{% if category.key == "integration" and not entry.config_flow %}
+[**My configuration for {{entry.name}}**](./packages/integrations/core/{{entry.domain}}.yaml)
+{% endif -%}
+
+**Version** | {{entry.installed_version}}
+--|--
+{% if entry.authors -%}
+**Author(s)** | {{entry.authors|join(", ")}}
 {% endif -%}
 {% endif -%}
-{% endfor %}
-
-## Custom Lovelace plugins that I use
-
-A summary of custom Lovelace plugins that I use.
-
-### [Compact Custom Header](https://github.com/maykar/compact-custom-header)
-
-_CCH - Customize the header and add enhancements to Lovelace. Features: kiosk mode, conditional header styling, per user/device views, swiping between views on mobile, and more._
-
-I use this to get more screen space by minifying the space used by the header, and to lock my laptop that I have in the hallway by the door to one view.
-
-### [Favicon Counter](https://github.com/custom-cards/favicon-counter)
-
-_Show a notification count badge.._
-
-I use this to show a badge on the Home Assistant tab in my browser when there are active [Persistent notifications](https://www.home-assistant.io/components/persistent_notification/)
-
-### [Mini Graph Card](https://github.com/kalkih/mini-graph-card)
-
-_Minimalistic graph card for Home Assistant Lovelace UI_
-
-I use this to create beautiful statistics cards for my UI.
-
-### [Lovelace Markdown Mod](https://github.com/thomasloven/lovelace-markdown-mod)
-
-_Makes the built-in [markdown](https://www.home-assistant.io/lovelace/markdown/) card better._
-
-I use this to add functions to the markdown card, like showing states of entities.
+{%- endfor -%}
+{% endif -%}
+{%- endfor %}
 
 ***
 

@@ -1,35 +1,8 @@
-# "Core" configuration
+# Documentation: https://www.home-assistant.io/docs/configuration/basic/
+---
+default_config:
 homeassistant:
   packages: !include_dir_named packages
 
-http:
-  base_url: !secret nabu_casa_url
-default_config:
-logger:
-  default: info
-  logs:
-    hacs: debug
-frontend:
-  extra_module_url:
-    - /local/ThemeOverride.js # https://gist.github.com/ludeeus/fb0a8410d6c04e7f2f58b23cbd4e1542
-  themes: !include_dir_merge_named themes
-recorder:
-  purge_keep_days: 3
-
-media_player spotify:
-  platform: spotify
-  client_id: !secret spotify_id
-  client_secret: !secret spotify_secret
-
-sensor entur_public_transport:
-  platform: entur_public_transport
-  stop_ids:
-    - !secret entur_stop_id
-
-sensor time_date:
-  platform: time_date
-  display_options: ['time', 'date']
-
-speedtestdotnet:
-  scan_interval:
-    minutes: 15
+automation: !include automations.yaml
+script: !include scripts.yaml
