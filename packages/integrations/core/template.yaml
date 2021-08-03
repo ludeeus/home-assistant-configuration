@@ -1,0 +1,14 @@
+# Documentation: https://www.home-assistant.io/integrations/template/
+# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/template
+---
+sensor statistics:
+  - platform: template
+    sensors:
+      statistics_entities:
+        friendly_name: "Number of entities"
+        unit_of_measurement: 'entities'
+        value_template: "{{ states | count }}"
+      statistics_automations:
+        friendly_name: "Number of automations"
+        unit_of_measurement: 'automations'
+        value_template: "{{ states.automation | count }}"

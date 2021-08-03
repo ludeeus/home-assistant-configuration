@@ -1,0 +1,11 @@
+# Documentation: https://www.home-assistant.io/integrations/influxdb/
+# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/influxdb
+---
+influxdb:
+  host: a0d7b954-influxdb
+  port: 8086
+  database: homeassistant
+  username: homeassistant
+  password: homeassistant
+  max_retries: 3
+  default_measurement: state

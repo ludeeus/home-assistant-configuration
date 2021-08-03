@@ -1,0 +1,11 @@
+# Documentation: https://www.home-assistant.io/docs/automation/
+---
+- id: '1607994327328'
+  alias: Pause Spotify when my phone rings
+  description: ''
+  use_blueprint:
+    path: ludeeus/pause_media_during_calls.yaml
+    input:
+      phone_state_sensor: sensor.sm_g973f_phone_state
+      media_player:
+        entity_id: media_player.spotify_joakim_sorensen

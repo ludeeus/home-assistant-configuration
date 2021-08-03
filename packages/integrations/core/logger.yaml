@@ -1,0 +1,5 @@
+# Documentation: https://www.home-assistant.io/integrations/logger/
+# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/logger
+---
+logger:
+  default: info

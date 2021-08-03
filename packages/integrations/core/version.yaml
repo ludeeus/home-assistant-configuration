@@ -1,0 +1,10 @@
+# Documentation: https://www.home-assistant.io/integrations/version/
+# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/version
+---
+sensor:
+  # Current installed version
+  - platform: version
+
+  # Current available version
+  - platform: version
+    source: supervisor

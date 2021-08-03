@@ -1,0 +1,49 @@
+blueprint:
+  name: Pause Playing Media During Calls
+  description: 'Automatically pause the playing media when you get a call!
+
+    Currently this only works with the Home Assistant Companion app for Android.
+
+    '
+  domain: automation
+  input:
+    phone_state_sensor:
+      name: Phone state sensor
+      description: 'Select the sensor that holds the phone state you want to track.
+
+        '
+      selector:
+        entity:
+          domain: sensor
+    media_player:
+      name: Media player
+      description: Select media player to control. This will only work for entities,
+        not areas or devices.
+      selector:
+        target:
+          entity:
+            domain: media_player
+  source_url: https://gist.github.com/ludeeus/58ab08b94424c12a8f911e932eb2f46a
+variables:
+  players: !input 'media_player'
+  playing: '{{ dict((states.media_player|selectattr(''entity_id'', ''in'', players.entity_id)|list
+    )|groupby(''state''))[''playing'']|map(attribute=''entity_id'') | list }}
+
+    '
+trigger:
+  platform: state
+  entity_id: !input 'phone_state_sensor'
+  from: idle
+condition:
+  - condition: template
+    value_template: '{{ (playing | count) != 0 }}'
+action:
+- service: media_player.media_pause
+  data:
+    entity_id: '{{ playing }}'
+- wait_for_trigger:
+  - platform: template
+    value_template: '{{ states[trigger.entity_id].state == ''idle'' }}'
+- service: media_player.media_play
+  data:
+    entity_id: '{{ playing }}'

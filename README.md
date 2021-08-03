@@ -1,138 +1,87 @@
-# Hello there! 👋
+# Welcome 👋!
 
-So this is my Home Assistant instance 🎉
+This is my Home Assistant installation.
 
-This repository exists mostly for my own amusement, but it may contain some things that others might find useful.
+## Some statistics about my installation:
 
-## Statistics from the instance
-
-Description | Value
--- | --
-Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 2
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 6
-Entities in the [`group`](https://www.home-assistant.io/components/group) domain | 2
-Entities in the [`input_boolean`](https://www.home-assistant.io/components/input_boolean) domain | 2
-Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 4
+Description | value
+--|--
+Installed version | 2021.8.0b8
+Total entity objects | 178
+Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 1
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 20
+Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
+Entities in the [`configurator`](https://www.home-assistant.io/components/configurator) domain | 1
+Entities in the [`cover`](https://www.home-assistant.io/components/cover) domain | 1
+Entities in the [`device_tracker`](https://www.home-assistant.io/components/device_tracker) domain | 2
+Entities in the [`input_datetime`](https://www.home-assistant.io/components/input_datetime) domain | 1
+Entities in the [`input_text`](https://www.home-assistant.io/components/input_text) domain | 1
+Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 27
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 19
+Entities in the [`select`](https://www.home-assistant.io/components/select) domain | 1
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 112
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
-Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 7
+Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 6
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
-Total state objects | 45
-
-## Hardware and general setup
-
-For my setup I use an old Lenovo Yoga Pro 2, it has a touch screen so I have mounted it on the wall by the front door so I can easily access some controls in my Lovelace UI.
-
-OS | Ubuntu desktop 18.04
--- | --
-SSD | 512GB
-RAM | 8GB
-Processor | Intel® Core™ i7-4500U Processor
-Connectivity | WiFi
-
-For the installation method of Home Assistant I went with [the generic Linux installation of Hassio](https://www.home-assistant.io/hassio/installation/#alternative-install-on-a-generic-linux-host)
-
-This method stores the files used by hassio/Home Assistant in `/usr/share/hassio`.
-
-I have mounted a share from my NAS to the `/usr/share/hassio` dir, that way I can handle backups and replication on my NAS.
-
-To have this work I added this line to my `/etc/fstab` file:
-
-```
-192.168.2.123:/volume1/SSD/hassio       /usr/share/hassio       nfs     auto    0       0
-```
-
-To access my instance I'm using my [Nabu Casa ❤️](https://www.nabucasa.com/) link both internally and externally.
+Entities in the [`zone`](https://www.home-assistant.io/components/zone) domain | 1
 
 ## Core integrations that I use
 
-- [AdGuard Home](https://www.home-assistant.io/components/adguard/)
-- [Belkin WeMo](https://www.home-assistant.io/components/wemo/)
-- [Default Config](https://www.home-assistant.io/components/default_config/)
-- [Entur public transport](https://www.home-assistant.io/components/entur_public_transport/)
-- [File](https://www.home-assistant.io/components/file/)
-- [Input Boolean](https://www.home-assistant.io/components/input_boolean/)
-- [LG webOS Smart TV](https://www.home-assistant.io/components/webostv/)
-- [Met.no](https://www.home-assistant.io/components/met/)
-- [Shell command](https://www.home-assistant.io/components/shell_command/)
-- [Speedtest.net](https://www.home-assistant.io/components/speedtestdotnet/)
-- [Spotify](https://www.home-assistant.io/components/spotify/)
-- [Time & Date](https://www.home-assistant.io/components/time_date/)
-- [Wake on LAN](https://www.home-assistant.io/components/wake_on_lan/)
-
-## custom_components that I use
-
-A summary of custom_components that I use.
-
-### [HACS (Home Assistant Community Store)](https://hacs.xyz)
-
-_Manage (Install, track, upgrade) and discover custom elements for Home Assistant._
-
-I use this to discover new awesome stuff, and to keep the custom elements I use up to date with the latest version of it from the developer.
-
-This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
-
-### [Generate readme](https://github.com/custom-components/readme)
-
-_Generates this awesome readme file._
-
-I use this integration to generate this readme, and to convert my lovelace configuration.
-
-This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
-
-### [Healthchecks.io](https://github.com/custom-components/healthchecksio)
-
-_Update and display the status of your healthchecks.io checks._
-
-I use this to update my check for Home Assistant, and to keep track of all my other checks.
-
-This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
-
-### [ESXi Stats](https://github.com/wxt9861/esxi_stats)
-
-_ESXi component for Home Assistant_
-
-I use this to get information about my ESXi host.
-
-This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
-
-### [UI Template sensor configuration](https://github.com/custom-components/templatesensor)
-
-_Add template sensors from the UI._
-
-I don't use this much ATM, but it's nice to be able to add/change template sensors without restarting Home Assistant.
-
-This integration has been configured in the UI "Configuration" -> "Integrations", so you will not find my configuration for it.
+Integration | Configuration
+--|--
+[AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow (UI configuration)
+[Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
+[Default Config](https://home-assistant.io/integrations/default_config) | Config flow (UI configuration)
+[LG webOS Smart TV](https://home-assistant.io/integrations/webostv) | [./packages/integrations/core/webostv.yaml](./packages/integrations/core/webostv.yaml)
+[Met.no](https://home-assistant.io/integrations/met) | Config flow (UI configuration)
+[Spotify](https://home-assistant.io/integrations/spotify) | Hidden
 
 
-## Custom Lovelace plugins that I use
+## The custom integrations that I use
 
-A summary of custom Lovelace plugins that I use.
+### [HACS](https://github.com/hacs/integration)
 
-### [Compact Custom Header](https://github.com/maykar/compact-custom-header)
+_HACS gives you a powerful UI to handle downloads of all your custom needs._
 
-_CCH - Customize the header and add enhancements to Lovelace. Features: kiosk mode, conditional header styling, per user/device views, swiping between views on mobile, and more._
+**Version** | 1.13.2
+--|--
+**Author(s)** | @ludeeus
 
-I use this to get more screen space by minifying the space used by the header, and to lock my laptop that I have in the hallway by the door to one view.
+### [Netdaemon](https://github.com/net-daemon/integration)
 
-### [Favicon Counter](https://github.com/custom-cards/favicon-counter)
+_Helper integration for Home Assistant_
 
-_Show a notification count badge.._
+**Version** | 21.28.0
+--|--
+**Author(s)** | @net-daemon
 
-I use this to show a badge on the Home Assistant tab in my browser when there are active [Persistent notifications](https://www.home-assistant.io/components/persistent_notification/)
+### [Breaking Changes](https://github.com/custom-components/breaking_changes)
+
+_Component to show potential breaking_changes in the current published version based on your loaded components_
+
+
+[**My configuration for Breaking Changes**](./packages/integrations/core/breaking_changes.yaml)
+**Version** | 21.4.0
+--|--
+**Author(s)** | @ludeeus
+
+### [Generate Readme](https://github.com/custom-components/readme)
+
+_Use Jinja and data from Home Assistant to generate your README.md file_
+
+**Version** | 0.3.0
+--|--
+**Author(s)** | @ludeeus
+
+## The custom lovelace plugins that I use
 
 ### [Mini Graph Card](https://github.com/kalkih/mini-graph-card)
 
 _Minimalistic graph card for Home Assistant Lovelace UI_
 
-I use this to create beautiful statistics cards for my UI.
+**Version** | v0.11.0-dev.4
+--|--
 
-### [Lovelace Markdown Mod](https://github.com/thomasloven/lovelace-markdown-mod)
-
-_Makes the built-in [markdown](https://www.home-assistant.io/lovelace/markdown/) card better._
-
-I use this to add functions to the markdown card, like showing states of entities.
 
 ***
 
