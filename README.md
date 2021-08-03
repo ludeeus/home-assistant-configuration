@@ -7,9 +7,9 @@ This is my Home Assistant installation.
 Description | value
 --|--
 Installed version | 2021.8.0b8
-Total entity objects | 178
+Total entity objects | 182
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 1
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 20
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 24
 Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
 Entities in the [`configurator`](https://www.home-assistant.io/components/configurator) domain | 1
 Entities in the [`cover`](https://www.home-assistant.io/components/cover) domain | 1
@@ -31,10 +31,25 @@ Integration | Configuration
 --|--
 [AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow (UI configuration)
 [Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
+[Cast](https://home-assistant.io/integrations/cast) | Config flow (UI configuration)
+[Cloud](https://home-assistant.io/integrations/cloud) | Hidden
+[Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow (UI configuration)
 [Default Config](https://home-assistant.io/integrations/default_config) | Config flow (UI configuration)
+[Frontend](https://home-assistant.io/integrations/frontend) | [./packages/integrations/core/frontend.yaml](./packages/integrations/core/frontend.yaml)
+[InfluxDB](https://home-assistant.io/integrations/influxdb) | [./packages/integrations/core/influxdb.yaml](./packages/integrations/core/influxdb.yaml)
 [LG webOS Smart TV](https://home-assistant.io/integrations/webostv) | [./packages/integrations/core/webostv.yaml](./packages/integrations/core/webostv.yaml)
+[Logger](https://home-assistant.io/integrations/logger) | [./packages/integrations/core/logger.yaml](./packages/integrations/core/logger.yaml)
 [Met.no](https://home-assistant.io/integrations/met) | Config flow (UI configuration)
+[Netatmo](https://home-assistant.io/integrations/netatmo) | Config flow (UI configuration)
+[Plex](https://home-assistant.io/integrations/plex) | Config flow (UI configuration)
+[Rest](https://home-assistant.io/integrations/rest) | Hidden
+[Sentry](https://home-assistant.io/integrations/sentry) | Config flow (UI configuration)
 [Spotify](https://home-assistant.io/integrations/spotify) | Hidden
+[Synology](https://home-assistant.io/integrations/synology) | Config flow (UI configuration)
+[Template](https://home-assistant.io/integrations/template) | [./packages/integrations/core/template.yaml](./packages/integrations/core/template.yaml)
+[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Hidden
+[Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
+[Wemo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
 
 
 ## The custom integrations that I use
