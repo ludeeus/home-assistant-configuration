@@ -7,19 +7,17 @@ This is my Home Assistant installation.
 Description | value
 --|--
 Installed version | 2021.8.0b8
-Total entity objects | 182
+Total entity objects | 138
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 1
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 24
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 21
 Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
-Entities in the [`configurator`](https://www.home-assistant.io/components/configurator) domain | 1
-Entities in the [`cover`](https://www.home-assistant.io/components/cover) domain | 1
 Entities in the [`device_tracker`](https://www.home-assistant.io/components/device_tracker) domain | 2
 Entities in the [`input_datetime`](https://www.home-assistant.io/components/input_datetime) domain | 1
 Entities in the [`input_text`](https://www.home-assistant.io/components/input_text) domain | 1
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 27
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
 Entities in the [`select`](https://www.home-assistant.io/components/select) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 112
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 73
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 6
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
@@ -49,6 +47,7 @@ Integration | Configuration
 [Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | [./packages/integrations/core/uptimerobot.yaml](./packages/integrations/core/uptimerobot.yaml)
 [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
 [Wemo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
+[ZHA](https://home-assistant.io/integrations/zha) | Config flow (UI configuration)
 
 
 ## The custom integrations that I use

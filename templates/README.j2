@@ -59,6 +59,7 @@ Integration | Configuration
 [Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | [./packages/integrations/core/uptimerobot.yaml](./packages/integrations/core/uptimerobot.yaml)
 [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
 [Wemo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
+[ZHA](https://home-assistant.io/integrations/zha) | Config flow (UI configuration)
 
 {% for category in custom_categories -%}
 {%- set entries = hacs_components | selectattr("category", "eq", category.key) | selectattr("installed", "eq", True) | list -%}
