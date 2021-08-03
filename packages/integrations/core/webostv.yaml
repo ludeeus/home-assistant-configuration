@@ -1,5 +1,0 @@
-# Documentation: https://www.home-assistant.io/integrations/webostv/
-# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/webostv
----
-webostv:
-  host: 192.168.100.117
