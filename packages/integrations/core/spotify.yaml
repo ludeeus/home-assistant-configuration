@@ -1,0 +1,6 @@
+# documentation: https://www.home-assistant.io/integrations/spotify/
+# source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/spotify
+---
+spotify:
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret

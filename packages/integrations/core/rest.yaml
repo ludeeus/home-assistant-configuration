@@ -1,0 +1,21 @@
+# documentation: https://www.home-assistant.io/integrations/rest/
+# source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/rest
+---
+rest:
+- resource: https://api.github.com/rate_limit
+  method: GET
+  scan_interval: 60
+  headers:
+    Authorization: !secret github_authorization_header
+    Accept: application/vnd.github.v3+json
+    Content-Type: application/json
+    User-Agent: Home Assistant REST sensor
+  sensor:
+    - name: HACS Github Access
+      unit_of_measurement: REST API calls
+      json_attributes_path: "$.resources.core"
+      value_template: "{{ value_json.resources.core.used }}"
+      json_attributes:
+        - "limit"
+        - "remaining"
+        - "reset"

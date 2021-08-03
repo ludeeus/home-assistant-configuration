@@ -1,10 +1,6 @@
 *
 !packages
 !packages/**/*
-packages/integrations/core/cloud.yaml
-packages/integrations/core/rest.yaml
-packages/integrations/core/spotify.yaml
-packages/integrations/core/uptimerobot.yaml
 !templates
 !templates/**/*
 !blueprints

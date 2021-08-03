@@ -32,7 +32,7 @@ Integration | Configuration
 [AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow (UI configuration)
 [Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
 [Cast](https://home-assistant.io/integrations/cast) | Config flow (UI configuration)
-[Cloud](https://home-assistant.io/integrations/cloud) | Hidden
+[Cloud](https://home-assistant.io/integrations/cloud) | [./packages/integrations/core/cloud.yaml](./packages/integrations/core/cloud.yaml)
 [Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow (UI configuration)
 [Default Config](https://home-assistant.io/integrations/default_config) | Config flow (UI configuration)
 [Frontend](https://home-assistant.io/integrations/frontend) | [./packages/integrations/core/frontend.yaml](./packages/integrations/core/frontend.yaml)
@@ -42,12 +42,12 @@ Integration | Configuration
 [Met.no](https://home-assistant.io/integrations/met) | Config flow (UI configuration)
 [Netatmo](https://home-assistant.io/integrations/netatmo) | Config flow (UI configuration)
 [Plex](https://home-assistant.io/integrations/plex) | Config flow (UI configuration)
-[Rest](https://home-assistant.io/integrations/rest) | Hidden
+[Rest](https://home-assistant.io/integrations/rest) | [./packages/integrations/core/rest.yaml](./packages/integrations/core/rest.yaml)
 [Sentry](https://home-assistant.io/integrations/sentry) | Config flow (UI configuration)
-[Spotify](https://home-assistant.io/integrations/spotify) | Hidden
+[Spotify](https://home-assistant.io/integrations/spotify) | [./packages/integrations/core/spotify.yaml](./packages/integrations/core/spotify.yaml)
 [Synology](https://home-assistant.io/integrations/synology) | Config flow (UI configuration)
 [Template](https://home-assistant.io/integrations/template) | [./packages/integrations/core/template.yaml](./packages/integrations/core/template.yaml)
-[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Hidden
+[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | [./packages/integrations/core/uptimerobot.yaml](./packages/integrations/core/uptimerobot.yaml)
 [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
 [Wemo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
 
