@@ -7,9 +7,9 @@ This is my Home Assistant installation.
 Description | value
 --|--
 Installed version | 2021.8.0b8
-Total entity objects | 176
+Total entity objects | 178
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 1
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 19
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 20
 Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
 Entities in the [`configurator`](https://www.home-assistant.io/components/configurator) domain | 1
 Entities in the [`cover`](https://www.home-assistant.io/components/cover) domain | 1
@@ -19,7 +19,7 @@ Entities in the [`input_text`](https://www.home-assistant.io/components/input_te
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 27
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
 Entities in the [`select`](https://www.home-assistant.io/components/select) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 111
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 112
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 6
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
@@ -60,7 +60,7 @@ _Helper integration for Home Assistant_
 _Component to show potential breaking_changes in the current published version based on your loaded components_
 
 
-[**My configuration for Breaking Changes**](./packages/integrations/core/breaking_changes.yaml)
+[**My configuration for Breaking Changes**](./packages/integrations/custom/breaking_changes.yaml)
 **Version** | 21.4.0
 --|--
 **Author(s)** | @ludeeus
