@@ -6,9 +6,9 @@ This is my Home Assistant installation.
 
 Description | value
 --|--
-Installed version | 2021.10.0.dev20210904
-Total entity objects | 152
-Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 1
+Installed version | 2021.10.0.dev20210905
+Total entity objects | 154
+Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 3
 Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 23
 Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
 Entities in the [`device_tracker`](https://www.home-assistant.io/components/device_tracker) domain | 2
@@ -43,6 +43,7 @@ Integration | Configuration
 [Sentry](https://home-assistant.io/integrations/sentry) | Config flow (UI configuration)
 [Spotify](https://home-assistant.io/integrations/spotify) | [./packages/integrations/core/spotify.yaml](./packages/integrations/core/spotify.yaml)
 [Synology](https://home-assistant.io/integrations/synology_dsm) | Config flow (UI configuration)
+[Telegram BOT](https://home-assistant.io/integrations/telegram) | [./packages/integrations/core/telegram.yaml](./packages/integrations/core/telegram.yaml)
 [Template](https://home-assistant.io/integrations/template) | [./packages/integrations/core/template.yaml](./packages/integrations/core/template.yaml)
 [Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Config flow (UI configuration)
 [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)

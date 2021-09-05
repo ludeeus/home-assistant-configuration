@@ -1,5 +1,3 @@
-# Documentation: https://www.home-assistant.io/docs/automation/
----
 - id: '1607994327328'
   alias: Pause Spotify when my phone rings
   description: ''
@@ -9,3 +7,29 @@
       phone_state_sensor: sensor.sm_g973f_phone_state
       media_player:
         entity_id: media_player.spotify_joakim_sorensen
+- id: '1630830932920'
+  alias: Notify on remote UI disconnect
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.remote_ui
+    from: 'on'
+    to: 'off'
+  condition: []
+  action:
+  - service: telegram_bot.send_message
+    data:
+      message: Remote UI has disconnected
+  mode: single
+- id: '1630833470587'
+  alias: Send notification when home assistant starts
+  description: ''
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition: []
+  action:
+  - service: telegram_bot.send_message
+    data:
+      message: Home Assistant has started
+  mode: single
