@@ -14,7 +14,7 @@ rest:
     - name: HACS Github Access
       unit_of_measurement: REST API calls
       json_attributes_path: "$.resources.core"
-      value_template: "{{ value_json.resources.core.used }}"
+      value_template: "{{ value_json.resources.core.used if value_json else 0 }}"
       json_attributes:
         - "limit"
         - "remaining"
