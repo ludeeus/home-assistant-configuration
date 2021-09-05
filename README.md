@@ -6,18 +6,18 @@ This is my Home Assistant installation.
 
 Description | value
 --|--
-Installed version | 2021.8.0b8
-Total entity objects | 138
+Installed version | 2021.10.0.dev20210904
+Total entity objects | 152
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 1
-Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 21
+Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 23
 Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
 Entities in the [`device_tracker`](https://www.home-assistant.io/components/device_tracker) domain | 2
 Entities in the [`input_datetime`](https://www.home-assistant.io/components/input_datetime) domain | 1
 Entities in the [`input_text`](https://www.home-assistant.io/components/input_text) domain | 1
-Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 27
+Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 28
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
 Entities in the [`select`](https://www.home-assistant.io/components/select) domain | 1
-Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 73
+Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 84
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
 Entities in the [`switch`](https://www.home-assistant.io/components/switch) domain | 6
 Entities in the [`weather`](https://www.home-assistant.io/components/weather) domain | 1
@@ -32,7 +32,7 @@ Integration | Configuration
 [Cast](https://home-assistant.io/integrations/cast) | Config flow (UI configuration)
 [Cloud](https://home-assistant.io/integrations/cloud) | [./packages/integrations/core/cloud.yaml](./packages/integrations/core/cloud.yaml)
 [Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow (UI configuration)
-[Default Config](https://home-assistant.io/integrations/default_config) | Config flow (UI configuration)
+[Default Config](https://home-assistant.io/integrations/default_config) | [./configuration.yaml](./configuration.yaml)
 [Frontend](https://home-assistant.io/integrations/frontend) | [./packages/integrations/core/frontend.yaml](./packages/integrations/core/frontend.yaml)
 [InfluxDB](https://home-assistant.io/integrations/influxdb) | [./packages/integrations/core/influxdb.yaml](./packages/integrations/core/influxdb.yaml)
 [Logger](https://home-assistant.io/integrations/logger) | [./packages/integrations/core/logger.yaml](./packages/integrations/core/logger.yaml)
@@ -42,9 +42,9 @@ Integration | Configuration
 [Rest](https://home-assistant.io/integrations/rest) | [./packages/integrations/core/rest.yaml](./packages/integrations/core/rest.yaml)
 [Sentry](https://home-assistant.io/integrations/sentry) | Config flow (UI configuration)
 [Spotify](https://home-assistant.io/integrations/spotify) | [./packages/integrations/core/spotify.yaml](./packages/integrations/core/spotify.yaml)
-[Synology](https://home-assistant.io/integrations/synology) | Config flow (UI configuration)
+[Synology](https://home-assistant.io/integrations/synology_dsm) | Config flow (UI configuration)
 [Template](https://home-assistant.io/integrations/template) | [./packages/integrations/core/template.yaml](./packages/integrations/core/template.yaml)
-[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | [./packages/integrations/core/uptimerobot.yaml](./packages/integrations/core/uptimerobot.yaml)
+[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Config flow (UI configuration)
 [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
 [Wemo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
 [ZHA](https://home-assistant.io/integrations/zha) | Config flow (UI configuration)
@@ -56,7 +56,7 @@ Integration | Configuration
 
 _HACS gives you a powerful UI to handle downloads of all your custom needs._
 
-**Version** | 1.13.2
+**Version** | 1.15.2
 --|--
 **Author(s)** | @ludeeus
 

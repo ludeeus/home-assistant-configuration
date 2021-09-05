@@ -1,5 +1,0 @@
-# Documentation: https://www.home-assistant.io/integrations/recorder/
-# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/recorder
----
-recorder:
-  db_url: 'sqlite:///:memory:'

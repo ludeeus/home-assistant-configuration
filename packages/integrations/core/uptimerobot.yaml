@@ -1,6 +1,0 @@
-# Documentation: https://www.home-assistant.io/integrations/uptimerobot/
-# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/uptimerobot
----
-binary_sensor:
-  - platform: uptimerobot
-    api_key: !secret uptimerobot_api_key
