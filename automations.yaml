@@ -33,3 +33,45 @@
     data:
       message: Home Assistant has started
   mode: single
+- id: '1633555826324'
+  alias: Turn on night lights
+  description: ''
+  trigger:
+  - platform: time
+    at: '23:00'
+  condition:
+  - condition: device
+    device_id: d20d4fa889d9807b7d66ab290af4a9c1
+    domain: device_tracker
+    entity_id: device_tracker.iphone
+    type: is_home
+  action:
+  - service: light.turn_on
+    target:
+      entity_id: light.led001
+    data:
+      color_name: homeassistant
+  - delay:
+      hours: 1
+      minutes: 0
+      seconds: 0
+      milliseconds: 0
+  - service: switch.turn_on
+    target:
+      entity_id: switch.w01
+  mode: single
+- id: '1633555882355'
+  alias: Turn off night lights
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.chrome_cast
+    to: playing
+  condition: []
+  action:
+  - service: homeassistant.turn_off
+    target:
+      entity_id:
+      - light.led001
+      - switch.w01
+  mode: single

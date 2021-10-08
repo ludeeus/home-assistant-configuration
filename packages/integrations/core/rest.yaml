@@ -2,20 +2,40 @@
 # source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/rest
 ---
 rest:
-- resource: https://api.github.com/rate_limit
-  method: GET
-  scan_interval: 60
-  headers:
-    Authorization: !secret github_authorization_header
-    Accept: application/vnd.github.v3+json
-    Content-Type: application/json
-    User-Agent: Home Assistant REST sensor
-  sensor:
-    - name: GitHub API token usage
-      unit_of_measurement: REST API calls
-      json_attributes_path: "$.resources.core"
-      value_template: "{{ value_json.resources.core.used if value_json else 0 }}"
-      json_attributes:
-        - "limit"
-        - "remaining"
-        - "reset"
+  - resource: https://api.github.com/rate_limit
+    method: GET
+    scan_interval: 60
+    headers:
+      Authorization: !secret github_authorization_header
+      Accept: application/vnd.github.v3+json
+      Content-Type: application/json
+      User-Agent: Home Assistant REST sensor
+    sensor:
+      - name: GitHub API token usage
+        unit_of_measurement: REST API calls
+        json_attributes_path: "$.resources.core"
+        value_template: "{{ value_json.resources.core.used if value_json else 0 }}"
+        json_attributes:
+          - "limit"
+          - "remaining"
+          - "reset"
+
+  - resource: !secret server_r_url
+    method: POST
+    scan_interval: 60
+    headers:
+      Content-Length: 0
+      X-Api-Key: !secret server_r_api_key
+    binary_sensor:
+      - name: !secret server_r_name
+        value_template: "{{ value_json[0].isValid if value_json else False }}"
+
+  - resource: !secret server_s_url
+    method: POST
+    scan_interval: 60
+    headers:
+      Content-Length: 0
+      X-Api-Key: !secret server_s_api_key
+    binary_sensor:
+      - name: !secret server_s_name
+        value_template: "{{ value_json[0].isValid if value_json else False }}"
