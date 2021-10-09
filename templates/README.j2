@@ -66,8 +66,6 @@ Integration | Configuration
 [Wemo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
 [ZHA](https://home-assistant.io/integrations/zha) | Config flow[^1]
 
-[^1]: UI Configuration
-
 {% for category in custom_categories -%}
 {%- set entries = hacs_components | selectattr("category", "eq", category.key) | selectattr("installed", "eq", True) | list -%}
 {% if entries | count != 0 %}
@@ -95,3 +93,6 @@ _{{entry.description}}_
 ***
 
 Like all other Home Assistant instances this is also a Work in Progress :D
+
+<!-- Footnotes -->
+[^1]: UI Configuration

@@ -56,8 +56,6 @@ Integration | Configuration
 [Wemo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
 [ZHA](https://home-assistant.io/integrations/zha) | Config flow[^1]
 
-[^1]: UI Configuration
-
 
 ## The custom integrations that I use
 
@@ -100,3 +98,6 @@ _Minimalistic graph card for Home Assistant Lovelace UI_
 ***
 
 Like all other Home Assistant instances this is also a Work in Progress :D
+
+<!-- Footnotes -->
+[^1]: UI Configuration
