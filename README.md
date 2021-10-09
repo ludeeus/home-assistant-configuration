@@ -7,17 +7,17 @@ This is my Home Assistant installation.
 Description | value
 --|--
 Installed version | 2021.11.0.dev20211009
-Total entity objects | 180
+Total entity objects | 182
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 6
 Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 22
 Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
 Entities in the [`device_tracker`](https://www.home-assistant.io/components/device_tracker) domain | 3
 Entities in the [`input_datetime`](https://www.home-assistant.io/components/input_datetime) domain | 1
 Entities in the [`input_text`](https://www.home-assistant.io/components/input_text) domain | 1
-Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 2
+Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 3
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 30
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
-Entities in the [`script`](https://www.home-assistant.io/components/script) domain | 2
+Entities in the [`script`](https://www.home-assistant.io/components/script) domain | 3
 Entities in the [`select`](https://www.home-assistant.io/components/select) domain | 1
 Entities in the [`sensor`](https://www.home-assistant.io/components/sensor) domain | 101
 Entities in the [`sun`](https://www.home-assistant.io/components/sun) domain | 1
@@ -44,7 +44,7 @@ Integration | Configuration
 [Netatmo](https://home-assistant.io/integrations/netatmo) | Config flow (UI configuration)
 [Plex](https://home-assistant.io/integrations/plex) | Config flow (UI configuration)
 [Rest](https://home-assistant.io/integrations/rest) | [./packages/integrations/core/rest.yaml](./packages/integrations/core/rest.yaml)
-[Scene](https://home-assistant.io/integrations/scene) | [./scenes.yaml](./scenes.yaml)
+[Script](https://home-assistant.io/integrations/script) | [./scripts.yaml](./scripts.yaml)
 [Sentry](https://home-assistant.io/integrations/sentry) | Config flow (UI configuration)
 [Spotify](https://home-assistant.io/integrations/spotify) | [./packages/integrations/core/spotify.yaml](./packages/integrations/core/spotify.yaml)
 [Synology](https://home-assistant.io/integrations/synology_dsm) | Config flow (UI configuration)
