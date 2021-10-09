@@ -7,7 +7,7 @@ This is my Home Assistant installation.
 Description | value
 --|--
 Installed version | 2021.11.0.dev20211009
-Total entity objects | 181
+Total entity objects | 180
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 6
 Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 22
 Entities in the [`camera`](https://www.home-assistant.io/components/camera) domain | 1
@@ -16,7 +16,6 @@ Entities in the [`input_datetime`](https://www.home-assistant.io/components/inpu
 Entities in the [`input_text`](https://www.home-assistant.io/components/input_text) domain | 1
 Entities in the [`light`](https://www.home-assistant.io/components/light) domain | 2
 Entities in the [`media_player`](https://www.home-assistant.io/components/media_player) domain | 30
-Entities in the [`persistent_notification`](https://www.home-assistant.io/components/persistent_notification) domain | 1
 Entities in the [`person`](https://www.home-assistant.io/components/person) domain | 1
 Entities in the [`script`](https://www.home-assistant.io/components/script) domain | 2
 Entities in the [`select`](https://www.home-assistant.io/components/select) domain | 1
@@ -38,6 +37,7 @@ Integration | Configuration
 [Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow (UI configuration)
 [Default Config](https://home-assistant.io/integrations/default_config) | [./configuration.yaml](./configuration.yaml)
 [Frontend](https://home-assistant.io/integrations/frontend) | [./packages/integrations/core/frontend.yaml](./packages/integrations/core/frontend.yaml)
+[Homekit](https://home-assistant.io/integrations/homekit) | Config flow (UI configuration)
 [InfluxDB](https://home-assistant.io/integrations/influxdb) | [./packages/integrations/core/influxdb.yaml](./packages/integrations/core/influxdb.yaml)
 [Logger](https://home-assistant.io/integrations/logger) | [./packages/integrations/core/logger.yaml](./packages/integrations/core/logger.yaml)
 [Met.no](https://home-assistant.io/integrations/met) | Config flow (UI configuration)
