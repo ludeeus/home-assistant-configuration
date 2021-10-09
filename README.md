@@ -29,32 +29,34 @@ Entities in the [`zone`](https://www.home-assistant.io/components/zone) domain |
 
 Integration | Configuration
 --|--
-[AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow (UI configuration)
+[AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow[^1]
 [Automations](https://home-assistant.io/integrations/automation) | [./automations.yaml](./automations.yaml)
-[Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
-[Cast](https://home-assistant.io/integrations/cast) | Config flow (UI configuration)
+[Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
+[Cast](https://home-assistant.io/integrations/cast) | Config flow[^1]
 [Cloud](https://home-assistant.io/integrations/cloud) | [./packages/integrations/core/cloud.yaml](./packages/integrations/core/cloud.yaml)
-[Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow (UI configuration)
+[Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow[^1]
 [Default Config](https://home-assistant.io/integrations/default_config) | [./configuration.yaml](./configuration.yaml)
 [Frontend](https://home-assistant.io/integrations/frontend) | [./packages/integrations/core/frontend.yaml](./packages/integrations/core/frontend.yaml)
-[Homekit](https://home-assistant.io/integrations/homekit) | Config flow (UI configuration)
+[Homekit](https://home-assistant.io/integrations/homekit) | Config flow[^1]
 [InfluxDB](https://home-assistant.io/integrations/influxdb) | [./packages/integrations/core/influxdb.yaml](./packages/integrations/core/influxdb.yaml)
 [Logger](https://home-assistant.io/integrations/logger) | [./packages/integrations/core/logger.yaml](./packages/integrations/core/logger.yaml)
-[Met.no](https://home-assistant.io/integrations/met) | Config flow (UI configuration)
-[Netatmo](https://home-assistant.io/integrations/netatmo) | Config flow (UI configuration)
-[Plex](https://home-assistant.io/integrations/plex) | Config flow (UI configuration)
+[Met.no](https://home-assistant.io/integrations/met) | Config flow[^1]
+[Netatmo](https://home-assistant.io/integrations/netatmo) | Config flow[^1]
+[Plex](https://home-assistant.io/integrations/plex) | Config flow[^1]
 [Rest](https://home-assistant.io/integrations/rest) | [./packages/integrations/core/rest.yaml](./packages/integrations/core/rest.yaml)
 [Script](https://home-assistant.io/integrations/script) | [./scripts.yaml](./scripts.yaml)
-[Sentry](https://home-assistant.io/integrations/sentry) | Config flow (UI configuration)
+[Sentry](https://home-assistant.io/integrations/sentry) | Config flow[^1]
 [Spotify](https://home-assistant.io/integrations/spotify) | [./packages/integrations/core/spotify.yaml](./packages/integrations/core/spotify.yaml)
-[Synology](https://home-assistant.io/integrations/synology_dsm) | Config flow (UI configuration)
+[Synology](https://home-assistant.io/integrations/synology_dsm) | Config flow[^1]
 [Telegram BOT](https://home-assistant.io/integrations/telegram) | [./packages/integrations/core/telegram.yaml](./packages/integrations/core/telegram.yaml)
 [Template](https://home-assistant.io/integrations/template) | [./packages/integrations/core/template.yaml](./packages/integrations/core/template.yaml)
-[Tuya](https://home-assistant.io/integrations/tuya) | Config flow (UI configuration)
-[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Config flow (UI configuration)
+[Tuya](https://home-assistant.io/integrations/tuya) | Config flow[^1]
+[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Config flow[^1]
 [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
-[Wemo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
+[Wemo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
 [ZHA](https://home-assistant.io/integrations/zha) | Config flow[^1]
+
+[^1]: UI Configuration
 
 
 ## The custom integrations that I use
@@ -98,6 +100,3 @@ _Minimalistic graph card for Home Assistant Lovelace UI_
 ***
 
 Like all other Home Assistant instances this is also a Work in Progress :D
-
-
-[^1]: UI Configuration
