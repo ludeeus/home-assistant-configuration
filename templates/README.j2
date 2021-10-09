@@ -143,7 +143,7 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
 Integration | Configuration
 --|--
 {% for integration in core_integrations -%}
-[<img src="https://brands.home-assistant.io/_/{{integration.key}}/icon.png" height="36"/>](https://brands.home-assistant.io/_/{{integration.key}}/icon.png) [{{integration.name}}](https://home-assistant.io/integrations/{{integration.key}}) | {{"[" + integration.configuration + "](" + integration.configuration + ")" if integration.configuration else "Config flow[^1]"}}
+[<img src="https://brands.home-assistant.io/_/{{integration.key}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{integration.key}}/icon.png) [{{integration.name}}](https://home-assistant.io/integrations/{{integration.key}}) | {{"[" + integration.configuration + "](" + integration.configuration + ")" if integration.configuration else "Config flow[^1]"}}
 {% endfor -%}
 
 {%- set custom_categories = [
@@ -167,7 +167,7 @@ Integration | Configuration
 ## The custom {{category.name}} that I use
 {% for entry in entries -%}
 {% if entry.installed %}
-### [<img src="https://brands.home-assistant.io/_/{{entry.domain}}/icon.png" height="36"/>](https://brands.home-assistant.io/_/{{entry.domain}}/icon.png) [{{entry.name}}]({{entry.documentation}})
+### [<img src="https://brands.home-assistant.io/_/{{entry.domain}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{entry.domain}}/icon.png) [{{entry.name}}]({{entry.documentation}})
 
 _{{entry.description}}_
 
