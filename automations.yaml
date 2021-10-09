@@ -75,3 +75,28 @@
       - light.led001
       - switch.w01
   mode: single
+- id: '1633761284031'
+  alias: Good morning
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: media_player.spotify_joakim_sorensen
+    to: Playing
+  condition:
+  - condition: time
+    after: 06:00
+    before: '12:00'
+  action:
+  - service: switch.turn_on
+    target:
+      entity_id: switch.w01
+  - service: script.living_room_lights_default
+  - delay:
+      hours: 0
+      minutes: 10
+      seconds: 0
+      milliseconds: 0
+  - service: switch.turn_off
+    target:
+      entity_id: switch.w01
+  mode: single
