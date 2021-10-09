@@ -29,37 +29,38 @@ Entities in the [`zone`](https://www.home-assistant.io/components/zone) domain |
 
 Integration | Configuration
 --|--
-[AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow[^1]
-[Automations](https://home-assistant.io/integrations/automation) | [./automations.yaml](./automations.yaml)
-[Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
-[Cast](https://home-assistant.io/integrations/cast) | Config flow[^1]
-[Cloud](https://home-assistant.io/integrations/cloud) | [./packages/integrations/core/cloud.yaml](./packages/integrations/core/cloud.yaml)
-[Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow[^1]
-[Default Config](https://home-assistant.io/integrations/default_config) | [./configuration.yaml](./configuration.yaml)
-[Frontend](https://home-assistant.io/integrations/frontend) | [./packages/integrations/core/frontend.yaml](./packages/integrations/core/frontend.yaml)
-[Homekit](https://home-assistant.io/integrations/homekit) | Config flow[^1]
-[InfluxDB](https://home-assistant.io/integrations/influxdb) | [./packages/integrations/core/influxdb.yaml](./packages/integrations/core/influxdb.yaml)
-[Logger](https://home-assistant.io/integrations/logger) | [./packages/integrations/core/logger.yaml](./packages/integrations/core/logger.yaml)
-[Met.no](https://home-assistant.io/integrations/met) | Config flow[^1]
-[Netatmo](https://home-assistant.io/integrations/netatmo) | Config flow[^1]
-[Plex](https://home-assistant.io/integrations/plex) | Config flow[^1]
-[Rest](https://home-assistant.io/integrations/rest) | [./packages/integrations/core/rest.yaml](./packages/integrations/core/rest.yaml)
-[Script](https://home-assistant.io/integrations/script) | [./scripts.yaml](./scripts.yaml)
-[Sentry](https://home-assistant.io/integrations/sentry) | Config flow[^1]
-[Spotify](https://home-assistant.io/integrations/spotify) | [./packages/integrations/core/spotify.yaml](./packages/integrations/core/spotify.yaml)
-[Synology](https://home-assistant.io/integrations/synology_dsm) | Config flow[^1]
-[Telegram BOT](https://home-assistant.io/integrations/telegram) | [./packages/integrations/core/telegram.yaml](./packages/integrations/core/telegram.yaml)
-[Template](https://home-assistant.io/integrations/template) | [./packages/integrations/core/template.yaml](./packages/integrations/core/template.yaml)
-[Tuya](https://home-assistant.io/integrations/tuya) | Config flow[^1]
-[Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Config flow[^1]
-[Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
-[Wemo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
-[ZHA](https://home-assistant.io/integrations/zha) | Config flow[^1]
+![AdGuard Home icon](https://brands.home-assistant.io/_/adguard/icon.png) [AdGuard Home](https://home-assistant.io/integrations/adguard) | Config flow[^1]
+![Automations icon](https://brands.home-assistant.io/_/automation/icon.png) [Automations](https://home-assistant.io/integrations/automation) | [./automations.yaml](./automations.yaml)
+![Belkin WeMo icon](https://brands.home-assistant.io/_/wemo/icon.png) [Belkin WeMo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
+![Cast icon](https://brands.home-assistant.io/_/cast/icon.png) [Cast](https://home-assistant.io/integrations/cast) | Config flow[^1]
+![Cloud icon](https://brands.home-assistant.io/_/cloud/icon.png) [Cloud](https://home-assistant.io/integrations/cloud) | [./packages/integrations/core/cloud.yaml](./packages/integrations/core/cloud.yaml)
+![Cloudflare icon](https://brands.home-assistant.io/_/cloudflare/icon.png) [Cloudflare](https://home-assistant.io/integrations/cloudflare) | Config flow[^1]
+![Default Config icon](https://brands.home-assistant.io/_/default_config/icon.png) [Default Config](https://home-assistant.io/integrations/default_config) | [./configuration.yaml](./configuration.yaml)
+![Frontend icon](https://brands.home-assistant.io/_/frontend/icon.png) [Frontend](https://home-assistant.io/integrations/frontend) | [./packages/integrations/core/frontend.yaml](./packages/integrations/core/frontend.yaml)
+![Homekit icon](https://brands.home-assistant.io/_/homekit/icon.png) [Homekit](https://home-assistant.io/integrations/homekit) | Config flow[^1]
+![InfluxDB icon](https://brands.home-assistant.io/_/influxdb/icon.png) [InfluxDB](https://home-assistant.io/integrations/influxdb) | [./packages/integrations/core/influxdb.yaml](./packages/integrations/core/influxdb.yaml)
+![Logger icon](https://brands.home-assistant.io/_/logger/icon.png) [Logger](https://home-assistant.io/integrations/logger) | [./packages/integrations/core/logger.yaml](./packages/integrations/core/logger.yaml)
+![Met.no icon](https://brands.home-assistant.io/_/met/icon.png) [Met.no](https://home-assistant.io/integrations/met) | Config flow[^1]
+![Netatmo icon](https://brands.home-assistant.io/_/netatmo/icon.png) [Netatmo](https://home-assistant.io/integrations/netatmo) | Config flow[^1]
+![Plex icon](https://brands.home-assistant.io/_/plex/icon.png) [Plex](https://home-assistant.io/integrations/plex) | Config flow[^1]
+![Rest icon](https://brands.home-assistant.io/_/rest/icon.png) [Rest](https://home-assistant.io/integrations/rest) | [./packages/integrations/core/rest.yaml](./packages/integrations/core/rest.yaml)
+![Script icon](https://brands.home-assistant.io/_/script/icon.png) [Script](https://home-assistant.io/integrations/script) | [./scripts.yaml](./scripts.yaml)
+![Sentry icon](https://brands.home-assistant.io/_/sentry/icon.png) [Sentry](https://home-assistant.io/integrations/sentry) | Config flow[^1]
+![Spotify icon](https://brands.home-assistant.io/_/spotify/icon.png) [Spotify](https://home-assistant.io/integrations/spotify) | [./packages/integrations/core/spotify.yaml](./packages/integrations/core/spotify.yaml)
+![Synology icon](https://brands.home-assistant.io/_/synology_dsm/icon.png) [Synology](https://home-assistant.io/integrations/synology_dsm) | Config flow[^1]
+![Telegram BOT icon](https://brands.home-assistant.io/_/telegram/icon.png) [Telegram BOT](https://home-assistant.io/integrations/telegram) | [./packages/integrations/core/telegram.yaml](./packages/integrations/core/telegram.yaml)
+![Template icon](https://brands.home-assistant.io/_/template/icon.png) [Template](https://home-assistant.io/integrations/template) | [./packages/integrations/core/template.yaml](./packages/integrations/core/template.yaml)
+![Tuya icon](https://brands.home-assistant.io/_/tuya/icon.png) [Tuya](https://home-assistant.io/integrations/tuya) | Config flow[^1]
+![Uptime Robot icon](https://brands.home-assistant.io/_/uptimerobot/icon.png) [Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Config flow[^1]
+![Version icon](https://brands.home-assistant.io/_/version/icon.png) [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
+![Wemo icon](https://brands.home-assistant.io/_/wemo/icon.png) [Wemo](https://home-assistant.io/integrations/wemo) | Config flow[^1]
+![ZHA icon](https://brands.home-assistant.io/_/zha/icon.png) [ZHA](https://home-assistant.io/integrations/zha) | Config flow[^1]
+
 
 
 ## The custom integrations that I use
 
-### [HACS](https://github.com/hacs/integration)
+### ![HACS icon](https://brands.home-assistant.io/_/hacs/icon.png) [HACS](https://github.com/hacs/integration)
 
 _HACS gives you a powerful UI to handle downloads of all your custom needs._
 
@@ -67,7 +68,7 @@ _HACS gives you a powerful UI to handle downloads of all your custom needs._
 --|--
 **Author(s)** | @ludeeus
 
-### [Breaking Changes](https://github.com/custom-components/breaking_changes)
+### ![Breaking Changes icon](https://brands.home-assistant.io/_/breaking_changes/icon.png) [Breaking Changes](https://github.com/custom-components/breaking_changes)
 
 _Component to show potential breaking_changes in the current published version based on your loaded components_
 
@@ -77,7 +78,7 @@ _Component to show potential breaking_changes in the current published version b
 --|--
 **Author(s)** | @ludeeus
 
-### [Generate Readme](https://github.com/custom-components/readme)
+### ![Generate Readme icon](https://brands.home-assistant.io/_/readme/icon.png) [Generate Readme](https://github.com/custom-components/readme)
 
 _Use Jinja and data from Home Assistant to generate your README.md file_
 
@@ -87,7 +88,7 @@ _Use Jinja and data from Home Assistant to generate your README.md file_
 
 ## The custom lovelace plugins that I use
 
-### [Mini Graph Card](https://github.com/kalkih/mini-graph-card)
+### ![Mini Graph Card icon](https://brands.home-assistant.io/_//icon.png) [Mini Graph Card](https://github.com/kalkih/mini-graph-card)
 
 _Minimalistic graph card for Home Assistant Lovelace UI_
 
