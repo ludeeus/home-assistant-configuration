@@ -54,7 +54,7 @@ Integration | Configuration
 [Uptime Robot](https://home-assistant.io/integrations/uptimerobot) | Config flow (UI configuration)
 [Version](https://home-assistant.io/integrations/version) | [./packages/integrations/core/version.yaml](./packages/integrations/core/version.yaml)
 [Wemo](https://home-assistant.io/integrations/wemo) | Config flow (UI configuration)
-[ZHA](https://home-assistant.io/integrations/zha) | Config flow (UI configuration)
+[ZHA](https://home-assistant.io/integrations/zha) | Config flow[^1]
 
 
 ## The custom integrations that I use
@@ -98,3 +98,6 @@ _Minimalistic graph card for Home Assistant Lovelace UI_
 ***
 
 Like all other Home Assistant instances this is also a Work in Progress :D
+
+
+[^1]: UI Configuration
