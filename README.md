@@ -6,7 +6,7 @@ This is my Home Assistant installation.
 
 Description | value
 --|--
-Installed version | 2021.11.0.dev20211009
+Installed version | 2021.11.0.dev20211010
 Total entity objects | 182
 Entities in the [`automation`](https://www.home-assistant.io/components/automation) domain | 6
 Entities in the [`binary_sensor`](https://www.home-assistant.io/components/binary_sensor) domain | 22

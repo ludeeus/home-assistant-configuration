@@ -81,11 +81,16 @@
   trigger:
   - platform: state
     entity_id: media_player.spotify_joakim_sorensen
-    to: Playing
+    to: playing
   condition:
   - condition: time
     after: 06:00
     before: '12:00'
+  - condition: device
+    device_id: d20d4fa889d9807b7d66ab290af4a9c1
+    domain: device_tracker
+    entity_id: device_tracker.iphone
+    type: is_home
   action:
   - service: switch.turn_on
     target:
