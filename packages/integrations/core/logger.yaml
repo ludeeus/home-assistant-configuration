@@ -3,3 +3,5 @@
 ---
 logger:
   default: info
+  logs:
+    homeassistant.components.rest_command: error

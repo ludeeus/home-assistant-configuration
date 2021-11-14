@@ -1,0 +1,8 @@
+# documentation: https://www.home-assistant.io/integrations/github/
+# source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/github
+---
+sensor github:
+  platform: github
+  access_token: !secret github_access_token
+  repositories:
+    - path: 'home-assistant/supervisor'

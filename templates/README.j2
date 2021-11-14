@@ -57,13 +57,19 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
         "configuration": "./packages/integrations/core/frontend.yaml"
     },
     {
-        "key": "homekit",
-        "name": "Homekit",
+        "key": "github",
+        "name": "GitHub",
+        "configuration": "./packages/integrations/core/github.yaml"
     },
     {
         "key": "influxdb",
         "name": "InfluxDB",
         "configuration": "./packages/integrations/core/influxdb.yaml"
+    },
+    {
+        "key": "launch_library",
+        "name": "Launch Library",
+        "configuration": "./packages/integrations/core/launch_library.yaml"
     },
     {
         "key": "logger",
@@ -75,6 +81,10 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
         "name": "Met.no",
     },
     {
+        "key": "mobile_app",
+        "name": "Mobile App",
+    },
+    {
         "key": "netatmo",
         "name": "Netatmo",
     },
@@ -83,6 +93,11 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
         "name": "Plex",
     },
     {
+        "key": "rest_command",
+        "name": "RESTful Command",
+        "configuration": "./packages/integrations/core/rest_command.yaml"
+    },
+        {
         "key": "rest",
         "name": "Rest",
         "configuration": "./packages/integrations/core/rest.yaml"
@@ -102,8 +117,17 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
         "configuration": "./packages/integrations/core/spotify.yaml"
     },
     {
+        "key": "hassio",
+        "name": "Supervisor",
+    },
+    {
         "key": "synology_dsm",
         "name": "Synology",
+    },
+    {
+        "key": "tautulli",
+        "name": "Tautulli",
+        "configuration": "./packages/integrations/core/tautulli.yaml"
     },
     {
         "key": "telegram",
@@ -127,14 +151,6 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
         "key": "version",
         "name": "Version",
         "configuration": "./packages/integrations/core/version.yaml"
-    },
-    {
-        "key": "wemo",
-        "name": "Wemo",
-    },
-    {
-        "key": "zha",
-        "name": "ZHA",
     },
 ] %}
 

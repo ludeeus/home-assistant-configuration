@@ -1,0 +1,8 @@
+# Documentation: https://www.home-assistant.io/integrations/tautulli/
+# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/tautulli
+---
+# Example configuration.yaml entry
+sensor tautulli:
+  - platform: tautulli
+    api_key: !secret 'tautulli_api_key'
+    host: !secret 'tautulli_host'

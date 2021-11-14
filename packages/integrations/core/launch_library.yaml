@@ -1,0 +1,6 @@
+# Documentation: https://www.home-assistant.io/integrations/launch_library/
+# Source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/launch_library
+---
+# Example configuration.yaml entry
+sensor:
+  - platform: launch_library

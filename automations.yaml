@@ -1,25 +1,30 @@
-- id: '1607994327328'
-  alias: Pause Spotify when my phone rings
-  description: ''
-  use_blueprint:
-    path: ludeeus/pause_media_during_calls.yaml
-    input:
-      phone_state_sensor: sensor.sm_g973f_phone_state
-      media_player:
-        entity_id: media_player.spotify_joakim_sorensen
 - id: '1630830932920'
   alias: Notify on remote UI disconnect
   description: ''
   trigger:
   - platform: state
     entity_id: binary_sensor.remote_ui
-    from: 'on'
-    to: 'off'
+    id: entity_state_change
   condition: []
   action:
-  - service: telegram_bot.send_message
-    data:
-      message: Remote UI has disconnected
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.remote_ui
+        state: 'on'
+      sequence:
+      - service: telegram_bot.send_message
+        data:
+          message: Remote UI has reconnected
+    - conditions:
+      - condition: state
+        entity_id: binary_sensor.remote_ui
+        state: 'off'
+      sequence:
+      - service: telegram_bot.send_message
+        data:
+          message: Remote UI has disconnected
+    default: []
   mode: single
 - id: '1630833470587'
   alias: Send notification when home assistant starts
@@ -48,17 +53,27 @@
   action:
   - service: light.turn_on
     target:
-      entity_id: light.led001
+      device_id:
+      - 6a5e8ff0b07d343544a3f69d332540c9
+      - 7211d5ba92f15beeef524ffbfa94605b
     data:
       color_name: homeassistant
+  - service: light.turn_off
+    target:
+      device_id:
+      - 322e0b917c3049e7f2a282f82f2cde46
+      - 26afcdae89c7f1b21f75e9dd4f82689c
   - delay:
       hours: 1
       minutes: 0
       seconds: 0
       milliseconds: 0
+  - condition: state
+    entity_id: media_player.chrome_cast
+    state: not_playing
   - service: switch.turn_on
     target:
-      entity_id: switch.w01
+      device_id: 7500d12a9e554b259bde198f0bad3132
   mode: single
 - id: '1633555882355'
   alias: Turn off night lights
@@ -71,9 +86,8 @@
   action:
   - service: homeassistant.turn_off
     target:
-      entity_id:
-      - light.led001
-      - switch.w01
+      area_id: b82aeb664391450d85befa774cf11796
+      device_id: 7500d12a9e554b259bde198f0bad3132
   mode: single
 - id: '1633761284031'
   alias: Good morning
@@ -95,7 +109,7 @@
   - service: switch.turn_on
     target:
       entity_id: switch.w01
-  - service: script.living_room_lights_default
+  - service: script.living_room_lights_dimmed
   - delay:
       hours: 0
       minutes: 10
@@ -104,4 +118,16 @@
   - service: switch.turn_off
     target:
       entity_id: switch.w01
+  mode: single
+- id: '1636382106820'
+  alias: Workaround for internal servers not working properly
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '*'
+    minutes: /1
+  condition: []
+  action:
+  - service: rest_command.server_r_command
+  - service: rest_command.server_s_command
   mode: single
