@@ -1,5 +1,6 @@
 # documentation: https://www.home-assistant.io/integrations/cloud/
 # source: https://github.com/home-assistant/core/tree/dev/homeassistant/components/cloud
 ---
-cloud:
-  google_actions_report_state_url: !secret cloud_google_actions_report_state_url
+# cloud:
+#   google_actions_report_state_url: !secret cloud_google_actions_report_state_url
+#   subscription_info_url: !secret cloud_subscription_info_url

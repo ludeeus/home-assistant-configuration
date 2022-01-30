@@ -6,10 +6,6 @@ living_room_lights_default:
       area_id: b82aeb664391450d85befa774cf11796
     data:
       color_temp: 425
-  - service: light.turn_on
-    target:
-      area_id: b82aeb664391450d85befa774cf11796
-    data:
       brightness: 255
   mode: single
 living_room_lights_home_assistant:
@@ -20,10 +16,6 @@ living_room_lights_home_assistant:
       area_id: b82aeb664391450d85befa774cf11796
     data:
       color_name: homeassistant
-  - service: light.turn_on
-    target:
-      area_id: b82aeb664391450d85befa774cf11796
-    data:
       brightness_pct: 100
   mode: single
 living_room_lights_dimmed:
@@ -34,9 +26,15 @@ living_room_lights_dimmed:
       area_id: b82aeb664391450d85befa774cf11796
     data:
       color_temp: 470
+      brightness: 150
+  mode: single
+living_room_lights_super_dimmed:
+  alias: Living room lights - Super Dimmed
+  sequence:
   - service: light.turn_on
     target:
       area_id: b82aeb664391450d85befa774cf11796
     data:
-      brightness: 150
+      brightness: 25
+      kelvin: 2000
   mode: single

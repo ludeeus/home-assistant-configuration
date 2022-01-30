@@ -38,96 +38,100 @@
     data:
       message: Home Assistant has started
   mode: single
-- id: '1633555826324'
-  alias: Turn on night lights
+- id: '1642939557645'
+  alias: Light management
   description: ''
   trigger:
   - platform: time
     at: '23:00'
-  condition:
-  - condition: device
-    device_id: d20d4fa889d9807b7d66ab290af4a9c1
-    domain: device_tracker
-    entity_id: device_tracker.iphone
-    type: is_home
-  action:
-  - service: light.turn_on
-    target:
-      device_id:
-      - 6a5e8ff0b07d343544a3f69d332540c9
-      - 7211d5ba92f15beeef524ffbfa94605b
-    data:
-      color_name: homeassistant
-  - service: light.turn_off
-    target:
-      device_id:
-      - 322e0b917c3049e7f2a282f82f2cde46
-      - 26afcdae89c7f1b21f75e9dd4f82689c
-  - delay:
-      hours: 1
-      minutes: 0
-      seconds: 0
-      milliseconds: 0
-  - condition: state
-    entity_id: media_player.chrome_cast
-    state: not_playing
-  - service: switch.turn_on
-    target:
-      device_id: 7500d12a9e554b259bde198f0bad3132
-  mode: single
-- id: '1633555882355'
-  alias: Turn off night lights
-  description: ''
-  trigger:
+    id: '2300'
+  - platform: time
+    at: '23:59'
+    id: '2359'
   - platform: state
     entity_id: media_player.chrome_cast
     to: playing
-  condition: []
-  action:
-  - service: homeassistant.turn_off
-    target:
-      area_id: b82aeb664391450d85befa774cf11796
-      device_id: 7500d12a9e554b259bde198f0bad3132
-  mode: single
-- id: '1633761284031'
-  alias: Good morning
-  description: ''
-  trigger:
+    id: chrome_cast_playing
   - platform: state
     entity_id: media_player.spotify_joakim_sorensen
     to: playing
+    id: spotify_joakim_sorensen_playing
+  - platform: state
+    entity_id: switch.w01
+    to: 'on'
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+    id: w01_on_10_min
   condition:
-  - condition: time
-    after: 06:00
-    before: '12:00'
   - condition: device
     device_id: d20d4fa889d9807b7d66ab290af4a9c1
     domain: device_tracker
     entity_id: device_tracker.iphone
     type: is_home
   action:
-  - service: switch.turn_on
-    target:
-      entity_id: switch.w01
-  - service: script.living_room_lights_dimmed
-  - delay:
-      hours: 0
-      minutes: 10
-      seconds: 0
-      milliseconds: 0
-  - service: switch.turn_off
-    target:
-      entity_id: switch.w01
-  mode: single
-- id: '1636382106820'
-  alias: Workaround for internal servers not working properly
-  description: ''
-  trigger:
-  - platform: time_pattern
-    hours: '*'
-    minutes: /1
-  condition: []
-  action:
-  - service: rest_command.server_r_command
-  - service: rest_command.server_s_command
-  mode: single
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: '2300'
+      sequence:
+      - service: light.turn_off
+        target:
+          device_id:
+          - 322e0b917c3049e7f2a282f82f2cde46
+          - 26afcdae89c7f1b21f75e9dd4f82689c
+      - service: light.turn_on
+        target:
+          device_id:
+          - 6a5e8ff0b07d343544a3f69d332540c9
+          - 7211d5ba92f15beeef524ffbfa94605b
+        data:
+          color_name: homeassistant
+    - conditions:
+      - condition: trigger
+        id: '2359'
+      - condition: state
+        entity_id: media_player.chrome_cast
+        state: unavailable
+      sequence:
+      - service: switch.turn_on
+        target:
+          device_id: 7500d12a9e554b259bde198f0bad3132
+    - conditions:
+      - condition: trigger
+        id: chrome_cast_playing
+      sequence:
+      - service: homeassistant.turn_off
+        target:
+          area_id: b82aeb664391450d85befa774cf11796
+          device_id:
+          - 7500d12a9e554b259bde198f0bad3132
+          - a2a84ecc53e151a7927225c302965ed1
+    - conditions:
+      - condition: trigger
+        id: spotify_joakim_sorensen_playing
+      - condition: time
+        after: 06:00
+        before: '12:00'
+      sequence:
+      - service: homeassistant.turn_on
+        target:
+          device_id:
+          - 7500d12a9e554b259bde198f0bad3132
+          - a2a84ecc53e151a7927225c302965ed1
+      - service: script.living_room_lights_dimmed
+    - conditions:
+      - condition: trigger
+        id: w01_on_10_min
+      - condition: time
+        after: 06:00
+        before: '12:00'
+      sequence:
+      - type: turn_off
+        device_id: 7500d12a9e554b259bde198f0bad3132
+        entity_id: switch.w01
+        domain: switch
+    default: []
+  mode: parallel
+  max: 10

@@ -59,7 +59,6 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
     {
         "key": "github",
         "name": "GitHub",
-        "configuration": "./packages/integrations/core/github.yaml"
     },
     {
         "key": "influxdb",
@@ -69,7 +68,6 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
     {
         "key": "launch_library",
         "name": "Launch Library",
-        "configuration": "./packages/integrations/core/launch_library.yaml"
     },
     {
         "key": "logger",
@@ -89,15 +87,14 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
         "name": "Netatmo",
     },
     {
+        "key": "nanoleaf",
+        "name": "Nanoleaf",
+    },
+    {
         "key": "plex",
         "name": "Plex",
     },
     {
-        "key": "rest_command",
-        "name": "RESTful Command",
-        "configuration": "./packages/integrations/core/rest_command.yaml"
-    },
-        {
         "key": "rest",
         "name": "Rest",
         "configuration": "./packages/integrations/core/rest.yaml"
@@ -150,7 +147,10 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
     {
         "key": "version",
         "name": "Version",
-        "configuration": "./packages/integrations/core/version.yaml"
+    },
+    {
+        "key": "xiaomi_miio",
+        "name": "Xiaomi Miio",
     },
 ] %}
 
@@ -159,7 +159,7 @@ Entities in the [`{{domain}}`](https://www.home-assistant.io/components/{{domain
 Integration | Configuration
 --|--
 {% for integration in core_integrations -%}
-[<img src="https://brands.home-assistant.io/_/{{integration.key}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{integration.key}}/icon.png) [{{integration.name}}](https://home-assistant.io/integrations/{{integration.key}}) | {{"[" + integration.configuration + "](" + integration.configuration + ")" if integration.configuration else "Config flow[^1]"}}
+[<img src="https://brands.home-assistant.io/_/{{integration.key}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{integration.key}}/dark_icon.png#gh-dark-mode-only)[<img src="https://brands.home-assistant.io/_/{{integration.key}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{integration.key}}/icon.png#gh-light-mode-only) [{{integration.name}}](https://home-assistant.io/integrations/{{integration.key}}) | {{"[" + integration.configuration + "](" + integration.configuration + ")" if integration.configuration else "Config flow[^1]"}}
 {% endfor -%}
 
 {%- set custom_categories = [
@@ -183,7 +183,9 @@ Integration | Configuration
 ## The custom {{category.name}} that I use
 {% for entry in entries -%}
 {% if entry.installed %}
-### [<img src="https://brands.home-assistant.io/_/{{entry.domain}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{entry.domain}}/icon.png) [{{entry.name}}]({{entry.documentation}})
+### {% if entry.category == "integration" -%}
+[<img src="https://brands.home-assistant.io/_/{{entry.domain}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{entry.domain}}/dark_icon.png#gh-dark-mode-only)[<img src="https://brands.home-assistant.io/_/{{entry.domain}}/icon.png" height="24"/>](https://brands.home-assistant.io/_/{{entry.domain}}/icon.png#gh-light-mode-only)
+{%- endif %} [{{entry.name}}]({{entry.documentation}})
 
 _{{entry.description}}_
 
