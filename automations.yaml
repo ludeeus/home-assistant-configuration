@@ -1,42 +1,46 @@
 - id: '1630830932920'
-  alias: Notify on remote UI disconnect
+  alias: Notifications
   description: ''
   trigger:
   - platform: state
     entity_id: binary_sensor.remote_ui
-    id: entity_state_change
+    id: remote_ui_state
+  - platform: homeassistant
+    event: start
+    id: homeassistant_start
   condition: []
   action:
   - choose:
     - conditions:
-      - condition: state
-        entity_id: binary_sensor.remote_ui
-        state: 'on'
+      - condition: trigger
+        id: remote_ui_state
       sequence:
-      - service: telegram_bot.send_message
-        data:
-          message: Remote UI has reconnected
+      - choose:
+        - conditions:
+          - condition: state
+            entity_id: binary_sensor.remote_ui
+            state: 'on'
+          sequence:
+          - service: telegram_bot.send_message
+            data:
+              message: Remote UI has reconnected
+        - conditions:
+          - condition: state
+            entity_id: binary_sensor.remote_ui
+            state: 'off'
+          sequence:
+          - service: telegram_bot.send_message
+            data:
+              message: Remote UI has disconnected
+        default: []
     - conditions:
-      - condition: state
-        entity_id: binary_sensor.remote_ui
-        state: 'off'
+      - condition: trigger
+        id: homeassistant_start
       sequence:
       - service: telegram_bot.send_message
         data:
-          message: Remote UI has disconnected
+          message: Home Assistant has started
     default: []
-  mode: single
-- id: '1630833470587'
-  alias: Send notification when home assistant starts
-  description: ''
-  trigger:
-  - platform: homeassistant
-    event: start
-  condition: []
-  action:
-  - service: telegram_bot.send_message
-    data:
-      message: Home Assistant has started
   mode: single
 - id: '1642939557645'
   alias: Light management
